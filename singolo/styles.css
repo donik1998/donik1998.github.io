@@ -4,32 +4,29 @@ body {
     font-family: 'Lato', serif;
 }
 
+body > div {
+    width: 1020px;
+}
+
 a {
     text-decoration: none;
     color: white;    
 }
 
-.slider {
-    background-color: #f06c64;
-    margin: auto;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1200px;
-}
-
-.slider div {
-    margin: 30px;
-}
-
-header { 
+#header { 
     background-color: #2d303a;
     color: white;
     margin: auto;
-    width: 1200px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    width: 1020px;
+}
+
+.slider {
+    background-color: #f06c64;
+    margin: auto;
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .bottom_line {
@@ -60,7 +57,7 @@ header {
 nav {
     list-style: none;
     display: inline-block;
-    margin-left: 350px;
+    margin-left: 200px;
 }
 
 nav li {
@@ -71,6 +68,13 @@ nav li {
 }
 
 .chev-right{ 
+    margin-right: 30px;
+    width: 3%; 
+    height: 10%;  
+}
+
+.chev-left{ 
+    margin-left: 30px;
     width: 3%; 
     height: 10%;  
 }
@@ -78,20 +82,15 @@ nav li {
 .chev-right img {
     position: relative;
     display: block;
-    left: 35%;
+    left: 30%;
     top: 30%;
     transform: rotate(180deg);
-}
-
-.chev-left{ 
-    width: 3%; 
-    height: 10%;  
 }
 
 .chev-left img {
     position: relative;
     display: block;
-    left: 25%;
+    left: 20%;
     top: 30%;
 }
 
@@ -115,7 +114,6 @@ nav li {
 
 .our_services {
     color: #666d89;
-    width: 1200px;
     text-align: left;
     margin: auto;
 }
@@ -133,7 +131,6 @@ nav li {
     border-radius: 15px;
     background-color: #54CEDC;
     transition: 0.2s;
-    transform: scale(1.1);
 }
 
 .all_services div:hover img {
@@ -144,21 +141,31 @@ nav li {
     transition: 0.2s;
 }
 
-.all_services div {
-    display: inline;
+.content p {
+    margin: 0;
+}
+
+.all_services .content {
+    width: 75%;
+    float: right;
+}
+
+.all_services > div {
+    padding: 10px;
+    max-height: 200px;
     width: 30%;
+    margin: 20px 0px;
 }
 
 .thumbnail {
-    height: 20vh;
+    height: 100px;
     float: left;
 }
 
 .thumbnail img {
     display: block;
     position: relative;
-    top: 25%;
-    left: 20%;
+    top: 15px;
 }
 
 .all_services {
@@ -167,7 +174,7 @@ nav li {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 50px 0 0 30px;
+    margin: 30px 0px;
 }
 .chev-right:hover {
     background-color: #e46065;
@@ -209,7 +216,6 @@ nav li {
 }
 
 .portfolio {
-    width: 1020px;
     margin: auto;
     padding: 40px 0 40px 0px;
     background-color: #272C38;
@@ -275,7 +281,6 @@ nav li {
 .about_us {
     margin: auto;
     padding: 40px 0 40px 0;
-    width: 1020px;
     color: #5F6986;
     background-color: #F2F2F2;
 }
@@ -324,10 +329,9 @@ nav li {
 
 .quote {
     margin: auto;
-    width: 1020px;
     color: #F9D9DA;
     background-color: #FF6C64;
-    padding: 40px 0 40px 0;
+    padding: 40px 0 20px 0;
 }
 
 .quote > div, h1, p {
@@ -339,7 +343,7 @@ nav li {
     font-size: 30px;
 }
 
-.container {
+.quote .container {
     background-color: #FF6C64;
     margin-top: 60px;
 }
@@ -378,6 +382,23 @@ input::placeholder, textarea::placeholder {
     width: 100%;
 }
 
+.form input:hover, .form textarea:hover {
+    box-shadow: 0px 0px 10px black;
+    transition: 0.25s;
+}
+
+input[type="button"] {
+    border-radius: 50px;
+    background-color: #F5554E;
+    width: 90%;
+    margin-left: 5%;
+}
+
+input[type="button"]:hover {
+    box-shadow: 0px 0px 10px black;
+    transition: 0.25s;
+}
+
 .contact_information a, .contact_information span {
     font-size: 12px;
     margin-left: 15px; 
@@ -393,9 +414,9 @@ input::placeholder, textarea::placeholder {
 footer {
     margin: auto;
     padding: 40px 0 100px 0;
-    width: 1020px;
     clear: both;
     background-color: #272C38;
+    width: 1020px;
 }
 
 footer .social_networks {
