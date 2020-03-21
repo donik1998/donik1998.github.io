@@ -22,11 +22,10 @@
         <div style="width: 100%;" class="bottom_line"></div>
     </div>
     <div id="slider" class="slider">
-        <div class="chev-left"><img src="assets/images/singolo1/chev.png" alt="Rool backward"></div>
+        <div onclick="nextSlide()" class="chev-left"><img src="assets/images/singolo1/chev.png" alt="Rool backward"></div>
         <div class="phone_vertical"><img onclick="verticalPhoneOnClick()" src="assets/images/singolo1/phone.png" alt="phone vertical"></div>
-        <div class="phone_horizontal"><img onclick="HorizontalPhoneOnClick()" src="assets/images/singolo1/phone_horizontal.png" alt="phone horizontal"></div>
-        <div class="bg_bottom"></div>
-        <div class="chev-right"><img src="assets/images/singolo1/chev.png" alt="Rool forward"></div>
+        <div class="phone_horizontal"><img onclick="horizontalPhoneOnClick()" src="assets/images/singolo1/phone_horizontal.png" alt="phone horizontal"></div>
+        <div onclick="nextSlide()" class="chev-right"><img src="assets/images/singolo1/chev.png" alt="Rool forward"></div>
     </div>
     <div id="services" class="our_services">
         <div class="main">
@@ -83,24 +82,24 @@
         <h1>Portfolio</h1>
     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     <div class="buttons">
-        <input type="submit" value="All">
-        <input type="submit" value="Web Design">
-        <input type="submit" value="Graphic Design">
-        <input type="submit" value="Artwork">
+        <input type="submit" onclick="showAll()" value="All">
+        <input type="submit" onclick="showWebDesign(event)" value="Web-Design">
+        <input type="submit" onclick="showGraphicDesign(event)" value="Graphic-Design">
+        <input type="submit" onclick="showArtwork(event)" value="Artwork">
     </div>
     <div class="gallery">
-        <img src="assets/images/singolo2/ship.png" alt="ship">
-        <img src="assets/images/singolo2/ice_cream.png" alt="ice_cream">
-        <img src="assets/images/singolo2/cosmo_art.png" alt="cosmo">
-        <img src="assets/images/singolo2/love_bot.png" alt="bot">
-        <img src="assets/images/singolo2/animals.png" alt="animals">
-        <img src="assets/images/singolo2/products.png" alt="products">
-        <img src="assets/images/singolo2/aliens.png" alt="aliens">
-        <img src="assets/images/singolo2/birds.png" alt="birds">
-        <img src="assets/images/singolo2/castle.png" alt="castle">
-        <img src="assets/images/singolo2/text.png" alt="text">
-        <img src="assets/images/singolo2/monster.png" alt="monster">
-        <img src="assets/images/singolo2/something.png" alt="something">
+        <img class="gallery_item Web-Design" onclick="highlight(event)" src="assets/images/singolo2/ship.png" alt="ship">
+        <img class="gallery_item Web-Design" onclick="highlight(event)" src="assets/images/singolo2/ice_cream.png" alt="ice_cream">
+        <img class="gallery_item Web-Design" onclick="highlight(event)" src="assets/images/singolo2/cosmo_art.png" alt="cosmo">
+        <img class="gallery_item Graphic-Design" onclick="highlight(event)" src="assets/images/singolo2/love_bot.png" alt="bot">
+        <img class="gallery_item Graphic-Design" onclick="highlight(event)" src="assets/images/singolo2/animals.png" alt="animals">
+        <img class="gallery_item Graphic-Design" onclick="highlight(event)" src="assets/images/singolo2/products.png" alt="products">
+        <img class="gallery_item Artwork" onclick="highlight(event)" src="assets/images/singolo2/aliens.png" alt="aliens">
+        <img class="gallery_item Artwork" onclick="highlight(event)" src="assets/images/singolo2/birds.png" alt="birds">
+        <img class="gallery_item Artwork" onclick="highlight(event)" src="assets/images/singolo2/castle.png" alt="castle">
+        <img class="gallery_item Artwork" onclick="highlight(event)" src="assets/images/singolo2/text.png" alt="text">
+        <img class="gallery_item Graphic-Design" onclick="highlight(event)" src="assets/images/singolo2/monster.png" alt="monster">
+        <img class="gallery_item Web-Design" onclick="highlight(event)" src="assets/images/singolo2/something.png" alt="something">
     </div>
     </div>
     <div id="about_us" class="about_us">
@@ -148,11 +147,11 @@
         <div class="container">
             <div class="form">
                 <form action="index.html">
-                    <input type="text" placeholder="Name (Required)"><br>
-                    <input type="text" placeholder="Email (Required)"><br>
+                    <input required type="text" placeholder="Name (Required)"><br>
+                    <input required type="text" placeholder="Email (Required)"><br>
                     <input type="text" placeholder="Subject"><br>
                     <textarea name="description" placeholder="Describe your project in detail..." rows="10"></textarea><br>
-                    <input type="button" value="Submit" name="submit">
+                    <input onclick="messageSubmission()" type="button" value="Submit" name="submit">
                 </form>
             </div>
             <div class="contact_information">
