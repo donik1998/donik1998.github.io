@@ -4,8 +4,16 @@ body {
     font-family: 'Lato', serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: red;
+}
+
 body > div {
-    width: 1020px;
+    width: 1020px; 
 }
 
 a {
@@ -13,20 +21,28 @@ a {
     color: white;    
 }
 
-#header { 
+#header {
+    position: fixed;
     background-color: #2d303a;
-    color: white;
-    margin: auto;
-    width: 1020px;
+    width: 100%;
+    z-index: 1;
 }
 
-.slider {
-    background-color: #f06c64;
-    margin: auto;
-    padding: 50px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo_title {
+    margin: 5px 0 5px 30px;
+    padding: 5px;
+    display: inline-block;
+    float: left;
+}
+
+nav {
+    margin-left: 500px;
+}
+
+nav li {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 75px;
 }
 
 .bottom_line {
@@ -39,32 +55,13 @@ a {
     height: 5px;
 }
 
-.navigation span {
-    color: #f06c64;
-}
-
-.logo_title {
-    display: inline-block;
-    margin-left: 30px;
-    padding: 5px;
-}
-
-.logo_title a {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-nav {
-    list-style: none;
-    display: inline-block;
-    margin-left: 200px;
-}
-
-nav li {
-    display: inline;
-    padding: 10px;
-    font-size: 12px;
-    margin: 10px;
+.slider {
+    background-color: #f06c64;
+    margin: auto;
+    padding: 100px 0px 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .chev-right{ 
@@ -113,6 +110,7 @@ nav li {
 }
 
 .our_services {
+    padding-top: 25px;
     color: #666d89;
     text-align: left;
     margin: auto;
@@ -154,7 +152,7 @@ nav li {
     padding: 10px;
     max-height: 200px;
     width: 30%;
-    margin: 20px 0px;
+    margin: 50px 0px;
 }
 
 .thumbnail {
@@ -174,7 +172,7 @@ nav li {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 30px 0px;
+    margin: 50px 0px;
 }
 .chev-right:hover {
     background-color: #e46065;
@@ -299,9 +297,9 @@ nav li {
 .team {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-evenly;
-    margin: 10px 0 0 40px;
+    margin: 10px 0 50px 40px;
 }
 
 .social_networks {
@@ -331,12 +329,11 @@ nav li {
     margin: auto;
     color: #F9D9DA;
     background-color: #FF6C64;
-    padding: 40px 0 20px 0;
+    padding: 50px 0 50px 0;
 }
 
 .quote > div, h1, p {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 25px 40px;
 }
 
 .quote > h1 {
@@ -345,7 +342,7 @@ nav li {
 
 .quote .container {
     background-color: #FF6C64;
-    margin-top: 60px;
+    margin-top: 75px;
 }
 
 input::placeholder, textarea::placeholder {
@@ -413,7 +410,7 @@ input[type="button"]:hover {
 
 footer {
     margin: auto;
-    padding: 40px 0 100px 0;
+    padding: 50px 0 150px 0;
     clear: both;
     background-color: #272C38;
     width: 1020px;
