@@ -15,7 +15,6 @@ h1 {
 
 p {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
     text-align: center;
 }
 
@@ -30,20 +29,29 @@ p {
 .personal-statement {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.university {
+.hobby {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.school {
+.education {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+
+.main > div img {
+    height: 200px;
+}
+
+.education > p > span {
+    color: red;
+    font-size: 20px;
 }
