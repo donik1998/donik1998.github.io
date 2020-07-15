@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/projects.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css" type="text/css">
-    <title>Doniyor Murodkulov Portfolio Page</title>
+    <title>Projects</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <img class="navbar-brand" src="images/glasses.png" height="100" alt="avatar">
@@ -24,22 +22,41 @@
                     <a href="about.html" class="nav-link active">About Me</a>
                 </li>
                 <li class="nav-item">
-                    <a href="projects.html" class="nav-link active">Projects</a>
+                    <a href="index.html" class="nav-link active">Home</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="main">
-        <div class="preface">
-            <p>Have you ever seen happy Mobile Developer? Either do I. Those guys are more like this man on the right. They all try to figure out which tiny-little piece of pixel is causing UI to break. That's how they work. 
-                In meantime, you might be asking yourself where am I? You are in the portfolio page of one of those guys. To finally find out whose text you are reading click on button below to download my CV.</p>
-            <a href="https://github.com/donik1998/CV/archive/Doniyor-Murodkulov.zip" id="download" class="btn btn-outline-danger btn-lg">Dowload CV</a>
-                <p>P.S. There is much more in this site. <span id="enjoy">Enjoy your time!</span></p>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="images/GitHub-Mark.png" alt="github">
+                    <h3>Library Management System</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>This is a Java team project for Application programming in Java</p>
+                    <a href="https://github.com/donik1998/Library-Management/tree/master">Browse Project</a>
+                </div>
+            </div>
         </div>
-        <div class="ordinal_mob_dev">
-            <img src="images/Mobile Developer.png" alt="dev">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="images/GitHub-Mark.png" alt="github">
+                    <h3>E-cafe Demo</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Demo app of E-cafe. This is the first time I have been working with Flutter</p>
+                    <a href="#">Browse Project</a>
+                </div>
+            </div>
         </div>
+    
     </div>
 </body>
-
 </html>
