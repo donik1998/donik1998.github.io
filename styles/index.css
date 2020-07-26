@@ -9,12 +9,6 @@ body {
     background-size: cover;
 }
 
-.container {
-    padding: 20px;
-    margin: 0;
-    width: 100%;
-}
-
 h1 {
     text-align: center;
     margin: 10px;
@@ -24,20 +18,20 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 20px;
 }
 
 .main p {
-    padding: 50px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .main a {
     display: block;
-    margin: 0px 50px;
 }
 
 #enjoy {
@@ -49,4 +43,9 @@ h1 {
 #download {
     font-family: 'Fondamento', cursive;
     font-size: 28px;
+    width: 480px;
+}
+
+.navbar {
+    width: 100%;
 }
