@@ -16,45 +16,43 @@ h1 {
 p {
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
+    padding: 20px;
+    font-size: 20px;    
+    width: 50%;
 }
 
 .main {
     margin: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.personal-statement {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30%;
+p > span {
+    font-weight: bold;
+    font-size: 24px;
 }
 
-.hobby {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30%;
+.iut_logo {
+    margin-top: 50px;
 }
 
-.education {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30%;
+.prog_lang {
+    color: white;
+    text-shadow: 0 0 5px white;
 }
 
-.main > div img {
-    height: 200px;
+.first_prog_lang {
+    margin: 20px;
 }
 
-.education > p > span {
-    color: red;
-    font-size: 20px;
+span > a {
+    color: white;
+}
+
+span > a:hover {
+    text-decoration: none;
+    color: none;
 }
