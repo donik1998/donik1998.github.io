@@ -47,8 +47,8 @@ td {
 }
 
 .social-net img:hover {
-    box-shadow: 0 0 30px lemonchiffon;
+    box-shadow: 0 0 30px white;
     background-color: white;
     transform: rotate(3600deg);
-    transition: 0.25s;
+    transition: .25s;
 }
