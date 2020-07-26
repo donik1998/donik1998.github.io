@@ -23,6 +23,7 @@ p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     text-align: center;
+    max-width: 560px;
 }
 
 #bio {
@@ -31,11 +32,19 @@ p {
 
 .main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .main > div {
     margin: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
