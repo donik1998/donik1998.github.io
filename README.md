@@ -13,6 +13,8 @@ Personal portfolio and CV of **Doniyor Murodkulov** — Senior Flutter Developer
 | [`uz.html`](https://donik1998.github.io/uz.html) | Oʻzbekcha versiyasi |
 | [`cv.html`](https://donik1998.github.io/cv.html) | Designed CV — print-ready A4, save as PDF from the browser |
 | [`cv-ats.html`](https://donik1998.github.io/cv-ats.html) | ATS-friendly CV — single-column, parser-safe |
+| [`cv-ru.html`](https://donik1998.github.io/cv-ru.html) | Резюме на русском — print-ready A4 |
+| [`cv-uz.html`](https://donik1998.github.io/cv-uz.html) | O‘zbekcha CV — print-ready A4 |
 
 ## Highlights
 
