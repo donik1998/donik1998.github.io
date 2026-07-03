@@ -293,13 +293,13 @@
   @media print {
     body { background: white; }
     .page {
+      width: auto;
       margin: 0;
       box-shadow: none;
       min-height: 0;
-      page-break-after: always;
-      break-after: page;
+      overflow: visible;
     }
-    .page:last-child { page-break-after: auto; break-after: auto; }
+    .page + .page { page-break-before: always; break-before: page; }
     .tl-entry { page-break-inside: avoid; break-inside: avoid; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .print-helper { display: none; }
