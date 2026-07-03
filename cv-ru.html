@@ -42,7 +42,7 @@
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     overflow: hidden;
     position: relative;
-    padding: 0 14mm 12mm;
+    padding: 0 14mm 8mm;
   }
   /* Bronze signature bar across the top of each page */
   .page::before {
@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;
     gap: 10mm;
-    padding: 14mm 0 8mm;
+    padding: 10mm 0 6mm;
     border-bottom: 1px solid var(--divider);
   }
   .header-text { flex: 1; }
@@ -90,8 +90,8 @@
   .contact-row .sep { color: var(--accent); font-weight: 700; }
 
   .photo {
-    width: 34mm;
-    height: 34mm;
+    width: 30mm;
+    height: 30mm;
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -105,7 +105,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4mm;
-    margin: 7mm 0;
+    margin: 5mm 0;
   }
   .stat {
     background: var(--cream);
@@ -133,7 +133,7 @@
     font-size: 9.5pt;
     color: var(--body-gray);
     line-height: 1.65;
-    margin: 0 0 8mm;
+    margin: 0 0 6mm;
   }
   .summary strong { color: var(--ink); }
 
@@ -173,7 +173,7 @@
   }
   .tl-entry {
     position: relative;
-    padding-bottom: 6.5mm;
+    padding-bottom: 5mm;
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -227,7 +227,7 @@
   .client { font-weight: 700; color: var(--ink); }
 
   /* ---------- Continuation header ---------- */
-  .cont-header { padding: 12mm 0 6mm; }
+  .cont-header { padding: 10mm 0 5mm; }
   .cont-header h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -295,6 +295,7 @@
     .page {
       margin: 0;
       box-shadow: none;
+      min-height: 0;
       page-break-after: always;
       break-after: page;
     }
