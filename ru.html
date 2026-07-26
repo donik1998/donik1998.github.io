@@ -3,13 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Дониёр Муродкулов — старший Flutter-разработчик и Mobile Tech Lead</title>
-<meta name="description" content="Старший Flutter-разработчик — создаю мобильные приложения с нуля до продакшна уже более 5 лет." />
-<meta property="og:title" content="Дониёр Муродкулов — старший Flutter-разработчик" />
-<meta property="og:description" content="Старший Flutter-разработчик и Mobile Tech Lead. Создаю production-приложения уже более 5 лет." />
+<title>Дониёр Муродкулов — Senior Flutter-разработчик и Mobile Tech Lead</title>
+<meta name="description" content="Senior Flutter-разработчик: делаю мобильные приложения с нуля до продакшена уже пять лет." />
+<meta property="og:title" content="Дониёр Муродкулов — Senior Flutter-разработчик" />
+<meta property="og:description" content="Senior Flutter-разработчик и Mobile Tech Lead. Пять лет делаю приложения, которые доходят до продакшена." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://donik1998.github.io/og-image.png" />
 <meta property="og:url" content="https://donik1998.github.io/ru.html" />
+<link rel="canonical" href="https://donik1998.github.io/ru.html" />
+<link rel="alternate" hreflang="en" href="https://donik1998.github.io/" />
+<link rel="alternate" hreflang="ru" href="https://donik1998.github.io/ru.html" />
+<link rel="alternate" hreflang="uz" href="https://donik1998.github.io/uz.html" />
+<link rel="alternate" hreflang="x-default" href="https://donik1998.github.io/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Doniyor Murodkulov",
+  "jobTitle": "Senior Flutter Developer",
+  "url": "https://donik1998.github.io",
+  "email": "mailto:donikmurodkulov98@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Tashkent", "addressCountry": "UZ" },
+  "sameAs": ["https://www.linkedin.com/in/donik1998", "https://github.com/donik1998"],
+  "knowsAbout": ["Flutter", "Dart", "Mobile Development", "Clean Architecture", "Domain-Driven Design"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "INHA University in Tashkent" },
+  "worksFor": { "@type": "Organization", "name": "EMCD" }
+}
+</script>
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://donik1998.github.io/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,9 +41,10 @@
   :root {
     --ink: #1F2937;
     --ink-soft: #374151;
-    --muted: #6B7280;
+    --muted: #5D6774;
     --accent: #8B6F47;
     --accent-soft: #B8956A;
+    --accent-strong: #6F5837;
     --bg: #FBFAF7;
     --card: #FFFFFF;
     --cream: #F7F4EE;
@@ -43,7 +64,7 @@
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--accent); text-decoration: none; }
-  a:hover { color: var(--accent-soft); }
+  a:hover { color: var(--accent-strong); }
   h1, h2, h3, h4 { color: var(--ink); margin: 0; line-height: 1.25; }
 
   /* ---------- Nav ---------- */
@@ -337,7 +358,7 @@
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
   }
   @media (max-width: 800px) { .skill-cols { grid-template-columns: 1fr; } }
-  .skill-group h4 {
+  .skill-group h3 {
     font-size: 13px; color: var(--accent); text-transform: uppercase;
     letter-spacing: 0.1em; font-weight: 700; margin-bottom: 14px;
   }
@@ -470,6 +491,7 @@
         <a href="#stack">Стек</a>
         <a href="#education">Образование</a>
         <a href="#contact">Контакты</a>
+        <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
       </div>
       <div class="lang-switch">
         <a href="index.html">EN</a>
@@ -483,12 +505,15 @@
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="eyebrow">Senior Flutter Developer  ·  Mobile Tech Lead</div>
-  <h1 class="tag">Создаю production-mobile-приложения — от идеи до запуска — уже более 5 лет.</h1>
+  <h1 class="tag">Делаю мобильные приложения, которыми пользуются каждый день, — и отвечаю за них после релиза.</h1>
   <p class="blurb">
-    Недавно я возглавлял мобильное направление в <strong>Express24</strong> — B2B-приложении
-    для доставки, на которое тысячи продавцов в Ташкенте полагаются каждый день, чтобы принимать
-    и выполнять заказы. Сегодня создаю крипто- и Web3-приложения в EMCD — и всегда рад
-    поговорить о мобильной разработке, архитектуре и о том, что делает приложения живучими.
+    Пять лет в мобильной разработке, 9 приложений в продакшене — доставка, финтех, стриминг,
+    маркетплейсы, крипто. В <strong>Express24</strong> отвечал за B2B-приложение, которым каждый
+    день пользуются 3 000+ магазинов, кафе и ресторанов: принял его с crash-free 68%, за два
+    месяца довёл до 98%, перевёл проект на Feature-First DDD, а заказы — с поллинга на WebSockets.
+    В <strong>azart technologies</strong> уменьшил вес приложения на ~70 МБ и выкатил server-driven
+    UI kit, который полностью настраивается через JSON. Сейчас делаю Web3-фичи в
+    <strong>EMCD</strong> для 35K+ пользователей в месяц.
   </p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#contact">Связаться &nbsp;→</a>
@@ -500,26 +525,26 @@
 <section id="about">
   <div class="section-head">
     <span class="section-num">01 / Обо мне</span>
-    <h2>Мобильный инженер, который доводит дело до конца.</h2>
+    <h2>Мобильный разработчик, который доводит дело до конца.</h2>
   </div>
 
   <div class="about-grid about">
     <div>
       <p>
-        Я Flutter-разработчик из Ташкента. Моя история началась с пары фриланс-заказов, взятых
-        из чистого любопытства и любви к делу. За пять лет эта любознательность довела меня до
-        роли Tech Lead в одной из первых платформ доставки в Ташкенте — и до запуска приложений
-        в сферах доставки, финтеха, стриминга, маркетплейсов и крипто.
+        Я Flutter-разработчик из Ташкента. Всё началось с пары фриланс-заказов, которые я взял
+        из чистого любопытства. За пять лет я дорос до Tech Lead в одной из первых служб доставки Ташкента — и запустил
+        приложения в доставке, финтехе, стриминге, маркетплейсах и крипто.
       </p>
       <p>
-        Больше всего мне нравится в этой работе не сам запуск первой версии, а то, как держать
-        её живой. Стабильность, релизные циклы и аналитика — именно то, от чего зависит,
-        проживёт приложение или нет, и они получают ровно столько же внимания, сколько и
-        сама разработка.
+        Больше всего в этой работе мне нравится не запуск первой версии, а то, что происходит
+        дальше. Стабильность, релизный цикл и аналитика решают, выживет приложение или нет, —
+        и я уделяю им столько же внимания, сколько и самой разработке.
       </p>
       <p>
-        Сейчас я работаю в <strong>EMCD</strong> — крипто/Web3-платформе с 35K+ активными пользователями в месяц.
-        Открыт к ролям Senior Flutter и Mobile Lead по всему миру.
+        Сейчас работаю в <strong>EMCD</strong> — крипто/Web3-платформе, у которой 35K+ активных
+        пользователей в месяц. Рассматриваю позиции Senior Flutter и Mobile Lead —
+        <strong>удалённо, из любой точки мира</strong>. Сам в Ташкенте (UTC+5): по времени полностью
+        совпадаю со странами Залива и почти весь рабочий день — с Европой.
       </p>
     </div>
 
@@ -529,8 +554,8 @@
         <div class="stat-label">лет с Flutter</div>
       </div>
       <div class="stat">
-        <div class="stat-num">~328 L</div>
-        <div class="stat-label">литров кофе в коде</div>
+        <div class="stat-num">68→98%</div>
+        <div class="stat-label">рост crash-free</div>
       </div>
       <div class="stat">
         <div class="stat-num">9</div>
@@ -547,7 +572,7 @@
 <!-- ===== PROJECTS ===== -->
 <section id="work">
   <div class="section-head">
-    <span class="section-num">02 / Избранные проекты</span>
+    <span class="section-num">02 / Избранное</span>
     <h2>Избранные проекты.</h2>
   </div>
 
@@ -558,17 +583,19 @@
       <h3>Express24 Merchant App</h3>
       <div class="card-role">Flutter Developer → Mobile Tech Lead  ·  2023 – 2024</div>
       <p>
-        B2B Flutter-приложение, которым пользуются <span class="highlight">3K+ магазинов, кафе
-        и ресторанов</span> для приёма и выполнения заказов. Отвечал за мобильную архитектуру,
-        релизы и CI; поднял crash-free rate <span class="highlight">с 68% до 98%</span>,
-        перевёл проект на Feature-First DDD и заменил поллинг заказов на real-time-конвейер на WebSockets.
+        B2B-приложение, через которое <span class="highlight">3 000+ магазинов, кафе
+        и ресторанов</span> принимают и выполняют заказы. Отвечал за мобильную архитектуру,
+        релизы и CI; принял приложение с crash-free 68%, устранил причины нестабильности и
+        <span class="highlight">за два месяца довёл до 98%</span> — пользователей с крашами
+        стало примерно в 16 раз меньше. Перевёл проект на Feature-First DDD, а заказы —
+        с поллинга на WebSockets.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">BLoC</span>
         <span class="chip">DDD</span><span class="chip">WebSockets</span>
         <span class="chip">CircleCI</span>
       </div>
-      <div class="card-status">Больше не поддерживается</div>
+      <div class="card-status">Проект закрыт — готов разобрать архитектуру на созвоне.</div>
     </article>
 
     <article class="card">
@@ -576,9 +603,10 @@
       <h3>EMCD Coinhold</h3>
       <div class="card-role">Flutter Developer  ·  2025 – н. в.</div>
       <p>
-        Мобильное приложение крипто-платформы из 400 человек с
-        <span class="highlight">35K+ активными пользователями в месяц</span>. Реализую фичи с Web3-интеграциями,
-        которые позволяют пользователям зарабатывать доход на крипто-активах, работая в большой Flutter-команде.
+        Мобильный кошелёк криптоплатформы: <span class="highlight">35K+ активных пользователей
+        в месяц</span>, над продуктом работает компания на 400 человек. Веду свою функциональную
+        область от и до: новые Web3-фичи, рефакторинг легаси и покрытие unit-, widget-, golden-
+        и E2E-тестами.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">Web3</span>
@@ -591,12 +619,33 @@
     </article>
 
     <article class="card">
+      <span class="card-tag">Social discovery  ·  Производительность</span>
+      <h3>Shuffle</h3>
+      <div class="card-role">Flutter Developer  ·  azart technologies, Дубай  ·  2023 – 2024</div>
+      <p>
+        Приложение для поиска мест и событий в Дубае и на Пхукете. Отвечал за всю анимацию в интерфейсе, собрал интерактивные графики в стиле Telegram на
+        <span class="highlight">CustomPaint</span> и выкатил server-driven UI kit, который
+        полностью настраивается через JSON. Уменьшил вес приложения на <span class="highlight">~70 МБ</span>; сделал подписки с серверной проверкой чеков; подключил HealthKit, Google Fit
+        и Health Connect.
+      </p>
+      <div class="card-tech">
+        <span class="chip">Flutter</span><span class="chip">CustomPaint</span>
+        <span class="chip">Server-driven UI</span><span class="chip">AnimationController</span>
+        <span class="chip">HealthKit</span>
+      </div>
+      <div class="card-links">
+        <a href="https://apps.apple.com/us/app/shuffle-palette-yourself/id6449493932" target="_blank" rel="noopener">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=tech.azart.shuffle" target="_blank" rel="noopener">Google Play</a>
+      </div>
+    </article>
+
+    <article class="card">
       <span class="card-tag">Лояльность  ·  QR</span>
       <h3>Tegen Loyalty</h3>
       <div class="card-role">Middle Flutter Developer  ·  Ptolemay LLC  ·  2021 – 2023</div>
       <p>
-        Приложение лояльности для розничной сети мясных продуктов. Покупатели получают
-        бонусы по QR-кодам в приложении, а магазины сканируют их на своей стороне.
+        Приложение лояльности для сети мясных магазинов. Покупатели получают бонусы
+        по QR-коду в приложении, а магазины сканируют его у себя на кассе.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">QR</span>
@@ -611,10 +660,10 @@
     <article class="card">
       <span class="card-tag">Маркетплейс  ·  Кроссплатформа</span>
       <h3>7Tech</h3>
-      <div class="card-role">Contract Software Engineer  ·  2025</div>
+      <div class="card-role">Contract Software Engineer (Flutter)  ·  2025</div>
       <p>
-        Маркетплейс, выпущенный на <span class="highlight">iOS, Android и Web</span> из
-        единой Flutter-кодовой базы в составе кросс-функциональной продуктовой команды.
+        Маркетплейс, который вышел сразу на <span class="highlight">iOS, Android и веб</span>
+        из одной кодовой базы на Flutter. Работал в кросс-функциональной продуктовой команде.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter Web</span><span class="chip">Flutter Mobile</span>
@@ -622,7 +671,7 @@
       </div>
       <div class="card-links">
         <a href="https://apps.apple.com/uz/app/7tech-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B5-%D1%81%D0%B5%D0%B3%D0%BE%D0%B4%D0%BD%D1%8F/id6479844581" target="_blank" rel="noopener">App Store</a>
-        <a href="https://seventech.uz/" target="_blank" rel="noopener">Android APK</a>
+        <a href="https://seventech.uz/" target="_blank" rel="noopener">Android-приложение</a>
       </div>
     </article>
 
@@ -631,14 +680,15 @@
       <h3>Million TV</h3>
       <div class="card-role">Contract Flutter Developer  ·  2025</div>
       <p>
-        Стриминг узбекских фильмов и сериалов. Отвечал за релизы от и до и собрал
-        насыщенный фичами видеоплеер с выбором языка и качества, навигацией по сериям и
-        возобновлением воспроизведения.
+        Стриминг узбекских фильмов и сериалов. Вёл релизы от и до, собрал полноценный
+        видеоплеер: выбор языка и качества, переходы по сериям, продолжение с того места,
+        где остановился.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">Video Player</span>
         <span class="chip">BLoC</span>
       </div>
+      <div class="card-status">Права на приложение у заказчика — покажу и разберу по запросу.</div>
     </article>
 
     <article class="card">
@@ -646,14 +696,14 @@
       <h3>Cuppy</h3>
       <div class="card-role">Contract Flutter Developer  ·  2024</div>
       <p>
-        Платформа для кофеен с двумя поверхностями — кабинет владельца и приложение для
-        клиентов — с насыщенным кастомным UI на <span class="highlight">CustomPainter</span>
-        и scope-based DI.
+        Платформа для кофеен: два приложения — кабинет владельца и приложение для гостей.
+        Кастомный интерфейс на <span class="highlight">CustomPainter</span>, DI на scoped-контейнерах.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">Provider</span>
         <span class="chip">BLoC</span><span class="chip">CustomPainter</span>
       </div>
+      <div class="card-status">Закрытая разработка для заказчика — покажу по запросу.</div>
     </article>
 
     <article class="card">
@@ -661,8 +711,8 @@
       <h3>Bakery HR App</h3>
       <div class="card-role">Flutter Developer  ·  Udevs  ·  2021</div>
       <p>
-        HR-приложение для национальной сети пекарен, насчитывающей
-        <span class="highlight">100+ магазинов по всему Узбекистану</span> — UI и интеграции с REST API.
+        HR-приложение для сети пекарен со
+        <span class="highlight">100+ точками по всему Узбекистану</span> — UI и интеграции с REST API.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">REST</span>
@@ -672,10 +722,10 @@
     <article class="card">
       <span class="card-tag">CRM  ·  Firebase</span>
       <h3>Auto Repair CRM</h3>
-      <div class="card-role">Фриланс  ·  Kwork.ru  ·  2020 – 2021</div>
+      <div class="card-role">Фриланс  ·  Kwork  ·  2020 – 2021</div>
       <p>
-        CRM «под ключ» для автосервиса на Flutter для
-        <span class="highlight">мобильных и веб</span>, целиком на Firebase Firestore и Storage.
+        CRM «под ключ» для автосервиса — на Flutter, сразу для
+        <span class="highlight">мобильных платформ и веба</span>, целиком на Firebase Firestore и Storage.
       </p>
       <div class="card-tech">
         <span class="chip">Flutter Web</span><span class="chip">Firestore</span>
@@ -724,6 +774,15 @@
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
+        <div class="dates">Янв 2023 — окт 2024</div>
+        <div class="role">Flutter Developer <span style="font-weight:500;color:var(--muted);">(параллельно с Express24)</span></div>
+        <div class="company">azart technologies · Shuffle</div>
+        <div class="location">Дубай (удалённо)</div>
+      </div>
+    </div>
+    <div class="tl-v-item">
+      <div class="tl-v-dot"></div>
+      <div class="tl-v-content">
         <div class="dates">Ноя 2021 — янв 2023</div>
         <div class="role">Middle Flutter Developer</div>
         <div class="company">Ptolemay LLC</div>
@@ -744,7 +803,7 @@
       <div class="tl-v-content">
         <div class="dates">Сен 2020 — май 2021</div>
         <div class="role">Фриланс Flutter Developer</div>
-        <div class="company">Kwork.ru</div>
+        <div class="company">Kwork</div>
         <div class="location">Удалённо</div>
       </div>
     </div>
@@ -760,23 +819,24 @@
 
   <div class="skill-cols">
     <div class="skill-group">
-      <h4>Основное</h4>
+      <h3>Основное</h3>
       <div class="skill-list">
         <span class="skill">Flutter</span><span class="skill">Dart</span>
         <span class="skill">BLoC</span><span class="skill">Provider</span>
         <span class="skill">ValueNotifier</span><span class="skill">MobX</span>
         <span class="skill">GetX</span>
         <span class="skill">Clean Architecture</span><span class="skill">DDD</span>
-        <span class="skill">MVC</span><span class="skill">Platform Channels</span>
+        <span class="skill">Platform Channels</span>
+        <span class="skill">CustomPaint</span><span class="skill">Custom Animations</span>
       </div>
     </div>
 
     <div class="skill-group">
-      <h4>Платформы и инструменты</h4>
+      <h3>Платформы и инструменты</h3>
       <div class="skill-list">
         <span class="skill">Firebase</span><span class="skill">Firestore</span>
         <span class="skill">REST</span><span class="skill">WebSockets</span>
-        <span class="skill">Codemagic</span><span class="skill">CircleCI</span>
+        <span class="skill">Codemagic</span><span class="skill">CircleCI</span><span class="skill">Fastlane</span>
         <span class="skill">Git / GitFlow</span><span class="skill">GitLab</span>
         <span class="skill">Jira</span><span class="skill">ClickUp</span>
         <span class="skill">Claude Code</span><span class="skill">Cursor</span>
@@ -784,11 +844,12 @@
     </div>
 
     <div class="skill-group">
-      <h4>Тестирование</h4>
+      <h3>Тестирование</h3>
       <div class="skill-list">
         <span class="skill">Unit Tests</span>
         <span class="skill">Widget Tests</span>
         <span class="skill">Golden Tests</span>
+        <span class="skill">E2E Tests</span>
       </div>
     </div>
   </div>
@@ -804,7 +865,7 @@
   <div class="edu-grid">
     <div class="edu-card">
       <div class="edu-tag">Степень</div>
-      <h3>Бакалавр компьютерной и программной инженерии</h3>
+      <h3>Бакалавр компьютерной инженерии и разработки ПО</h3>
       <div class="edu-school">INHA University в Ташкенте</div>
       <div class="edu-dates">2018 — 2022</div>
     </div>
@@ -822,16 +883,15 @@
 <section id="personality">
   <div class="section-head">
     <span class="section-num">06 / Личное</span>
-    <h2>За пределами редактора.</h2>
+    <h2>Помимо кода.</h2>
   </div>
 
   <div class="pers-cols">
 
-    <!-- Left column: chip-heavy tiles -->
     <div class="pers-col">
       <div class="pers-tile">
         <div class="pers-tile-title">Спидкубинг</div>
-        <div class="pers-tile-meta">Участник официального турнира WCA · 2017</div>
+        <div class="pers-tile-meta">Участник официальных соревнований WCA · 2017</div>
         <div class="skill-list pers-tile-chips">
           <span class="skill">2×2</span>
           <span class="skill">3×3</span>
@@ -839,55 +899,24 @@
           <span class="skill">5×5</span>
           <span class="skill">6×6</span>
           <span class="skill">7×7</span>
-          <span class="skill">Megaminx</span>
-          <span class="skill">Teraminx</span>
+          <span class="skill">Мегаминкс</span>
+          <span class="skill">Тераминкс</span>
           <span class="skill">Mirror Cube</span>
-        </div>
-      </div>
-
-      <div class="pers-tile">
-        <div class="pers-tile-title">Путешествия</div>
-        <div class="pers-tile-meta">Города, в которых я побывал</div>
-        <div class="skill-list pers-tile-chips">
-          <span class="skill">Нью-Йорк <span class="lvl">· 2019</span></span>
-          <span class="skill">Москва <span class="lvl">· 2024</span></span>
-          <span class="skill">Дубай <span class="lvl">· 2025</span></span>
-        </div>
-      </div>
-
-      <div class="pers-tile">
-        <div class="pers-tile-title">Языки</div>
-        <div class="pers-tile-meta">Разговорные</div>
-        <div class="skill-list pers-tile-chips">
-          <span class="skill">Русский <span class="lvl">— родной</span></span>
-          <span class="skill">Таджикский <span class="lvl">— родной</span></span>
-          <span class="skill">Английский <span class="lvl">— профессиональный</span></span>
-          <span class="skill">Узбекский <span class="lvl">— рабочий</span></span>
-          <span class="skill">Французский <span class="lvl">— базовый</span></span>
         </div>
       </div>
     </div>
 
-    <!-- Right column: stat-only tiles in a 2-col grid -->
-    <div class="pers-col pers-col--grid">
+    <div class="pers-col">
       <div class="pers-tile">
-        <div class="pers-tile-title">Видеоигры</div>
-        <div class="pers-tile-meta">5 000+ часов удовольствия в Steam</div>
-      </div>
-
-      <div class="pers-tile">
-        <div class="pers-tile-title">Фильмы</div>
-        <div class="pers-tile-meta">1 000+ просмотренных тайтлов</div>
-      </div>
-
-      <div class="pers-tile">
-        <div class="pers-tile-title">Аниме</div>
-        <div class="pers-tile-meta">50+ просмотренных тайтлов</div>
-      </div>
-
-      <div class="pers-tile">
-        <div class="pers-tile-title">Lego</div>
-        <div class="pers-tile-meta">1 600+ собранных деталей · ~15 запасных найдено</div>
+        <div class="pers-tile-title">Языки</div>
+        <div class="pers-tile-meta">Владею</div>
+        <div class="skill-list pers-tile-chips">
+          <span class="skill">Русский <span class="lvl">— родной</span></span>
+          <span class="skill">Таджикский <span class="lvl">— родной</span></span>
+          <span class="skill">Английский <span class="lvl">— C1 (профессиональный)</span></span>
+          <span class="skill">Узбекский <span class="lvl">— рабочий уровень</span></span>
+          <span class="skill">Французский <span class="lvl">— базовый</span></span>
+        </div>
       </div>
     </div>
 
@@ -897,21 +926,24 @@
 <!-- ===== CONTACT ===== -->
 <section id="contact">
   <div class="contact">
-    <h3>Давайте что-нибудь построим.</h3>
+    <h3>Давайте обсудим сотрудничество.</h3>
     <p>
-      Открыт к ролям Senior Flutter и Mobile Lead по всему миру. Готов и к удалённой
-      контрактной работе.
+      Рассматриваю позиции Senior Flutter и Mobile Lead — удалённо, из любой точки мира.
+      Сам в Ташкенте (UTC+5): по времени полностью совпадаю со странами Залива и почти весь
+      рабочий день — с Европой. С оформлением всё просто: работаю по сервисному договору
+      как подрядчик или через EOR вроде Deel.
     </p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Напишите мне &nbsp;→</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/donik1998" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-secondary" href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-secondary" href="cv-ru.html" target="_blank" rel="noopener">Открыть резюме</a>
     </div>
   </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Doniyor Murodkulov  ·  Собрано вручную на HTML и CSS
+  © <span id="year"></span> Doniyor Murodkulov  ·  Свёрстано вручную на HTML и CSS
 </footer>
 
 <script>
