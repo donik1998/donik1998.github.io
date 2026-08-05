@@ -6,29 +6,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#E3E9F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070C15" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
+  /* Neo-Corporate — measured blue. Dark applies on screen only; print is
+     always the white sheet with dark ink (see the print block at the end). */
   :root {
-    --ink: #1F2937;
-    --ink-soft: #374151;
-    --muted: #6B7280;
-    --body-gray: #4B5563;
-    --accent: #8B6F47;
-    --accent-soft: #B8956A;
-    --cream: #F7F4EE;
-    --divider: #E5E0D5;
-    --rule: #D8D2C4;
+    color-scheme: light;
+    --ink: #13233C;
+    --ink-soft: #33455F;
+    --muted: #556780;
+    --body-gray: #3F5372;
+    --accent: #2463C4;
+    --accent-soft: #5B93E0;
+    --accent-ink: #FFFFFF;
+    --cream: #EAF1FB;
+    --divider: #D3DCE8;
+    --rule: #C4D2E4;
+    --desk: #E3E9F2;
+    --sheet: #FFFFFF;
+    --sheet-shadow: rgba(19, 35, 60, 0.10);
+  }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --ink: #E9EEFA;
+    --ink-soft: #C6D2E4;
+    --muted: #9AABC2;
+    --body-gray: #B4C2D8;
+    --accent: #63A4FF;
+    --accent-soft: #3E7BD1;
+    --accent-ink: #08111F;
+    --cream: #16243B;
+    --divider: #25314A;
+    --rule: #2B3852;
+    --desk: #070C15;
+    --sheet: #141D2F;
+    --sheet-shadow: rgba(0, 0, 0, 0.55);
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+      color-scheme: dark;
+      --ink: #E9EEFA;
+      --ink-soft: #C6D2E4;
+      --muted: #9AABC2;
+      --body-gray: #B4C2D8;
+      --accent: #63A4FF;
+      --accent-soft: #3E7BD1;
+      --accent-ink: #08111F;
+      --cream: #16243B;
+      --divider: #25314A;
+      --rule: #2B3852;
+      --desk: #070C15;
+      --sheet: #141D2F;
+      --sheet-shadow: rgba(0, 0, 0, 0.55);
+    }
   }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Golos Text', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--ink);
-    background: #E8E6E1; /* screen only — print is white */
+    background: var(--desk); /* screen only — print is always white */
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -38,8 +81,8 @@
     width: 210mm;
     min-height: 297mm;
     margin: 24px auto;
-    background: #FFFFFF;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    background: var(--sheet);
+    box-shadow: 0 10px 28px var(--sheet-shadow);
     overflow: hidden;
     position: relative;
     padding: 0 14mm 8mm;
@@ -71,7 +114,7 @@
     margin-bottom: 3mm;
   }
   .header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Golos Text', 'Space Grotesk', sans-serif;
     font-weight: 700;
     font-size: 30pt;
     letter-spacing: -0.5px;
@@ -114,7 +157,7 @@
     padding: 4mm 4.5mm;
   }
   .stat-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Golos Text', 'Space Grotesk', sans-serif;
     font-size: 16pt;
     font-weight: 700;
     color: var(--accent);
@@ -153,7 +196,7 @@
     white-space: nowrap;
   }
   .section-h h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Golos Text', 'Space Grotesk', sans-serif;
     font-size: 17pt;
     font-weight: 700;
     margin: 0;
@@ -185,7 +228,7 @@
     width: 3.2mm; height: 3.2mm;
     border-radius: 50%;
     background: var(--accent);
-    border: 0.7mm solid #fff;
+    border: 0.7mm solid var(--sheet);
     box-shadow: 0 0 0 0.4mm var(--accent);
   }
   .tl-top {
@@ -229,7 +272,7 @@
   /* ---------- Continuation header ---------- */
   .cont-header { padding: 8mm 0 4mm; }
   .cont-header h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Golos Text', 'Space Grotesk', sans-serif;
     font-weight: 700;
     font-size: 14pt;
     margin: 0;
@@ -291,6 +334,14 @@
   /* ---------- Print rules ---------- */
   @page { size: A4; margin: 0; }
   @media print {
+    /* A CV is a document first: printing is always the white sheet with dark
+       ink, whatever the visitor happens to be viewing it in. */
+    html[data-theme="dark"], html:not([data-theme="light"]) {
+      color-scheme: light;
+      --ink: #13233C; --ink-soft: #33455F; --muted: #556780; --body-gray: #3F5372;
+      --accent: #2463C4; --accent-soft: #5B93E0; --accent-ink: #FFFFFF; --cream: #EAF1FB;
+      --divider: #D3DCE8; --rule: #C4D2E4; --desk: #FFFFFF; --sheet: #FFFFFF;
+    }
     body { background: white; }
     .page {
       width: auto;
@@ -309,7 +360,7 @@
   .print-helper {
     position: fixed;
     top: 20px; right: 20px;
-    background: white;
+    background: var(--sheet);
     padding: 12px 16px;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -322,8 +373,8 @@
   .print-helper b { color: var(--accent); }
   .print-helper button {
     margin-top: 8px;
-    background: var(--ink);
-    color: white;
+    background: var(--accent);
+    color: var(--accent-ink);
     border: 0;
     padding: 8px 14px;
     border-radius: 6px;
@@ -332,7 +383,7 @@
     font-size: 13px;
     width: 100%;
   }
-  .print-helper button:hover { background: var(--accent); }
+  .print-helper button:hover { background: var(--accent-soft); }
   .print-helper .ats-link {
     display: block;
     margin-top: 8px;
@@ -342,7 +393,25 @@
     text-align: center;
     font-weight: 600;
   }
+
+  /* Theme toggle inside the on-screen helper (hidden on print with it) */
+  .print-helper .theme-toggle {
+    display: block; width: 100%; margin-top: 8px;
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--divider); border-radius: 8px;
+    padding: 7px 10px; font: inherit; font-size: 12px; font-weight: 600;
+    cursor: pointer; transition: color .15s, border-color .15s;
+  }
+  .print-helper .theme-toggle:hover { color: var(--accent); border-color: var(--accent-soft); }
 </style>
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -353,6 +422,7 @@
   <a class="ats-link" href="cv.html">English version →</a>
   <a class="ats-link" href="cv-uz.html">O‘zbekcha versiyasi →</a>
   <a class="ats-link" href="cv-ats.html">ATS version (EN) →</a>
+  <button class="theme-toggle" id="themeToggle" type="button"></button>
 </div>
 
 <!-- ============== PAGE 1 ============== -->
@@ -608,5 +678,23 @@
 
 </div>
 
+<script>
+  (function () {
+    var btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() {
+      return document.documentElement.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+    }
+    function label() { btn.textContent = current() === 'dark' ? "Светлая тема" : "Тёмная тема"; }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      label();
+    });
+    label();
+  })();
+</script>
 </body>
 </html>

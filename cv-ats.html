@@ -8,13 +8,37 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <style>
   /* ATS-safe: single column, no photo, no graphics, semantic headings. */
+  /* Neo-Corporate palette. Colors only — this document stays single-column,
+     semantic and graphic-free so resume parsers read it exactly as before. */
+  :root {
+    color-scheme: light;
+    --ink: #13233C;
+    --ink-soft: #33455F;
+    --accent: #2463C4;
+    --accent-ink: #FFFFFF;
+    --desk: #E3E9F2;
+    --sheet: #FFFFFF;
+    --sheet-shadow: rgba(19, 35, 60, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --ink: #E9EEFA;
+      --ink-soft: #C6D2E4;
+      --accent: #63A4FF;
+      --accent-ink: #08111F;
+      --desk: #070C15;
+      --sheet: #141D2F;
+      --sheet-shadow: rgba(0, 0, 0, 0.55);
+    }
+  }
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
   body {
-    font-family: Georgia, 'Times New Roman', serif;
-    color: #111827;
-    background: #E8E6E1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--desk);
     line-height: 1.5;
     font-size: 10.5pt;
   }
@@ -22,8 +46,8 @@
     width: 210mm;
     min-height: 297mm;
     margin: 24px auto;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    background: var(--sheet);
+    box-shadow: 0 8px 24px var(--sheet-shadow);
     padding: 16mm 18mm;
   }
 
@@ -40,15 +64,15 @@
   .contact {
     font-size: 9.5pt;
     margin: 0 0 6mm;
-    color: #1f2937;
+    color: var(--ink-soft);
   }
-  .contact a { color: #1f2937; }
+  .contact a { color: var(--accent); }
 
   h2 {
     font-size: 12pt;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1.5px solid #111827;
+    border-bottom: 1.5px solid var(--accent);
     padding-bottom: 1.5mm;
     margin: 7mm 0 3.5mm;
   }
@@ -75,6 +99,12 @@
 
   @page { size: A4; margin: 0; }
   @media print {
+    /* Always the white sheet with dark ink, whatever the screen preference. */
+    :root {
+      color-scheme: light;
+      --ink: #13233C; --ink-soft: #33455F; --accent: #2463C4;
+      --accent-ink: #FFFFFF; --desk: #FFFFFF; --sheet: #FFFFFF;
+    }
     body { background: #fff; }
     .page { width: auto; margin: 0; box-shadow: none; min-height: 0; }
     .job { page-break-inside: avoid; break-inside: avoid; }
@@ -84,7 +114,7 @@
   .print-helper {
     position: fixed;
     top: 20px; right: 20px;
-    background: #fff;
+    background: var(--sheet);
     padding: 12px 16px;
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -96,8 +126,8 @@
   }
   .print-helper button {
     margin-top: 8px;
-    background: #111827;
-    color: #fff;
+    background: var(--accent);
+    color: var(--accent-ink);
     border: 0;
     padding: 8px 14px;
     border-radius: 6px;
@@ -110,7 +140,7 @@
     display: block;
     margin-top: 8px;
     font-size: 12px;
-    color: #8B6F47;
+    color: var(--accent);
     text-decoration: none;
     text-align: center;
     font-weight: 600;

@@ -19,7 +19,9 @@
 <meta name="twitter:image" content="https://donik1998.github.io/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <script type="application/ld+json">
@@ -39,294 +41,292 @@
 }
 </script>
 <style>
+  /* ==========================================================================
+     Neo-Corporate — clean cards, measured blue, dependable rhythm.
+     Light is the printed/default-ish ground; dark follows the visitor's OS
+     unless they pick a side with the toggle (stored in localStorage).
+     ========================================================================== */
   :root {
-    --ink: #1F2937;
-    --ink-soft: #374151;
-    --muted: #5D6774;
-    --accent: #8B6F47;
-    --accent-soft: #B8956A;
-    --accent-strong: #6F5837;
-    --bg: #FBFAF7;
-    --card: #FFFFFF;
-    --cream: #F7F4EE;
-    --divider: #E5E0D5;
-    --radius: 14px;
-    --shadow-md: 0 8px 24px rgba(31, 41, 55, 0.06), 0 2px 6px rgba(31, 41, 55, 0.04);
-    --maxw: 1140px;
+    color-scheme: light;
+    --surface:      #F6F8FB;
+    --raised:       #FFFFFF;
+    --ink:          #13233C;
+    --ink-soft:     #33455F;
+    --muted:        #556780;
+    --line:         #D3DCE8;
+    --accent:       #2463C4;
+    --accent-text:  #2463C4;
+    --accent-ink:   #FFFFFF;
+    --accent-wash:  #EAF1FB;
+    --accent-edge:  #A9C6EF;
+    --nav-bg:       rgba(246, 248, 251, 0.82);
+    --shadow-sm:    0 1px 2px rgba(19, 35, 60, 0.06);
+    --shadow-md:    0 10px 28px rgba(19, 35, 60, 0.10), 0 2px 6px rgba(19, 35, 60, 0.05);
+    --radius:       8px;
+    --radius-lg:    14px;
+    --maxw:         1140px;
   }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+    --surface:      #0B1220;
+    --raised:       #141D2F;
+    --ink:          #E9EEFA;
+    --ink-soft:     #C6D2E4;
+    --muted:        #9AABC2;
+    --line:         #25314A;
+    --accent:       #63A4FF;
+    --accent-text:  #63A4FF;
+    --accent-ink:   #08111F;
+    --accent-wash:  #16243B;
+    --accent-edge:  #35547F;
+    --nav-bg:       rgba(11, 18, 32, 0.82);
+    --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md:    0 12px 32px rgba(0, 0, 0, 0.50), 0 2px 8px rgba(0, 0, 0, 0.32);
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface:      #0B1220;
+      --raised:       #141D2F;
+      --ink:          #E9EEFA;
+      --ink-soft:     #C6D2E4;
+      --muted:        #9AABC2;
+      --line:         #25314A;
+      --accent:       #63A4FF;
+      --accent-text:  #63A4FF;
+      --accent-ink:   #08111F;
+      --accent-wash:  #16243B;
+      --accent-edge:  #35547F;
+      --nav-bg:       rgba(11, 18, 32, 0.82);
+      --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.35);
+      --shadow-md:    0 12px 32px rgba(0, 0, 0, 0.50), 0 2px 8px rgba(0, 0, 0, 0.32);
+    }
+  }
+
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Space Grotesk', 'Golos Text', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--ink);
-    background: var(--bg);
+    /* Full-bleed wash painted on the body itself. As a pseudo-element inside
+       .hero it was clipped to the 1140px column and the gradient's falloff
+       showed as a hard rectangle edge. */
+    background-color: var(--surface);
+    background-image: radial-gradient(1250px 480px at 50% 0,
+                      var(--accent-wash), transparent 72%);
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-position: top center;
+    background-attachment: scroll;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    transition: background 0.2s ease, color 0.2s ease;
   }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { color: var(--accent-strong); }
-  h1, h2, h3, h4 { color: var(--ink); margin: 0; line-height: 1.25; }
+  a { color: var(--accent-text); text-decoration: none; }
+  a:hover { color: var(--ink); }
+  h1, h2, h3, h4 {
+    color: var(--ink); margin: 0; line-height: 1.15;
+    font-family: 'Space Grotesk', 'Golos Text', sans-serif; letter-spacing: -0.02em;
+  }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
   /* ---------- Nav ---------- */
   nav {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(251, 250, 247, 0.85);
-    backdrop-filter: saturate(180%) blur(10px);
-    border-bottom: 1px solid var(--divider);
+    background: var(--nav-bg);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
   }
   .nav-inner {
     max-width: var(--maxw); margin: 0 auto;
-    padding: 16px 24px;
+    padding: 15px 24px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .nav-brand {
-    font-weight: 700; font-size: 16px; color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  .nav-brand span { color: var(--accent); }
-  .nav-actions { display: flex; align-items: center; gap: 22px; }
-  .nav-links { display: flex; gap: 22px; }
+  .nav-brand { font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: -0.02em; }
+  .nav-brand span { color: var(--accent-text); }
+  .nav-actions { display: flex; align-items: center; gap: 18px; }
+  .nav-links { display: flex; gap: 20px; }
   .nav-links a {
-    color: var(--ink-soft); font-weight: 500; font-size: 14px;
+    color: var(--muted); font-weight: 500; font-size: 14px;
     transition: color 0.15s;
   }
-  .nav-links a:hover { color: var(--accent); }
-  @media (max-width: 700px) { .nav-links { display: none; } }
+  .nav-links a:hover { color: var(--accent-text); }
+  @media (max-width: 820px) { .nav-links { display: none; } }
 
   /* Language switcher */
-  .lang-switch {
-    display: flex; gap: 2px;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 0.04em;
-  }
+  .lang-switch { display: flex; gap: 2px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; }
   .lang-switch a {
-    color: var(--muted);
-    padding: 6px 9px;
-    border-radius: 8px;
+    color: var(--muted); padding: 6px 9px; border-radius: var(--radius);
     transition: color 0.15s, background 0.15s;
   }
-  .lang-switch a:hover { color: var(--ink); background: var(--cream); }
-  .lang-switch a.active {
-    color: var(--accent);
-    background: var(--cream);
+  .lang-switch a:hover { color: var(--ink); background: var(--accent-wash); }
+  .lang-switch a.active { color: var(--accent-ink); background: var(--accent); }
+
+  /* Theme toggle */
+  .theme-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; padding: 0;
+    background: var(--raised); color: var(--muted);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    cursor: pointer; transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .theme-toggle:hover { color: var(--accent-text); border-color: var(--accent-edge); }
+  .theme-toggle svg { width: 17px; height: 17px; display: block; }
+  .theme-toggle .icon-moon { display: none; }
+  html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+  html[data-theme="dark"] .theme-toggle .icon-sun  { display: none; }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .theme-toggle .icon-moon { display: block; }
+    html:not([data-theme="light"]) .theme-toggle .icon-sun  { display: none; }
   }
 
   /* ---------- Hero ---------- */
   .hero {
     max-width: var(--maxw); margin: 0 auto;
-    padding: 96px 24px 64px;
+    padding: 92px 24px 60px;
+    position: relative;
   }
   .eyebrow {
-    color: var(--accent); font-weight: 600; font-size: 13px;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    margin-bottom: 16px;
+    color: var(--accent-text); font-weight: 700; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    margin-bottom: 18px;
   }
   .hero h1.tag {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(32px, 4.6vw, 56px);
     font-weight: 700;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
     color: var(--ink);
-    margin: 0 0 28px;
-    max-width: 760px;
+    margin: 0 0 26px;
+    max-width: 18ch;
   }
   .hero .blurb {
-    font-size: 17px; color: var(--ink-soft); max-width: 720px;
-    margin-bottom: 36px;
+    font-size: 16.5px; color: var(--ink-soft); max-width: 68ch;
+    margin-bottom: 34px;
   }
+  .hero .blurb strong { color: var(--ink); font-weight: 600; }
   .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 22px; border-radius: 999px;
-    font-weight: 600; font-size: 14.5px;
-    transition: transform 0.15s, box-shadow 0.15s, background 0.15s, color 0.15s;
+    padding: 12px 22px; border-radius: var(--radius);
+    font-weight: 600; font-size: 14px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s, color 0.15s, border-color 0.15s;
   }
-  .btn-primary { background: var(--ink); color: #fff; }
-  .btn-primary:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
-  .btn-secondary {
-    background: var(--cream); color: var(--ink);
-    border: 1px solid var(--divider);
-  }
-  .btn-secondary:hover { background: #fff; color: var(--ink); transform: translateY(-1px); }
+  a.btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: var(--shadow-sm); }
+  a.btn-primary:hover { color: var(--accent-ink); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  a.btn-secondary { background: var(--raised); color: var(--ink); border: 1px solid var(--line); }
+  a.btn-secondary:hover { color: var(--ink); border-color: var(--accent-edge); transform: translateY(-1px); }
 
   /* ---------- Sections ---------- */
   section { max-width: var(--maxw); margin: 0 auto; padding: 56px 24px; }
-  .section-head {
-    display: flex; align-items: baseline; gap: 16px;
-    margin-bottom: 36px; flex-wrap: wrap;
-  }
+  .section-head { margin-bottom: 34px; }
   .section-num {
-    color: var(--accent); font-weight: 700; font-size: 13px;
-    letter-spacing: 0.12em; text-transform: uppercase;
+    display: block;
+    color: var(--accent-text); font-weight: 700; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase;
     font-feature-settings: "tnum" 1;
+    margin-bottom: 10px;
   }
-  .section-head h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px; font-weight: 700; letter-spacing: -0.01em;
-  }
+  .section-head h2 { font-size: clamp(26px, 3.2vw, 32px); font-weight: 700; letter-spacing: -0.02em; }
 
   /* ---------- About ---------- */
-  .about-grid {
-    display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px;
-  }
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; }
   @media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; } }
   .about p { font-size: 16px; color: var(--ink-soft); margin: 0 0 16px; }
-  .stats {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-  }
+  .about strong { color: var(--ink); font-weight: 600; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+           align-content: start; grid-auto-rows: min-content; }
   .stat {
-    background: var(--cream);
-    padding: 22px; border-radius: var(--radius);
-    border: 1px solid var(--divider);
+    background: var(--raised); padding: 22px;
+    border-radius: var(--radius-lg); border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
   }
   .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px; font-weight: 700; color: var(--ink);
-    line-height: 1.1; letter-spacing: -0.01em;
+    font-size: 30px; font-weight: 700; color: var(--accent-text);
+    line-height: 1.05; letter-spacing: -0.03em;
   }
   .stat-label {
-    font-size: 12px; color: var(--muted); margin-top: 8px;
-    text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;
+    font-size: 11px; color: var(--muted); margin-top: 8px;
+    text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600;
   }
 
-  /* ---------- Projects (3-col) ---------- */
-  .project-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
-  }
+  /* ---------- Projects ---------- */
+  .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   @media (max-width: 980px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px)  { .project-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .project-grid { grid-template-columns: 1fr; } }
   .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 1px solid var(--divider);
+    background: var(--raised);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
     padding: 24px;
+    box-shadow: var(--shadow-sm);
     transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
     display: flex; flex-direction: column;
   }
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-soft);
-  }
+  .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--accent-edge); }
   .card-tag {
     display: inline-block;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--accent);
-    background: var(--cream); padding: 5px 10px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent-text);
+    background: var(--accent-wash); padding: 5px 11px; border-radius: var(--radius);
     margin-bottom: 14px; align-self: flex-start;
   }
-  .card h3 {
-    font-size: 18px; margin-bottom: 6px; font-weight: 700;
-    letter-spacing: -0.01em;
-  }
+  .card h3 { font-size: 18px; margin-bottom: 6px; font-weight: 700; }
   .card-role { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
   .card p { font-size: 14px; color: var(--ink-soft); margin: 0 0 16px; }
   .card-tech {
     display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;
-    padding-top: 14px; border-top: 1px solid var(--divider);
+    padding-top: 14px; border-top: 1px solid var(--line);
   }
   .chip {
     font-size: 11.5px; font-weight: 500; color: var(--ink-soft);
-    background: var(--cream); padding: 4px 10px; border-radius: 999px;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 4px 10px; border-radius: var(--radius);
   }
-  .card .highlight { color: var(--accent); font-weight: 700; }
-  .card-links {
-    display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap;
-  }
+  .card .highlight { color: var(--ink); font-weight: 700; }
+  .card-links { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
   .card-links a {
-    font-size: 12.5px; font-weight: 600; color: var(--accent);
+    font-size: 12.5px; font-weight: 600; color: var(--accent-text);
     display: inline-flex; align-items: center; gap: 3px;
     transition: color 0.15s;
   }
   .card-links a::after { content: '↗'; font-size: 12px; }
   .card-links a:hover { color: var(--ink); }
-  .card-status {
-    margin-top: 12px; font-size: 12.5px;
-    color: var(--muted); font-style: italic;
-  }
+  .card-status { margin-top: 12px; font-size: 12.5px; color: var(--muted); }
 
-  /* ---------- Animated vertical timeline ---------- */
-  .tl-v {
-    position: relative;
-    padding: 8px 0 8px 40px;
-    margin: 12px 0;
-  }
-  /* Gray track */
+  /* ---------- Vertical timeline ---------- */
+  .tl-v { position: relative; padding: 8px 0 8px 40px; margin: 12px 0; }
   .tl-v::before {
-    content: '';
-    position: absolute;
-    left: 11px;
-    top: 14px;
-    bottom: 14px;
-    width: 2px;
-    background: var(--divider);
-    border-radius: 1px;
+    content: ''; position: absolute; left: 11px; top: 14px; bottom: 14px;
+    width: 2px; background: var(--line); border-radius: 1px;
   }
-  /* Accent line that draws downward */
   .tl-v::after {
-    content: '';
-    position: absolute;
-    left: 11px;
-    top: 14px;
-    bottom: 14px;
-    width: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 2.4s cubic-bezier(0.65, 0.0, 0.35, 1);
+    content: ''; position: absolute; left: 11px; top: 14px; bottom: 14px;
+    width: 2px; background: var(--accent); border-radius: 1px;
+    transform: scaleY(0); transform-origin: top;
+    transition: transform 2.4s cubic-bezier(0.65, 0, 0.35, 1);
   }
   .tl-v.in-view::after { transform: scaleY(1); }
-
-  .tl-v-item {
-    position: relative;
-    padding: 0 0 28px 24px;
-  }
+  .tl-v-item { position: relative; padding: 0 0 28px 24px; }
   .tl-v-item:last-child { padding-bottom: 0; }
-
   .tl-v-dot {
-    position: absolute;
-    left: -34px;
-    top: 4px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 3px solid var(--bg);
+    position: absolute; left: -34px; top: 4px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent); border: 3px solid var(--surface);
     box-shadow: 0 0 0 2px var(--accent);
     transform: scale(0);
     transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
     z-index: 2;
   }
-
-  .tl-v-content {
-    opacity: 0;
-    transform: translateX(-8px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  }
-  .tl-v-content .dates {
-    font-size: 11px; color: var(--muted);
-    font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .tl-v-content .role {
-    font-weight: 700; font-size: 16px; color: var(--ink);
-    margin-top: 6px;
-  }
-  .tl-v-content .company {
-    color: var(--accent); font-weight: 600; font-size: 14px;
-    margin-top: 2px;
-  }
-  .tl-v-content .location {
-    color: var(--muted); font-size: 13px; margin-top: 2px;
-  }
-
-  /* Trigger animations on in-view, staggered to follow the line */
+  .tl-v-content { opacity: 0; transform: translateX(-8px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+  .tl-v-content .dates { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .tl-v-content .role { font-weight: 700; font-size: 16px; color: var(--ink); margin-top: 6px; letter-spacing: -0.01em; }
+  .tl-v-content .company { color: var(--accent-text); font-weight: 600; font-size: 14px; margin-top: 2px; }
+  .tl-v-content .location { color: var(--muted); font-size: 13px; margin-top: 2px; }
   .tl-v.in-view .tl-v-dot { transform: scale(1); }
   .tl-v.in-view .tl-v-content { opacity: 1; transform: translateX(0); }
-
   .tl-v.in-view .tl-v-item:nth-child(1) .tl-v-dot,
   .tl-v.in-view .tl-v-item:nth-child(1) .tl-v-content { transition-delay: 0.25s; }
   .tl-v.in-view .tl-v-item:nth-child(2) .tl-v-dot,
@@ -343,141 +343,205 @@
   .tl-v.in-view .tl-v-item:nth-child(7) .tl-v-content { transition-delay: 1.75s; }
   .tl-v.in-view .tl-v-item:nth-child(8) .tl-v-dot,
   .tl-v.in-view .tl-v-item:nth-child(8) .tl-v-content { transition-delay: 2.00s; }
-
-  /* Respect reduced-motion */
   @media (prefers-reduced-motion: reduce) {
-    .tl-v::after,
-    .tl-v-dot,
-    .tl-v-content { transition: none !important; }
+    .tl-v::after, .tl-v-dot, .tl-v-content { transition: none !important; }
     .tl-v::after { transform: scaleY(1); }
     .tl-v-dot { transform: scale(1); }
     .tl-v-content { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
   }
 
-  /* ---------- Stack ---------- */
-  .skill-cols {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
-  }
-  @media (max-width: 800px) { .skill-cols { grid-template-columns: 1fr; } }
-  .skill-group h3 {
-    font-size: 13px; color: var(--accent); text-transform: uppercase;
-    letter-spacing: 0.1em; font-weight: 700; margin-bottom: 14px;
-  }
+  /* ---------- Chips (shared by Stack + Personality rows) ---------- */
   .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill {
-    font-size: 13.5px; font-weight: 500; color: var(--ink);
-    background: #fff; border: 1px solid var(--divider);
-    padding: 6px 12px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 500; color: var(--ink);
+    background: var(--raised); border: 1px solid var(--line);
+    padding: 5px 11px; border-radius: var(--radius);
   }
+  .skill .lvl { color: var(--muted); font-weight: 400; margin-left: 4px; }
+
+  /* ---------- Work: three tiers of weight ----------
+     Flagship cases carry a pulled-out metric; contract work stays on the card
+     grid; early roles collapse to a compact list. Hierarchy comes from scale
+     and density only — no imagery. */
+  .cases { display: flex; flex-direction: column; gap: 18px; }
+  .case {
+    background: var(--raised); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 30px 32px;
+    box-shadow: var(--shadow-sm);
+    display: grid; grid-template-columns: 1fr 252px; gap: 40px;
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  }
+  .case:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--accent-edge); }
+  .case h3 { font-size: 25px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 6px; }
+  .case .card-role { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .case p { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 18px; }
+  .case .card-tech { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 0; }
+  .case-metric {
+    border-left: 1px solid var(--line); padding-left: 30px;
+    align-self: center;
+  }
+  .case-metric .n {
+    font-size: clamp(34px, 3.6vw, 46px); font-weight: 700; color: var(--accent-text);
+    line-height: 1; letter-spacing: -0.04em; white-space: nowrap;
+  }
+  .case-metric .l {
+    font-size: 11px; color: var(--muted); margin-top: 12px;
+    text-transform: uppercase; letter-spacing: 0.11em; font-weight: 600; line-height: 1.45;
+  }
+  @media (max-width: 880px) {
+    .case { grid-template-columns: 1fr; gap: 22px; padding: 26px 24px; }
+    .case-metric { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  }
+
+  .tier-label {
+    display: flex; align-items: center; gap: 16px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); margin: 46px 0 20px;
+  }
+  .tier-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+  .early { border-top: 1px solid var(--line); }
+  .early-row {
+    display: grid; grid-template-columns: 240px 1fr auto; gap: 30px;
+    padding: 20px 2px; border-bottom: 1px solid var(--line); align-items: start;
+    transition: background 0.15s;
+  }
+  .early-row:hover { background: var(--accent-wash); }
+  .early-row h3 { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
+  .early-tag {
+    display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent-text); margin-top: 6px;
+  }
+  .early-role { font-size: 12.5px; color: var(--muted); margin-bottom: 7px; }
+  .early-row p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 8px; }
+  .early-tech { font-size: 11.5px; color: var(--muted); }
+  .early-links { display: flex; flex-direction: column; gap: 7px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .early-links a::after { content: ' ↗'; }
+  @media (max-width: 860px) {
+    .early-row { grid-template-columns: 1fr; gap: 10px; }
+    .early-links { flex-direction: row; gap: 16px; }
+  }
+
+  /* ---------- Stack + Personality: label-left rows instead of tall columns ---------- */
+  .row-list { border-top: 1px solid var(--line); }
+  .row-item {
+    display: grid; grid-template-columns: 190px 1fr; gap: 26px;
+    padding: 18px 0; border-bottom: 1px solid var(--line); align-items: baseline;
+  }
+  .row-item > h3 { margin: 0; }
+  .row-item .skill-list { gap: 7px; }
+  .stack-label {
+    font-size: 11px; color: var(--accent-text); text-transform: uppercase;
+    letter-spacing: 0.14em; font-weight: 700;
+  }
+  @media (max-width: 700px) { .row-item { grid-template-columns: 1fr; gap: 10px; } }
 
   /* ---------- Education ---------- */
-  .edu-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
-  }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 700px) { .edu-grid { grid-template-columns: 1fr; } }
   .edu-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 1px solid var(--divider);
-    padding: 26px;
-    transition: transform 0.18s, box-shadow 0.18s;
+    background: var(--raised); border-radius: var(--radius-lg);
+    border: 1px solid var(--line); padding: 26px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
   }
-  .edu-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .edu-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--accent-edge); }
   .edu-tag {
-    display: inline-block;
-    font-size: 11px; font-weight: 700;
-    color: var(--accent); letter-spacing: 0.1em;
+    display: inline-block; font-size: 11px; font-weight: 700;
+    color: var(--accent-text); letter-spacing: 0.12em;
     text-transform: uppercase; margin-bottom: 14px;
-    background: var(--cream); padding: 4px 10px; border-radius: 999px;
+    background: var(--accent-wash); padding: 4px 11px; border-radius: var(--radius);
   }
-  .edu-card h3 {
-    font-size: 18px; font-weight: 700; margin-bottom: 8px;
-  }
-  .edu-school {
-    color: var(--accent); font-weight: 600; font-size: 14px;
-  }
-  .edu-dates {
-    color: var(--muted); font-size: 13px; margin-top: 6px;
-  }
+  .edu-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .edu-school { color: var(--accent-text); font-weight: 600; font-size: 14px; }
+  .edu-dates { color: var(--muted); font-size: 13px; margin-top: 6px; }
 
-  /* ---------- Personality (stat-style tiles, cube chips inside) ---------- */
-  /* Two-column layout: chip-heavy tiles on the left, stat-only on the right.
-     Each column flows independently so tiles stack tightly without big gaps. */
-  .pers-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
+  /* ---------- Personality: feature panels, same metric vocabulary as the cases ---------- */
+  .pers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 820px) { .pers-grid { grid-template-columns: 1fr; } }
+  .pers-panel {
+    background: var(--raised); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 32px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    /* Figure top-anchored, detail bottom-anchored, so the two panels stay
+       composed even though the language list is much taller than the chips. */
+    display: flex; flex-direction: column;
   }
-  .pers-col {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  .pers-panel:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--accent-edge); }
+  .pers-figure {
+    font-size: clamp(44px, 5vw, 58px); font-weight: 700; color: var(--accent-text);
+    line-height: 0.95; letter-spacing: -0.04em;
   }
-  /* Right column variant: small stat-only tiles flow into a 2-col grid */
-  .pers-col--grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-content: start;
+  .pers-figure-l {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: var(--muted); margin-top: 11px;
   }
-  @media (max-width: 700px) {
-    .pers-cols { grid-template-columns: 1fr; }
-    .pers-col--grid { grid-template-columns: 1fr; }
+  .pers-panel h3 {
+    font-size: 21px; font-weight: 700; letter-spacing: -0.02em;
+    margin-top: 0; padding-top: 22px; border-top: 1px solid var(--line);
   }
-  .pers-tile {
-    background: var(--cream);
-    padding: 22px 22px 24px;
-    border-radius: var(--radius);
-    border: 1px solid var(--divider);
+  .pers-figure-l { margin-bottom: 26px; }
+  .pers-sub {
+    font-size: 11px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.1em; font-weight: 600; margin-top: 8px;
   }
-  .pers-tile-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+  .pers-panel .skill-list { margin-top: 18px; }
+  .lang-list { margin: 16px 0 0; }
+  .lang-list div {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    padding: 10px 0; border-bottom: 1px solid var(--line);
   }
-  .pers-tile-meta {
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-  }
-  .pers-tile-chips {
-    margin-top: 16px;
-  }
-  .skill .lvl {
-    color: var(--muted); font-weight: 400; margin-left: 4px;
-  }
+  .lang-list div:last-child { border-bottom: 0; padding-bottom: 0; }
+  .lang-list dt { font-size: 14.5px; font-weight: 600; color: var(--ink); }
+  .lang-list dd { margin: 0; font-size: 12.5px; color: var(--muted); text-align: right; }
 
   /* ---------- Contact ---------- */
   .contact {
-    background: var(--cream);
-    border-radius: var(--radius);
+    background: var(--raised);
+    border-radius: var(--radius-lg);
     padding: 48px 32px;
     text-align: center;
-    border: 1px solid var(--divider);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
   }
-  .contact h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px; margin-bottom: 12px; letter-spacing: -0.01em;
-  }
+  .contact h3 { font-size: clamp(24px, 3vw, 32px); margin-bottom: 12px; font-weight: 700; letter-spacing: -0.02em; }
   .contact p {
     color: var(--ink-soft); margin-bottom: 28px;
-    max-width: 540px; margin-left: auto; margin-right: auto;
+    max-width: 560px; margin-left: auto; margin-right: auto;
   }
   .contact-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
   /* ---------- Footer ---------- */
-  footer {
-    text-align: center; padding: 32px 24px 48px;
-    color: var(--muted); font-size: 13px;
+  footer { text-align: center; padding: 32px 24px 48px; color: var(--muted); font-size: 13px; }
+
+  /* ---------- Print: always the light ground, no wasted ink ---------- */
+  @media print {
+    html[data-theme="dark"], html:not([data-theme="light"]) {
+      color-scheme: light;
+      --surface: #FFFFFF; --raised: #FFFFFF; --ink: #13233C; --ink-soft: #33455F;
+      --muted: #556780; --line: #D3DCE8; --accent: #2463C4; --accent-text: #2463C4;
+      --accent-ink: #FFFFFF; --accent-wash: #EAF1FB; --accent-edge: #A9C6EF;
+    }
+    :root { --surface: #FFFFFF; }
+    body { background: #FFFFFF; }
+    nav, .theme-toggle { display: none !important; }
+    body { background-image: none; }
+    .card, .stat, .edu-card, .pers-tile, .contact { box-shadow: none; break-inside: avoid; }
+    a { color: var(--ink); }
   }
 </style>
+<script>
+  /* Apply a stored theme choice before first paint. With no stored choice the
+     CSS falls back to prefers-color-scheme, so this is progressive enhancement. */
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body>
 
@@ -494,6 +558,18 @@
         <a href="#contact">Contact</a>
         <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
       </div>
+      <button class="theme-toggle" id="themeToggle" type="button"
+              aria-label="Switch between light and dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
       <div class="lang-switch">
         <a href="index.html" class="active">EN</a>
         <a href="ru.html">RU</a>
@@ -509,12 +585,10 @@
   <h1 class="tag">I build mobile apps people use every day — and keep them alive after launch.</h1>
   <p class="blurb">
     Five years in mobile, nine production apps across delivery, fintech, streaming, marketplace
-    and crypto. At <strong>Express24</strong> I owned the B2B merchant app that 3,000+ shops and
-    restaurants use daily — inherited it at 68% crash-free users and took it to 98% in two months,
-    migrated the codebase to Feature-First DDD, and replaced order polling with a real-time
-    WebSocket pipeline. At <strong>azart technologies</strong> I cut ~70 MB off the app and shipped
-    a server-driven UI kit configured entirely via JSON. Now building Web3 features at
-    <strong>EMCD</strong> for 35K+ monthly users.
+    and crypto. At <strong>Express24</strong> I inherited the B2B merchant app that 3,000+ shops,
+    cafés and restaurants use daily at 68% crash-free users, and took it to 98% in two months —
+    then migrated the codebase to Feature-First DDD and moved orders off polling onto real-time
+    WebSockets. Now I build Web3 features at <strong>EMCD</strong> for 35K+ monthly users.
   </p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#contact">Get in touch &nbsp;→</a>
@@ -579,87 +653,87 @@
     <h2>Selected projects.</h2>
   </div>
 
-  <div class="project-grid">
-
-    <article class="card">
-      <span class="card-tag">B2B  ·  Tech Lead</span>
-      <h3>Express24 Merchant App</h3>
-      <div class="card-role">Flutter Developer → Mobile Tech Lead  ·  2023 – 2024</div>
-      <p>
+    <div class="cases">
+      <article class="case">
+        <div>
+          <span class="card-tag">B2B  ·  Tech Lead</span>
+          <h3>Express24 Merchant App</h3>
+          <div class="card-role">Flutter Developer → Mobile Tech Lead  ·  2023 – 2024</div>
+          <p>
         B2B app that <span class="highlight">3,000+ shops, cafés and restaurants</span> use
         to accept and fulfill orders. Owned mobile architecture, releases and CI; inherited the
         app at 68% crash-free users and fixed the root causes of instability to reach
         <span class="highlight">98% in two months</span> — ~16× fewer crash-affected users.
         Migrated to Feature-First DDD and moved order updates from polling to WebSockets.
       </p>
-      <div class="card-tech">
+          <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">BLoC</span>
         <span class="chip">DDD</span><span class="chip">WebSockets</span>
         <span class="chip">CircleCI</span>
       </div>
-      <div class="card-status">Express24 has since retired the app — happy to walk through the architecture.</div>
-    </article>
-
-    <article class="card">
-      <span class="card-tag">Crypto  ·  Web3</span>
-      <h3>EMCD Coinhold</h3>
-      <div class="card-role">Flutter Developer  ·  2025 – Present</div>
-      <p>
+          <div class="card-status">Express24 has since retired the app — happy to walk through the architecture.</div>
+        </div>
+        <div class="case-metric">
+          <div class="n">68 → 98%</div>
+          <div class="l">crash-free users, in two months</div>
+        </div>
+      </article>
+      <article class="case">
+        <div>
+          <span class="card-tag">Crypto  ·  Web3</span>
+          <h3>EMCD Coinhold</h3>
+          <div class="card-role">Flutter Developer  ·  2025 – Present</div>
+          <p>
         Mobile wallet of a 400-person crypto platform with
         <span class="highlight">35K+ monthly active users</span>. I own one feature area end-to-end —
         shipping new Web3 functionality, refactoring legacy code, and covering it with unit,
         widget, golden and E2E tests.
       </p>
-      <div class="card-tech">
+          <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">Web3</span>
         <span class="chip">Clean Architecture</span><span class="chip">REST</span>
       </div>
-      <div class="card-links">
+          <div class="card-links">
         <a href="https://apps.apple.com/sa/app/emcd-coinhold-crypto-wallet/id1606903304" target="_blank" rel="noopener">App Store</a>
         <a href="https://play.google.com/store/apps/details?id=io.emcd.emcd_flutter.prod" target="_blank" rel="noopener">Google Play</a>
       </div>
-    </article>
-
-    <article class="card">
-      <span class="card-tag">Social Discovery  ·  Animation &amp; Performance</span>
-      <h3>Shuffle</h3>
-      <div class="card-role">Flutter Developer  ·  azart technologies, Dubai  ·  2023 – 2024</div>
-      <p>
+        </div>
+        <div class="case-metric">
+          <div class="n">35K+</div>
+          <div class="l">monthly active users</div>
+        </div>
+      </article>
+      <article class="case">
+        <div>
+          <span class="card-tag">Social Discovery  ·  Animation &amp; Performance</span>
+          <h3>Shuffle</h3>
+          <div class="card-role">Flutter Developer  ·  azart technologies, Dubai  ·  2023 – 2024</div>
+          <p>
         Social discovery app for Dubai and Phuket. Owned the animated UI layer, built
         Telegram-style interactive charts with <span class="highlight">CustomPaint</span>, and
         shipped a server-driven UI kit configured entirely via JSON. Cut app size by
         <span class="highlight">~70 MB</span>; built subscriptions with server-side receipt
         verification; integrated HealthKit, Google Fit and Health Connect.
       </p>
-      <div class="card-tech">
+          <div class="card-tech">
         <span class="chip">Flutter</span><span class="chip">CustomPaint</span>
         <span class="chip">Server-driven UI</span><span class="chip">AnimationController</span>
         <span class="chip">HealthKit</span>
       </div>
-      <div class="card-links">
+          <div class="card-links">
         <a href="https://apps.apple.com/us/app/shuffle-palette-yourself/id6449493932" target="_blank" rel="noopener">App Store</a>
         <a href="https://play.google.com/store/apps/details?id=tech.azart.shuffle" target="_blank" rel="noopener">Google Play</a>
       </div>
-    </article>
+        </div>
+        <div class="case-metric">
+          <div class="n">−70 MB</div>
+          <div class="l">cut from app size</div>
+        </div>
+      </article>
+    </div>
 
-    <article class="card">
-      <span class="card-tag">Loyalty  ·  QR</span>
-      <h3>Tegen Loyalty</h3>
-      <div class="card-role">Mid-level Flutter Developer  ·  Ptolemay LLC  ·  2021 – 2023</div>
-      <p>
-        Loyalty app for a meat retail chain. Customers claim rewards via in-app
-        QR codes, and shops scan them at the counter.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">QR</span>
-        <span class="chip">REST</span>
-      </div>
-      <div class="card-links">
-        <a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a>
-      </div>
-    </article>
-
+    <div class="tier-label">Contract work · 2024 – 2025</div>
+    <div class="project-grid">
     <article class="card">
       <span class="card-tag">Marketplace  ·  Multi-platform</span>
       <h3>7Tech</h3>
@@ -677,7 +751,6 @@
         <a href="https://seventech.uz/" target="_blank" rel="noopener">Android app</a>
       </div>
     </article>
-
     <article class="card">
       <span class="card-tag">Streaming  ·  Solo</span>
       <h3>Million TV</h3>
@@ -693,7 +766,6 @@
       </div>
       <div class="card-status">Client-owned release — walkthrough on request.</div>
     </article>
-
     <article class="card">
       <span class="card-tag">B2B + B2C  ·  Custom UI</span>
       <h3>Cuppy</h3>
@@ -709,37 +781,48 @@
       </div>
       <div class="card-status">Private client build — walkthrough on request.</div>
     </article>
+    </div>
 
-    <article class="card">
-      <span class="card-tag">HR  ·  Multi-store</span>
-      <h3>Bakery HR App</h3>
-      <div class="card-role">Flutter Developer  ·  Udevs  ·  2021</div>
-      <p>
-        HR application for a national bakery chain operating
-        <span class="highlight">100+ stores across Uzbekistan</span> — UI implementation
-        and REST API integrations.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">REST</span>
+    <div class="tier-label">Earlier work · 2020 – 2023</div>
+    <div class="early">
+      <div class="early-row">
+        <div>
+          <h3>Tegen Loyalty</h3>
+          <span class="early-tag">Loyalty  ·  QR</span>
+        </div>
+        <div>
+          <div class="early-role">Mid-level Flutter Developer  ·  Ptolemay LLC  ·  2021 – 2023</div>
+          <p>Loyalty app for a meat retail chain. Customers claim rewards via in-app QR codes, and shops scan them at the counter.</p>
+          <div class="early-tech">Flutter · QR · REST</div>
+        </div>
+        <div class="early-links"><a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a></div>
       </div>
-    </article>
-
-    <article class="card">
-      <span class="card-tag">CRM  ·  Firebase</span>
-      <h3>Auto Repair CRM</h3>
-      <div class="card-role">Freelance  ·  Kwork  ·  2020 – 2021</div>
-      <p>
-        End-to-end CRM for an auto repair shop, built with Flutter for
-        <span class="highlight">mobile and web</span> and powered entirely by Firebase Firestore
-        and Storage.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter Web</span><span class="chip">Firestore</span>
-        <span class="chip">Storage</span>
+      <div class="early-row">
+        <div>
+          <h3>Bakery HR App</h3>
+          <span class="early-tag">HR  ·  Multi-store</span>
+        </div>
+        <div>
+          <div class="early-role">Flutter Developer  ·  Udevs  ·  2021</div>
+          <p>HR application for a national bakery chain operating <span class="highlight">100+ stores across Uzbekistan</span> — UI implementation and REST API integrations.</p>
+          <div class="early-tech">Flutter · REST</div>
+        </div>
+        <div></div>
       </div>
-    </article>
-
-  </div>
+      <div class="early-row">
+        <div>
+          <h3>Auto Repair CRM</h3>
+          <span class="early-tag">CRM  ·  Firebase</span>
+        </div>
+        <div>
+          <div class="early-role">Freelance  ·  Kwork  ·  2020 – 2021</div>
+          <p>End-to-end CRM for an auto repair shop, built with Flutter for <span class="highlight">mobile and web</span> and powered entirely by Firebase Firestore and Storage.</p>
+          <div class="early-tech">Flutter Web · Firestore · Storage</div>
+        </div>
+        <div></div>
+      </div>
+    </div>
 </section>
 
 <!-- ===== EXPERIENCE (animated vertical timeline) ===== -->
@@ -823,40 +906,18 @@
     <h2>Tools I reach for.</h2>
   </div>
 
-  <div class="skill-cols">
-    <div class="skill-group">
-      <h3>Core</h3>
-      <div class="skill-list">
-        <span class="skill">Flutter</span><span class="skill">Dart</span>
-        <span class="skill">BLoC</span><span class="skill">Provider</span>
-        <span class="skill">ValueNotifier</span><span class="skill">MobX</span>
-        <span class="skill">GetX</span>
-        <span class="skill">Clean Architecture</span><span class="skill">DDD</span>
-        <span class="skill">Platform Channels</span>
-        <span class="skill">CustomPaint</span><span class="skill">Custom Animations</span>
-      </div>
+  <div class="row-list">
+    <div class="row-item">
+      <h3 class="stack-label">Core</h3>
+      <div class="skill-list"> <span class="skill">Flutter</span><span class="skill">Dart</span> <span class="skill">BLoC</span><span class="skill">Provider</span> <span class="skill">ValueNotifier</span><span class="skill">MobX</span> <span class="skill">GetX</span> <span class="skill">Clean Architecture</span><span class="skill">DDD</span> <span class="skill">Platform Channels</span> <span class="skill">CustomPaint</span><span class="skill">Custom Animations</span> </div>
     </div>
-
-    <div class="skill-group">
-      <h3>Platforms & Tooling</h3>
-      <div class="skill-list">
-        <span class="skill">Firebase</span><span class="skill">Firestore</span>
-        <span class="skill">REST</span><span class="skill">WebSockets</span>
-        <span class="skill">Codemagic</span><span class="skill">CircleCI</span><span class="skill">Fastlane</span>
-        <span class="skill">Git / GitFlow</span><span class="skill">GitLab</span>
-        <span class="skill">Jira</span><span class="skill">ClickUp</span>
-        <span class="skill">Claude Code</span><span class="skill">Cursor</span>
-      </div>
+    <div class="row-item">
+      <h3 class="stack-label">Platforms & Tooling</h3>
+      <div class="skill-list"> <span class="skill">Firebase</span><span class="skill">Firestore</span> <span class="skill">REST</span><span class="skill">WebSockets</span> <span class="skill">Codemagic</span><span class="skill">CircleCI</span><span class="skill">Fastlane</span> <span class="skill">Git / GitFlow</span><span class="skill">GitLab</span> <span class="skill">Jira</span><span class="skill">ClickUp</span> <span class="skill">Claude Code</span><span class="skill">Cursor</span> </div>
     </div>
-
-    <div class="skill-group">
-      <h3>Testing</h3>
-      <div class="skill-list">
-        <span class="skill">Unit Tests</span>
-        <span class="skill">Widget Tests</span>
-        <span class="skill">Golden Tests</span>
-        <span class="skill">E2E Tests</span>
-      </div>
+    <div class="row-item">
+      <h3 class="stack-label">Testing</h3>
+      <div class="skill-list"> <span class="skill">Unit Tests</span> <span class="skill">Widget Tests</span> <span class="skill">Golden Tests</span> <span class="skill">E2E Tests</span> </div>
     </div>
   </div>
 </section>
@@ -892,40 +953,27 @@
     <h2>Beyond the editor.</h2>
   </div>
 
-  <div class="pers-cols">
-
-    <div class="pers-col">
-      <div class="pers-tile">
-        <div class="pers-tile-title">Speedcubing</div>
-        <div class="pers-tile-meta">WCA Official Contestant · 2017</div>
-        <div class="skill-list pers-tile-chips">
-          <span class="skill">2×2</span>
-          <span class="skill">3×3</span>
-          <span class="skill">4×4</span>
-          <span class="skill">5×5</span>
-          <span class="skill">6×6</span>
-          <span class="skill">7×7</span>
-          <span class="skill">Megaminx</span>
-          <span class="skill">Teraminx</span>
-          <span class="skill">Mirror Cube</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pers-col">
-      <div class="pers-tile">
-        <div class="pers-tile-title">Languages</div>
-        <div class="pers-tile-meta">Spoken</div>
-        <div class="skill-list pers-tile-chips">
-          <span class="skill">Russian <span class="lvl">— Native</span></span>
-          <span class="skill">Tajik <span class="lvl">— Native</span></span>
-          <span class="skill">English <span class="lvl">— C1 (Professional)</span></span>
-          <span class="skill">Uzbek <span class="lvl">— Working proficiency</span></span>
-          <span class="skill">French <span class="lvl">— Elementary</span></span>
-        </div>
-      </div>
-    </div>
-
+  <div class="pers-grid">
+      <article class="pers-panel">
+        <div class="pers-figure">9</div>
+        <div class="pers-figure-l">puzzle types</div>
+        <h3>Speedcubing</h3>
+        <div class="pers-sub">WCA Official Contestant · 2017</div>
+        <div class="skill-list"><span class="skill">2×2</span><span class="skill">3×3</span><span class="skill">4×4</span><span class="skill">5×5</span><span class="skill">6×6</span><span class="skill">7×7</span><span class="skill">Megaminx</span><span class="skill">Teraminx</span><span class="skill">Mirror Cube</span></div>
+      </article>
+      <article class="pers-panel">
+        <div class="pers-figure">5</div>
+        <div class="pers-figure-l">languages</div>
+        <h3>Languages</h3>
+        <div class="pers-sub">Spoken</div>
+        <dl class="lang-list">
+          <div><dt>Russian</dt><dd>Native</dd></div>
+          <div><dt>Tajik</dt><dd>Native</dd></div>
+          <div><dt>English</dt><dd>C1 (Professional)</dd></div>
+          <div><dt>Uzbek</dt><dd>Working proficiency</dd></div>
+          <div><dt>French</dt><dd>Elementary</dd></div>
+        </dl>
+      </article>
   </div>
 </section>
 
@@ -954,6 +1002,22 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---- Theme toggle: explicit choice overrides the OS preference ----
+  (function () {
+    var btn = document.getElementById('themeToggle');
+    if (!btn) return;
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() {
+      var set = document.documentElement.getAttribute('data-theme');
+      return set || (mq.matches ? 'dark' : 'light');
+    }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
 
   // ---- Vertical timeline: animate line + entries on scroll into view ----
   (function () {
