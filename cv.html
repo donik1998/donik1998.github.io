@@ -78,8 +78,12 @@
   }
 
   .page {
-    width: 210mm;
-    min-height: 297mm;
+    /* --fit is set by the auto-fit script below: 1 normally, slightly under 1
+       when a page's content would otherwise run past the bottom of the sheet.
+       Dividing the box size by it keeps the rendered sheet exactly A4. */
+    zoom: var(--fit, 1);
+    width: calc(210mm / var(--fit, 1));
+    min-height: calc(297mm / var(--fit, 1));
     margin: 24px auto;
     background: var(--sheet);
     box-shadow: 0 10px 28px var(--sheet-shadow);
@@ -334,26 +338,51 @@
   /* ---------- Print rules ---------- */
   @page { size: A4; margin: 0; }
   @media print {
-    /* A CV is a document first: printing is always the white sheet with dark
-       ink, whatever the visitor happens to be viewing it in. */
+    /* A CV is a document first, so the default print is the white sheet with
+       dark ink whatever the visitor is viewing it in. The dark sheet is
+       opt-in: the "Dark PDF" button sets data-print="dark" for one print job. */
     html[data-theme="dark"], html:not([data-theme="light"]) {
       color-scheme: light;
       --ink: #13233C; --ink-soft: #33455F; --muted: #556780; --body-gray: #3F5372;
       --accent: #2463C4; --accent-soft: #5B93E0; --accent-ink: #FFFFFF; --cream: #EAF1FB;
       --divider: #D3DCE8; --rule: #C4D2E4; --desk: #FFFFFF; --sheet: #FFFFFF;
     }
-    body { background: white; }
+    /* Must stay last of the three: same specificity as the resets above, so
+       source order is what makes the opt-in win. */
+    html[data-print="dark"] {
+      color-scheme: dark;
+      --ink: #E9EEFA; --ink-soft: #C6D2E4; --muted: #9AABC2; --body-gray: #B4C2D8;
+      --accent: #63A4FF; --accent-soft: #3E7BD1; --accent-ink: #08111F; --cream: #16243B;
+      --divider: #25314A; --rule: #2B3852; --desk: #141D2F; --sheet: #141D2F;
+    }
+    body { background: var(--sheet); }
+    /* One .page === exactly one sheet. The fixed height is the fix for the
+       orphaned-section bug: with min-height:0 the 8mm bottom padding pushed
+       the box to 299mm against a 297mm sheet, and Chromium — unable to split
+       padding — moved the whole trailing grid onto an extra sheet. */
     .page {
-      width: auto;
+      width: calc(210mm / var(--fit, 1));
+      height: calc(297mm / var(--fit, 1));
       margin: 0;
       box-shadow: none;
-      min-height: 0;
-      overflow: visible;
+      overflow: hidden;
     }
     .page + .page { page-break-before: always; break-before: page; }
     .tl-entry { page-break-inside: avoid; break-inside: avoid; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .print-helper { display: none; }
+  }
+
+  /* Secondary action: save the dark sheet instead of the white one */
+  .print-helper .pdf-dark {
+    display: block; width: 100%; margin-top: 8px;
+    background: transparent; color: var(--accent);
+    border: 1px solid var(--accent-soft); border-radius: 8px;
+    padding: 7px 10px; font: inherit; font-size: 12px; font-weight: 600;
+    cursor: pointer; transition: background .15s, color .15s, border-color .15s;
+  }
+  .print-helper .pdf-dark:hover {
+    background: var(--accent); color: var(--accent-ink); border-color: var(--accent);
   }
 
   /* ---------- On-screen print helper ---------- */
@@ -419,6 +448,7 @@
   <b>Save as PDF:</b> click the button or press <b>⌘P</b> / <b>Ctrl+P</b>.
   Set <b>Margins</b> to <b>None</b> and enable <b>Background graphics</b>.
   <button onclick="window.print()">Print / Save as PDF</button>
+  <button class="pdf-dark" id="darkPdf" type="button">Dark PDF</button>
   <a class="ats-link" href="cv-ats.html">ATS-friendly version →</a>
   <a class="ats-link" href="cv-ru.html">Русская версия →</a>
   <a class="ats-link" href="cv-uz.html">O‘zbekcha versiyasi →</a>
@@ -487,7 +517,7 @@
     <div class="tl-entry">
       <div class="tl-top">
         <span class="tl-role">Flutter Developer</span>
-        <span class="tl-dates">Aug 2025 — Present</span>
+        <span class="tl-dates">Aug 2025 — Jul 2026</span>
       </div>
       <div class="tl-company">EMCD (emcd.io) <span class="loc">· Remote</span></div>
       <div class="tl-body">
@@ -696,5 +726,70 @@
     label();
   })();
 </script>
+<script>
+  /* Keep every .page exactly one A4 sheet.
+
+     The sheets are hand-paginated, so a page whose content grows past 297mm
+     used to get fragmented by the browser: the last unbreakable block (the
+     education/languages grid) was pushed onto an extra sheet, clipped at the
+     paper edge and missing its accent bar. Scaling the offending page down by
+     the couple of percent it overruns keeps the break where it was authored.
+     --fit stays unset (i.e. 1) for any page that already fits. */
+  (function () {
+    var PX_PER_MM = 96 / 25.4;
+    var SHEET_MM = 297, PAD_BOTTOM_MM = 8, SAFETY_MM = 0.6;
+    var LIMIT = SHEET_MM - SAFETY_MM;
+
+    function lastFlowChild(page) {
+      var kids = page.children;
+      for (var k = kids.length - 1; k >= 0; k--) {
+        if (getComputedStyle(kids[k]).position !== 'absolute') return kids[k];
+      }
+      return null;
+    }
+
+    function fit() {
+      var pages = document.querySelectorAll('.page');
+      var i, last, neededMM, scale = 1;
+
+      for (i = 0; i < pages.length; i++) pages[i].style.removeProperty('--fit');
+
+      for (i = 0; i < pages.length; i++) {
+        last = lastFlowChild(pages[i]);
+        if (!last) continue;
+        neededMM = (last.getBoundingClientRect().bottom - pages[i].getBoundingClientRect().top)
+                   / PX_PER_MM + PAD_BOTTOM_MM;
+        if (neededMM > LIMIT) scale = Math.min(scale, LIMIT / neededMM);
+      }
+
+      /* One scale for the whole document — a CV whose second sheet is set a
+         few percent larger than its first reads as a mistake. */
+      if (scale < 1) {
+        for (i = 0; i < pages.length; i++) pages[i].style.setProperty('--fit', scale.toFixed(4));
+      }
+    }
+
+    fit();
+    window.addEventListener('load', fit);
+    window.addEventListener('beforeprint', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  })();
+
+  /* "Dark PDF" — flag one print job as dark, then drop the flag again so
+     a later Ctrl+P still produces the ink-friendly white sheet. */
+  (function () {
+    var btn = document.getElementById('darkPdf');
+    if (!btn) return;
+    var root = document.documentElement;
+    function clear() { root.removeAttribute('data-print'); }
+    window.addEventListener('afterprint', clear);
+    btn.addEventListener('click', function () {
+      root.setAttribute('data-print', 'dark');
+      window.print();
+      setTimeout(clear, 5000);   /* safety net if afterprint never fires */
+    });
+  })();
+</script>
 </body>
+
 </html>
