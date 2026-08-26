@@ -1,6 +1,6 @@
 # donik1998.github.io
 
-Personal portfolio and CV of **Doniyor Murodkulov** — Senior Flutter Developer & Mobile Tech Lead based in Tashkent, Uzbekistan.
+Personal portfolio and CV of **Doniyor Murodkulov** — Mobile Tech Lead & Flutter developer based in Tashkent, Uzbekistan.
 
 **Live site:** [donik1998.github.io](https://donik1998.github.io)
 
@@ -12,15 +12,15 @@ Personal portfolio and CV of **Doniyor Murodkulov** — Senior Flutter Developer
 | [`ru.html`](https://donik1998.github.io/ru.html) | Русская версия |
 | [`uz.html`](https://donik1998.github.io/uz.html) | Oʻzbekcha versiyasi |
 | [`cv.html`](https://donik1998.github.io/cv.html) | Designed CV — print-ready A4, save as PDF from the browser |
-| [`cv-ats.html`](https://donik1998.github.io/cv-ats.html) | ATS-friendly CV — single-column, parser-safe |
+| [`cv-ats.html`](https://donik1998.github.io/cv-ats.html) | ATS-friendly CV — single-column, parser-safe (default CV linked from the site) |
 | [`cv-ru.html`](https://donik1998.github.io/cv-ru.html) | Резюме на русском — print-ready A4 |
 | [`cv-uz.html`](https://donik1998.github.io/cv-uz.html) | O‘zbekcha CV — print-ready A4 |
 
 ## Highlights
 
-- 5+ years of Flutter, 9 production apps shipped across delivery, fintech, streaming, marketplace and crypto
-- Former Mobile Tech Lead at Express24 — crash-free rate 68% → 98%, Feature-First DDD migration, real-time WebSocket order pipeline
-- Currently building Web3 features at EMCD (35K+ monthly active users)
+- Six years in mobile, 8 production apps shipped across delivery, fintech, streaming, marketplace and crypto
+- Promoted to Mobile Tech Lead at Express24 within eight months — led a team of three engineers; crash-free rate 68% → 98%, Feature-First DDD migration, real-time WebSocket order pipeline
+- At EMCD, led two end-to-end refactors of the Coinhold wallet (35K+ monthly active users) — both delivered on schedule — and drove team-wide adoption of AI-assisted test writing
 
 ## Tech
 
