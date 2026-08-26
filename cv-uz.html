@@ -445,6 +445,10 @@
   /* Accent is 4.25:1 on the sheet: legal for the masthead bar, the 16pt stat
      numerals and the list marks — never for 8-9pt type. */
   .tl-company, .skill-group h4 { color: var(--ink); }
+  .proj-top { display: flex; align-items: baseline; justify-content: space-between; gap: 4mm; }
+  .proj-name { font-weight: 700; font-size: 10pt; color: var(--ink); }
+  .proj-meta { font-size: 8pt; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+  .proj p { font-size: 8.6pt; color: var(--body-gray); margin: 1.2mm 0 0; }
   .skill--lead { background: var(--ink); color: var(--sheet); border-color: var(--ink); font-weight: 600; }
   .tl-dates, .edu-item .dates { color: var(--muted); }
   .print-helper b, .print-helper .ats-link, .print-helper .pdf-dark { color: var(--ink); }
@@ -676,8 +680,8 @@
       <div class="skill-list">
         <span class="skill skill--lead">Claude</span><span class="skill skill--lead">Claude Code</span>
         <span class="skill skill--lead">Cursor</span>
-        <span class="skill">Agentlar</span><span class="skill">Orkestratorlar</span>
-        <span class="skill">AI yordamida testlash</span>
+        <span class="skill">Agentlar jamoasi</span><span class="skill">Spetsifikatsiyaga asoslangan</span>
+        <span class="skill">Repozitoriylar orkestratsiyasi</span><span class="skill">AI yordamida testlash</span>
       </div>
     </div>
     <div class="skill-group">
@@ -691,10 +695,23 @@
     </div>
   </div>
 
+  <div class="section-h">
+    <span class="section-num">03 / </span>
+    <h2>Tanlangan loyiha</h2>
+    <div class="line"></div>
+  </div>
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">CubeClash</span>
+      <span class="proj-meta">Chiqarilmagan · kod ochiq</span>
+    </div>
+    <p>Spidkubing ilovasi — WCA taymeri va WebSockets orqali <span class="hl">jonli 1x1 musobaqalar</span>. Bitta mahsulot to‘rtta kod bazasida — Flutter, nativ Kotlin, nativ Swift va NestJS + Postgres backend — bitta arxitektura va bitta real-time shartnoma asosida. <span class="hl">Olti agentdan iborat jamoa</span> (PM, dizayn, spetsifikatsiya, arxitektor, backend, UI) bilan loyihalab qurdim; ular repozitoriylarni yozma spetsifikatsiyalar bo‘yicha parallel olib boradi.</p>
+  </div>
+
   <div class="bottom-grid">
     <div>
       <div class="section-h">
-        <span class="section-num">03 / </span>
+        <span class="section-num">04 / </span>
         <h2>Ta’lim</h2>
         <div class="line"></div>
       </div>
@@ -712,7 +729,7 @@
 
     <div>
       <div class="section-h">
-        <span class="section-num">04 / </span>
+        <span class="section-num">05 / </span>
         <h2>Tillar</h2>
         <div class="line"></div>
       </div>

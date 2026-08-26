@@ -445,6 +445,10 @@
   /* Accent is 4.25:1 on the sheet: legal for the masthead bar, the 16pt stat
      numerals and the list marks — never for 8-9pt type. */
   .tl-company, .skill-group h4 { color: var(--ink); }
+  .proj-top { display: flex; align-items: baseline; justify-content: space-between; gap: 4mm; }
+  .proj-name { font-weight: 700; font-size: 10pt; color: var(--ink); }
+  .proj-meta { font-size: 8pt; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+  .proj p { font-size: 8.6pt; color: var(--body-gray); margin: 1.2mm 0 0; }
   .skill--lead { background: var(--ink); color: var(--sheet); border-color: var(--ink); font-weight: 600; }
   .tl-dates, .edu-item .dates { color: var(--muted); }
   .print-helper b, .print-helper .ats-link, .print-helper .pdf-dark { color: var(--ink); }
@@ -674,8 +678,8 @@
       <div class="skill-list">
         <span class="skill skill--lead">Claude</span><span class="skill skill--lead">Claude Code</span>
         <span class="skill skill--lead">Cursor</span>
-        <span class="skill">Агенты</span><span class="skill">Оркестраторы</span>
-        <span class="skill">Тесты с помощью AI</span>
+        <span class="skill">Команда агентов</span><span class="skill">Спеки как контракт</span>
+        <span class="skill">Оркестрация репозиториев</span><span class="skill">Тесты с помощью AI</span>
       </div>
     </div>
     <div class="skill-group">
@@ -689,10 +693,23 @@
     </div>
   </div>
 
+  <div class="section-h">
+    <span class="section-num">03 / </span>
+    <h2>Избранный проект</h2>
+    <div class="line"></div>
+  </div>
+  <div class="proj">
+    <div class="proj-top">
+      <span class="proj-name">CubeClash</span>
+      <span class="proj-meta">Не выпущено · код открыт</span>
+    </div>
+    <p>Приложение для спидкубинга — WCA-таймер и <span class="hl">живые дуэли 1 на 1</span> через WebSockets. Один продукт в четырёх кодовых базах — Flutter, нативный Kotlin, нативный Swift и бэкенд на NestJS + Postgres — с одной архитектурой и одним real-time-контрактом. Спроектировал и собрал с <span class="hl">командой из шести агентов</span> (PM, дизайн, спеки, архитектор, бэкенд, UI), которые ведут репозитории параллельно по письменным спецификациям.</p>
+  </div>
+
   <div class="bottom-grid">
     <div>
       <div class="section-h">
-        <span class="section-num">03 / </span>
+        <span class="section-num">04 / </span>
         <h2>Образование</h2>
         <div class="line"></div>
       </div>
@@ -710,7 +727,7 @@
 
     <div>
       <div class="section-h">
-        <span class="section-num">04 / </span>
+        <span class="section-num">05 / </span>
         <h2>Языки</h2>
         <div class="line"></div>
       </div>
