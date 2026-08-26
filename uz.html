@@ -599,6 +599,22 @@
   .chip, .skill { background: transparent; border: 1px solid var(--line); color: var(--ink); }
   .edu-school { color: var(--ink); }
 
+  /* Stack: a red rule marks each group, and the tools I lead with are filled
+     while the rest stay outlined — hierarchy instead of hue, which is the only
+     way swiss is allowed to add emphasis. */
+  .row-item { padding: 22px 0; }
+  .stack-label { position: relative; padding-top: 15px; }
+  .stack-label::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 28px; height: 3px; background: var(--accent);
+  }
+  .row-item .skill-list { gap: 8px; }
+  .row-item .skill { padding: 6px 12px; font-size: 13px; }
+  .skill--lead {
+    background: var(--ink); color: var(--surface);
+    border-color: var(--ink); font-weight: 600;
+  }
+
   /* ---------- Print: always the light ground, no wasted ink ---------- */
   @media print {
     html[data-theme="dark"], html:not([data-theme="light"]) {
@@ -612,6 +628,7 @@
     nav, .theme-toggle { display: none !important; }
     body { background-image: none; }
     .card, .stat, .edu-card, .pers-tile, .contact { box-shadow: none; break-inside: avoid; }
+    .skill--lead { background: transparent; color: var(--ink); border-color: var(--ink); }
     a { color: var(--ink); }
   }
 </style>
@@ -967,15 +984,19 @@
   <div class="row-list">
     <div class="row-item">
       <h3 class="stack-label">Asosiy</h3>
-      <div class="skill-list"> <span class="skill">Flutter</span><span class="skill">Dart</span> <span class="skill">BLoC</span><span class="skill">Provider</span> <span class="skill">ValueNotifier</span><span class="skill">MobX</span> <span class="skill">GetX</span> <span class="skill">Clean Architecture</span><span class="skill">DDD</span> <span class="skill">Platform Channels</span> <span class="skill">CustomPaint</span><span class="skill">Custom Animations</span> </div>
+      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill skill--lead">Dart</span><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">DDD</span><span class="skill">Provider</span><span class="skill">ValueNotifier</span><span class="skill">MobX</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Custom Animations</span></div>
+    </div>
+    <div class="row-item">
+      <h3 class="stack-label">AI va agentlar</h3>
+      <div class="skill-list"><span class="skill skill--lead">Claude</span><span class="skill skill--lead">Claude Code</span><span class="skill skill--lead">Cursor</span><span class="skill">Agentlar</span><span class="skill">Orkestratorlar</span><span class="skill">AI yordamida testlash</span></div>
     </div>
     <div class="row-item">
       <h3 class="stack-label">Platformalar va vositalar</h3>
-      <div class="skill-list"> <span class="skill">Firebase</span><span class="skill">Firestore</span> <span class="skill">REST</span><span class="skill">WebSockets</span> <span class="skill">Codemagic</span><span class="skill">CircleCI</span><span class="skill">Fastlane</span> <span class="skill">Git / GitFlow</span><span class="skill">GitLab</span> <span class="skill">Jira</span><span class="skill">ClickUp</span> <span class="skill">Claude Code</span><span class="skill">Cursor</span> </div>
+      <div class="skill-list"><span class="skill skill--lead">Firebase</span><span class="skill skill--lead">REST</span><span class="skill skill--lead">WebSockets</span><span class="skill skill--lead">CircleCI</span><span class="skill">Firestore</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git / GitFlow</span><span class="skill">GitLab</span><span class="skill">Jira</span><span class="skill">ClickUp</span></div>
     </div>
     <div class="row-item">
       <h3 class="stack-label">Testlash</h3>
-      <div class="skill-list"> <span class="skill">Unit Tests</span> <span class="skill">Widget Tests</span> <span class="skill">Golden Tests</span> <span class="skill">E2E Tests</span> </div>
+      <div class="skill-list"><span class="skill skill--lead">Unit Tests</span><span class="skill skill--lead">Widget Tests</span><span class="skill skill--lead">Golden Tests</span><span class="skill skill--lead">E2E Tests</span></div>
     </div>
   </div>
 </section>
