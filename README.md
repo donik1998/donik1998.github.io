@@ -24,7 +24,7 @@ Personal portfolio and CV of **Doniyor Murodkulov** — Mobile Tech Lead & Flutt
 
 ## Tech
 
-Hand-written HTML & CSS — no frameworks, no build step, zero dependencies. Trilingual (EN/RU/UZ), responsive, respects `prefers-reduced-motion`, print-optimized CV pages.
+Hand-written HTML & CSS — no frameworks, no build step, zero dependencies, and no webfonts: the Swiss Editorial type is the system Helvetica stack, so the pages make no external requests at all. Trilingual (EN/RU/UZ), responsive, light and dark, respects `prefers-reduced-motion`, print-optimized CV pages.
 
 ## Contact
 

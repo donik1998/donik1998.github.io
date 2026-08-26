@@ -4,11 +4,8 @@
 <meta charset="UTF-8">
 <title>Doniyor Murodkulov — CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#E3E9F2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#070C15" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <style>
@@ -19,57 +16,57 @@
      always the white sheet with dark ink (see the print block at the end). */
   :root {
     color-scheme: light;
-    --ink: #13233C;
-    --ink-soft: #33455F;
-    --muted: #556780;
-    --body-gray: #3F5372;
-    --accent: #2463C4;
-    --accent-soft: #5B93E0;
+    --ink: #111111;
+    --ink-soft: #333333;
+    --muted: #666666;
+    --body-gray: #333333;
+    --accent: #E8341C;
+    --accent-soft: #E8341C;
     --accent-ink: #FFFFFF;
-    --cream: #EAF1FB;
-    --divider: #D3DCE8;
-    --rule: #C4D2E4;
-    --desk: #E3E9F2;
+    --cream: #FFFFFF;
+    --divider: #E2E0DC;
+    --rule: #E2E0DC;
+    --desk: #E2E0DC;
     --sheet: #FFFFFF;
-    --sheet-shadow: rgba(19, 35, 60, 0.10);
+    --sheet-shadow: transparent;
   }
   html[data-theme="dark"] {
     color-scheme: dark;
-    --ink: #E9EEFA;
-    --ink-soft: #C6D2E4;
-    --muted: #9AABC2;
-    --body-gray: #B4C2D8;
-    --accent: #63A4FF;
-    --accent-soft: #3E7BD1;
-    --accent-ink: #08111F;
-    --cream: #16243B;
-    --divider: #25314A;
-    --rule: #2B3852;
-    --desk: #070C15;
-    --sheet: #141D2F;
-    --sheet-shadow: rgba(0, 0, 0, 0.55);
+    --ink: #FFFFFF;
+    --ink-soft: #D3D3D3;
+    --muted: #8E8E8E;
+    --body-gray: #D3D3D3;
+    --accent: #E8341C;
+    --accent-soft: #E8341C;
+    --accent-ink: #FFFFFF;
+    --cream: #161616;
+    --divider: #2A2A2A;
+    --rule: #2A2A2A;
+    --desk: #0A0A0A;
+    --sheet: #111111;
+    --sheet-shadow: transparent;
   }
   @media (prefers-color-scheme: dark) {
     html:not([data-theme="light"]) {
       color-scheme: dark;
-      --ink: #E9EEFA;
-      --ink-soft: #C6D2E4;
-      --muted: #9AABC2;
-      --body-gray: #B4C2D8;
-      --accent: #63A4FF;
-      --accent-soft: #3E7BD1;
-      --accent-ink: #08111F;
-      --cream: #16243B;
-      --divider: #25314A;
-      --rule: #2B3852;
-      --desk: #070C15;
-      --sheet: #141D2F;
-      --sheet-shadow: rgba(0, 0, 0, 0.55);
+      --ink: #FFFFFF;
+      --ink-soft: #D3D3D3;
+      --muted: #8E8E8E;
+      --body-gray: #D3D3D3;
+      --accent: #E8341C;
+      --accent-soft: #E8341C;
+      --accent-ink: #FFFFFF;
+      --cream: #161616;
+      --divider: #2A2A2A;
+      --rule: #2A2A2A;
+      --desk: #0A0A0A;
+      --sheet: #111111;
+      --sheet-shadow: transparent;
     }
   }
 
   body {
-    font-family: 'Space Grotesk', 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--ink);
     background: var(--desk); /* screen only — print is always white */
     line-height: 1.55;
@@ -118,7 +115,7 @@
     margin-bottom: 3mm;
   }
   .header h1 {
-    font-family: 'Space Grotesk', 'Golos Text', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 30pt;
     letter-spacing: -0.5px;
@@ -139,7 +136,7 @@
   .photo {
     width: 30mm;
     height: 30mm;
-    border-radius: 50%;
+    border-radius: 0;
     overflow: hidden;
     flex-shrink: 0;
     border: 1.2mm solid var(--cream);
@@ -157,11 +154,11 @@
   .stat {
     background: var(--cream);
     border: 1px solid var(--divider);
-    border-radius: 3mm;
+    border-radius: 0;
     padding: 4mm 4.5mm;
   }
   .stat-num {
-    font-family: 'Space Grotesk', 'Golos Text', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16pt;
     font-weight: 700;
     color: var(--accent);
@@ -200,7 +197,7 @@
     white-space: nowrap;
   }
   .section-h h2 {
-    font-family: 'Space Grotesk', 'Golos Text', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 17pt;
     font-weight: 700;
     margin: 0;
@@ -230,7 +227,7 @@
     position: absolute;
     left: -7mm; top: 1.2mm;
     width: 3.2mm; height: 3.2mm;
-    border-radius: 50%;
+    border-radius: 0;
     background: var(--accent);
     border: 0.7mm solid var(--sheet);
     box-shadow: 0 0 0 0.4mm var(--accent);
@@ -276,7 +273,7 @@
   /* ---------- Continuation header ---------- */
   .cont-header { padding: 8mm 0 4mm; }
   .cont-header h3 {
-    font-family: 'Space Grotesk', 'Golos Text', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 14pt;
     margin: 0;
@@ -315,7 +312,7 @@
     background: var(--cream);
     border: 1px solid var(--divider);
     padding: 1mm 2.8mm;
-    border-radius: 99px;
+    border-radius: 0;
     white-space: nowrap;
   }
 
@@ -343,17 +340,17 @@
        opt-in: the "Qorongʻi PDF" button sets data-print="dark" for one print job. */
     html[data-theme="dark"], html:not([data-theme="light"]) {
       color-scheme: light;
-      --ink: #13233C; --ink-soft: #33455F; --muted: #556780; --body-gray: #3F5372;
-      --accent: #2463C4; --accent-soft: #5B93E0; --accent-ink: #FFFFFF; --cream: #EAF1FB;
-      --divider: #D3DCE8; --rule: #C4D2E4; --desk: #FFFFFF; --sheet: #FFFFFF;
+      --ink: #111111; --ink-soft: #333333; --muted: #666666; --body-gray: #333333;
+      --accent: #E8341C; --accent-soft: #E8341C; --accent-ink: #FFFFFF; --cream: #FFFFFF;
+      --divider: #E2E0DC; --rule: #E2E0DC; --desk: #E2E0DC; --sheet: #FFFFFF;
     }
     /* Must stay last of the three: same specificity as the resets above, so
        source order is what makes the opt-in win. */
     html[data-print="dark"] {
       color-scheme: dark;
-      --ink: #E9EEFA; --ink-soft: #C6D2E4; --muted: #9AABC2; --body-gray: #B4C2D8;
-      --accent: #63A4FF; --accent-soft: #3E7BD1; --accent-ink: #08111F; --cream: #16243B;
-      --divider: #25314A; --rule: #2B3852; --desk: #141D2F; --sheet: #141D2F;
+      --ink: #FFFFFF; --ink-soft: #D3D3D3; --muted: #8E8E8E; --body-gray: #D3D3D3;
+      --accent: #E8341C; --accent-soft: #E8341C; --accent-ink: #FFFFFF; --cream: #161616;
+      --divider: #2A2A2A; --rule: #2A2A2A; --desk: #0A0A0A; --sheet: #111111;
     }
     body { background: var(--sheet); }
     /* One .page === exactly one sheet. The fixed height is the fix for the
@@ -432,6 +429,29 @@
     cursor: pointer; transition: color .15s, border-color .15s;
   }
   .print-helper .theme-toggle:hover { color: var(--accent); border-color: var(--accent-soft); }
+
+  /* ==========================================================================
+     Swiss Editorial — style key `swiss`. Hard edges, hairlines, no shadows,
+     one hot accent used only where it is legible: the top bar, the photo rule
+     and the 16pt stat numerals. Labels take the 12px/0.04em step.
+     ========================================================================== */
+  .eyebrow, .section-num { color: var(--ink); letter-spacing: 0.04em; }
+  .stat, .chip, .photo, .tl-entry::before,
+  .print-helper, .print-helper button, .print-helper .styled-link,
+  .print-helper .theme-toggle { border-radius: 0 !important; }
+  .stat, .chip { background: transparent; }
+  .page { box-shadow: none; }
+
+  /* Accent is 4.25:1 on the sheet: legal for the masthead bar, the 16pt stat
+     numerals and the list marks — never for 8-9pt type. */
+  .tl-company, .skill-group h4 { color: var(--ink); }
+  .tl-dates, .edu-item .dates { color: var(--muted); }
+  .print-helper b, .print-helper .ats-link, .print-helper .pdf-dark { color: var(--ink); }
+  .print-helper button, .print-helper .pdf-dark:hover {
+    background: var(--ink); color: var(--sheet); border-color: var(--ink);
+    border-bottom: 3px solid transparent;
+  }
+  .print-helper button:hover { background: var(--ink); border-bottom-color: var(--accent); }
 </style>
 <script>
   (function () {

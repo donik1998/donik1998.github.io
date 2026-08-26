@@ -32,11 +32,8 @@
 </script>
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://donik1998.github.io/og-image.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<meta name="theme-color" content="#F6F8FB" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <style>
@@ -47,58 +44,70 @@
      ========================================================================== */
   :root {
     color-scheme: light;
-    --surface:      #F6F8FB;
-    --raised:       #FFFFFF;
-    --ink:          #13233C;
-    --ink-soft:     #33455F;
-    --muted:        #556780;
-    --line:         #D3DCE8;
-    --accent:       #2463C4;
-    --accent-text:  #2463C4;
+    /* Swiss Editorial — style key `swiss`, tokens verbatim from
+       design-system/styles.json v1. Radius 0 and shadows none are set on the
+       tokens themselves, so every rule below inherits "no shadows, hard edges"
+       without being touched. */
+    --surface:      #FFFFFF;
+    --raised:       #FBFAF8;
+    --ink:          #111111;
+    --ink-soft:     #333333;
+    --muted:        #666666;
+    --line:         #E2E0DC;
+    --accent:       #E8341C;
+    /* accent is 4.25:1 on paper — legal for the 6px bars and for large
+       numerals, not for 13px text. So text never takes the accent. */
+    --accent-text:  #111111;
     --accent-ink:   #FFFFFF;
-    --accent-wash:  #EAF1FB;
-    --accent-edge:  #A9C6EF;
-    --nav-bg:       rgba(246, 248, 251, 0.82);
-    --shadow-sm:    0 1px 2px rgba(19, 35, 60, 0.06);
-    --shadow-md:    0 10px 28px rgba(19, 35, 60, 0.10), 0 2px 6px rgba(19, 35, 60, 0.05);
-    --radius:       8px;
-    --radius-lg:    14px;
+    --accent-wash:  #FBFAF8;
+    --accent-edge:  #111111;
+    --nav-bg:       #FFFFFF;
+    --shadow-sm:    none;
+    --shadow-md:    none;
+    --radius:       0px;
+    --radius-lg:    0px;
     --maxw:         1140px;
   }
   html[data-theme="dark"] {
     color-scheme: dark;
-    --surface:      #0B1220;
-    --raised:       #141D2F;
-    --ink:          #E9EEFA;
-    --ink-soft:     #C6D2E4;
-    --muted:        #9AABC2;
-    --line:         #25314A;
-    --accent:       #63A4FF;
-    --accent-text:  #63A4FF;
-    --accent-ink:   #08111F;
-    --accent-wash:  #16243B;
-    --accent-edge:  #35547F;
-    --nav-bg:       rgba(11, 18, 32, 0.82);
-    --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.35);
-    --shadow-md:    0 12px 32px rgba(0, 0, 0, 0.50), 0 2px 8px rgba(0, 0, 0, 0.32);
+    /* Inverted swiss. Every grey is solved to reproduce the light mode's own
+       contrast ratio on the flipped ground: ink 18.88:1, muted 5.76 vs 5.74,
+       line 1.32 vs 1.32, raised 1.04 vs 1.04. The red is unchanged. */
+    --surface:      #111111;
+    --raised:       #161616;
+    --ink:          #FFFFFF;
+    --ink-soft:     #D3D3D3;
+    --muted:        #8E8E8E;
+    --line:         #2A2A2A;
+    --accent:       #E8341C;
+    --accent-text:  #FFFFFF;
+    --accent-ink:   #FFFFFF;
+    --accent-wash:  #161616;
+    --accent-edge:  #FFFFFF;
+    --nav-bg:       #111111;
+    --shadow-sm:    none;
+    --shadow-md:    none;
   }
   @media (prefers-color-scheme: dark) {
     html:not([data-theme="light"]) {
       color-scheme: dark;
-      --surface:      #0B1220;
-      --raised:       #141D2F;
-      --ink:          #E9EEFA;
-      --ink-soft:     #C6D2E4;
-      --muted:        #9AABC2;
-      --line:         #25314A;
-      --accent:       #63A4FF;
-      --accent-text:  #63A4FF;
-      --accent-ink:   #08111F;
-      --accent-wash:  #16243B;
-      --accent-edge:  #35547F;
-      --nav-bg:       rgba(11, 18, 32, 0.82);
-      --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.35);
-      --shadow-md:    0 12px 32px rgba(0, 0, 0, 0.50), 0 2px 8px rgba(0, 0, 0, 0.32);
+      /* Inverted swiss. Every grey is solved to reproduce the light mode's own
+         contrast ratio on the flipped ground: ink 18.88:1, muted 5.76 vs 5.74,
+         line 1.32 vs 1.32, raised 1.04 vs 1.04. The red is unchanged. */
+      --surface:      #111111;
+      --raised:       #161616;
+      --ink:          #FFFFFF;
+      --ink-soft:     #D3D3D3;
+      --muted:        #8E8E8E;
+      --line:         #2A2A2A;
+      --accent:       #E8341C;
+      --accent-text:  #FFFFFF;
+      --accent-ink:   #FFFFFF;
+      --accent-wash:  #161616;
+      --accent-edge:  #FFFFFF;
+      --nav-bg:       #111111;
+      --shadow-sm:    none;
+      --shadow-md:    none;
     }
   }
 
@@ -106,18 +115,12 @@
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    font-family: 'Space Grotesk', 'Golos Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--ink);
     /* Full-bleed wash painted on the body itself. As a pseudo-element inside
        .hero it was clipped to the 1140px column and the gradient's falloff
        showed as a hard rectangle edge. */
     background-color: var(--surface);
-    background-image: radial-gradient(1250px 480px at 50% 0,
-                      var(--accent-wash), transparent 72%);
-    background-repeat: no-repeat;
-    background-size: 100% 560px;
-    background-position: top center;
-    background-attachment: scroll;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     transition: background 0.2s ease, color 0.2s ease;
@@ -126,7 +129,7 @@
   a:hover { color: var(--ink); }
   h1, h2, h3, h4 {
     color: var(--ink); margin: 0; line-height: 1.15;
-    font-family: 'Space Grotesk', 'Golos Text', sans-serif; letter-spacing: -0.02em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: -0.02em;
   }
   ::selection { background: var(--accent); color: var(--accent-ink); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
@@ -144,7 +147,7 @@
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-brand { font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: -0.02em; }
-  .nav-brand span { color: var(--accent-text); }
+  .nav-brand span { color: var(--accent); }
   .nav-actions { display: flex; align-items: center; gap: 18px; }
   .nav-links { display: flex; gap: 20px; }
   .nav-links a {
@@ -515,13 +518,94 @@
   /* ---------- Footer ---------- */
   footer { text-align: center; padding: 32px 24px 48px; color: var(--muted); font-size: 13px; }
 
+
+  /* ==========================================================================
+     Swiss Editorial — what the tokens alone can't express.
+     Style notes in force: uppercase 12px labels at 0.04em; hard 6px accent
+     bars as section markers; no shadows; nothing decorative.
+     ========================================================================== */
+
+  /* One hot accent, and only where it is legible: the 6px bars and the large
+     numerals. Everything smaller is ink. */
+  .stat-num, .case-metric .n, .pers-figure { color: var(--accent); }
+
+  /* 6px accent bars as section markers — pure CSS, no markup needed. */
+  .hero::before, .section-head::before, .contact::before {
+    content: ''; display: block; width: 56px; height: 6px;
+    background: var(--accent); margin-bottom: 20px;
+  }
+  .contact::before { margin-left: auto; margin-right: auto; }
+
+  /* Label step: 12px / 0.04em, per the style note (it supersedes the 11px
+     0.14em step in the shared type scale). */
+  .eyebrow, .section-num, .stat-label, .card-tag, .tier-label, .stack-label,
+  .edu-tag, .early-tag, .case-metric .l, .pers-figure-l, .pers-sub,
+  .tl-v-content .dates {
+    font-size: 12px; letter-spacing: 0.04em; font-weight: 500;
+  }
+  .eyebrow, .section-num, .stack-label, .early-tag, .edu-tag { color: var(--ink); }
+  .stat-label, .case-metric .l, .pers-figure-l, .pers-sub,
+  .tier-label, .tl-v-content .dates { color: var(--muted); }
+
+  /* Flat surfaces: no lift, no tint. Hover moves the rule, not the box. */
+  .card, .case, .stat, .edu-card, .pers-panel, .contact { transition: border-color 0.15s; }
+  .card:hover, .case:hover, .edu-card:hover, .pers-panel:hover {
+    transform: none; border-color: var(--ink);
+  }
+  a.btn-primary:hover, a.btn-secondary:hover { transform: none; }
+  .early-row:hover { background: transparent; box-shadow: inset 0 0 0 0 transparent; }
+  /* 16px bold in accent would be 4.25:1 — under AA. The rule takes the red. */
+  .early-row:hover h3 { text-decoration: underline; text-decoration-color: var(--accent);
+                        text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  nav { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  :focus-visible { border-radius: 0; }
+
+  /* Tags become outlined, not tinted — swiss has no washes. */
+  .card-tag, .edu-tag {
+    background: transparent; border: 1px solid var(--line);
+    padding: 4px 10px; color: var(--ink);
+  }
+
+  /* Buttons. #FFF on #E8341C is 4.25:1, under AA at 14px, so the primary
+     takes the ink ground (18.9:1) and the red arrives as the hover rule. */
+  a.btn-primary {
+    background: var(--ink); color: var(--surface);
+    border-bottom: 3px solid transparent;
+  }
+  a.btn-primary:hover { background: var(--ink); color: var(--surface); border-bottom-color: var(--accent); }
+  a.btn-secondary { border: 1px solid var(--ink); background: transparent; }
+  a.btn-secondary:hover { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+  .lang-switch a.active { background: var(--ink); color: var(--surface); }
+  .lang-switch a:hover { background: transparent; color: var(--ink); }
+
+  /* Links carry a red rule instead of red type. */
+  .card-links a, .early-links a {
+    color: var(--ink); text-decoration: underline;
+    text-decoration-color: var(--accent); text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .card-links a:hover, .early-links a:hover { text-decoration-color: var(--ink); }
+
+  /* Timeline: square marks on a hard rule. */
+  .tl-v::before, .tl-v::after { border-radius: 0; }
+  .tl-v-dot {
+    width: 10px; height: 10px; left: -32px; top: 7px;
+    border-radius: 0; border: 0; box-shadow: none; background: var(--accent);
+  }
+  .tl-v-content .company { color: var(--ink); }
+  .tl-v-content .role { font-weight: 700; }
+
+  /* Chips: hairline boxes, no fill. */
+  .chip, .skill { background: transparent; border: 1px solid var(--line); color: var(--ink); }
+  .edu-school { color: var(--ink); }
+
   /* ---------- Print: always the light ground, no wasted ink ---------- */
   @media print {
     html[data-theme="dark"], html:not([data-theme="light"]) {
       color-scheme: light;
-      --surface: #FFFFFF; --raised: #FFFFFF; --ink: #13233C; --ink-soft: #33455F;
-      --muted: #556780; --line: #D3DCE8; --accent: #2463C4; --accent-text: #2463C4;
-      --accent-ink: #FFFFFF; --accent-wash: #EAF1FB; --accent-edge: #A9C6EF;
+      --surface: #FFFFFF; --raised: #FFFFFF; --ink: #111111; --ink-soft: #333333;
+      --muted: #666666; --line: #E2E0DC; --accent: #E8341C; --accent-text: #111111;
+      --accent-ink: #FFFFFF; --accent-wash: #FFFFFF; --accent-edge: #111111;
     }
     :root { --surface: #FFFFFF; }
     body { background: #FFFFFF; }

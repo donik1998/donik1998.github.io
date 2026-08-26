@@ -12,31 +12,31 @@
      semantic and graphic-free so resume parsers read it exactly as before. */
   :root {
     color-scheme: light;
-    --ink: #13233C;
-    --ink-soft: #33455F;
-    --accent: #2463C4;
+    --ink: #111111;
+    --ink-soft: #333333;
+    --accent: #E8341C;
     --accent-ink: #FFFFFF;
-    --desk: #E3E9F2;
+    --desk: #E2E0DC;
     --sheet: #FFFFFF;
-    --sheet-shadow: rgba(19, 35, 60, 0.10);
+    --sheet-shadow: transparent;
   }
   @media (prefers-color-scheme: dark) {
     :root {
       color-scheme: dark;
-      --ink: #E9EEFA;
-      --ink-soft: #C6D2E4;
-      --accent: #63A4FF;
-      --accent-ink: #08111F;
-      --desk: #070C15;
-      --sheet: #141D2F;
-      --sheet-shadow: rgba(0, 0, 0, 0.55);
+      --ink: #FFFFFF;
+      --ink-soft: #D3D3D3;
+      --accent: #E8341C;
+      --accent-ink: #FFFFFF;
+      --desk: #0A0A0A;
+      --sheet: #111111;
+      --sheet-shadow: transparent;
     }
   }
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: var(--ink);
     background: var(--desk);
     line-height: 1.5;
@@ -66,7 +66,7 @@
     margin: 0 0 6mm;
     color: var(--ink-soft);
   }
-  .contact a { color: var(--accent); }
+  .contact a { color: var(--ink); }
 
   h2 {
     font-size: 12pt;
@@ -102,7 +102,7 @@
     /* Always the white sheet with dark ink, whatever the screen preference. */
     :root {
       color-scheme: light;
-      --ink: #13233C; --ink-soft: #33455F; --accent: #2463C4;
+      --ink: #111111; --ink-soft: #333333; --accent: #E8341C;
       --accent-ink: #FFFFFF; --desk: #FFFFFF; --sheet: #FFFFFF;
     }
     body { background: #fff; }
@@ -116,9 +116,9 @@
     top: 20px; right: 20px;
     background: var(--sheet);
     padding: 12px 16px;
-    border-radius: 10px;
+    border-radius: 0;
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 13px;
     z-index: 100;
     line-height: 1.45;
@@ -126,11 +126,11 @@
   }
   .print-helper button {
     margin-top: 8px;
-    background: var(--accent);
-    color: var(--accent-ink);
+    background: var(--ink);
+    color: var(--sheet);
     border: 0;
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: 0;
     font-weight: 600;
     cursor: pointer;
     font-size: 13px;
@@ -140,7 +140,7 @@
     display: block;
     margin-top: 8px;
     font-size: 12px;
-    color: var(--accent);
+    color: var(--ink);
     text-decoration: none;
     text-align: center;
     font-weight: 600;
