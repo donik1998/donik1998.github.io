@@ -3,33 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Doniyor Murodkulov — Mobile Tech Lead · Flutter Developer</title>
-<meta name="description" content="Mobile Tech Lead va Flutter dasturchi — olti yildan beri prodakshen ilovalarni yarataman, boshqaraman va barqarorlashtiraman." />
-<meta property="og:title" content="Doniyor Murodkulov — Mobile Tech Lead · Flutter Developer" />
-<meta property="og:description" content="Mobile Tech Lead va Flutter dasturchi. Olti yildan beri prodakshenga mobil ilovalar chiqaraman." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://donik1998.github.io/og-image.png" />
-<meta property="og:url" content="https://donik1998.github.io/uz.html" />
+<title>Doniyor Murodkulov &mdash; dasturiy injener</title>
+<meta name="description" content="Dasturiy injener: olti yil, prodakshnda sakkizta mahsulot. Crash-free ko&lsquo;rsatkichini 68% dan 98% ga ikki oyda yetkazdim; 35 000+ oylik faol foydalanuvchili hamyonda ikkita to&lsquo;liq refaktoring o&lsquo;tkazdim." />
 <link rel="canonical" href="https://donik1998.github.io/uz.html" />
 <link rel="alternate" hreflang="en" href="https://donik1998.github.io/" />
 <link rel="alternate" hreflang="ru" href="https://donik1998.github.io/ru.html" />
 <link rel="alternate" hreflang="uz" href="https://donik1998.github.io/uz.html" />
 <link rel="alternate" hreflang="x-default" href="https://donik1998.github.io/" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Doniyor Murodkulov",
-  "jobTitle": "Mobile Tech Lead, Flutter Developer",
-  "url": "https://donik1998.github.io",
-  "email": "mailto:donikmurodkulov98@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Tashkent", "addressCountry": "UZ" },
-  "sameAs": ["https://www.linkedin.com/in/donik1998", "https://github.com/donik1998"],
-  "knowsAbout": ["Flutter", "Dart", "Mobile Development", "Clean Architecture", "Domain-Driven Design"],
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "INHA University in Tashkent" },
-  "worksFor": { "@type": "Organization", "name": "EMCD" }
-}
-</script>
+<meta property="og:title" content="Doniyor Murodkulov &mdash; dasturiy injener" />
+<meta property="og:description" content="Olti yil va prodakshnda sakkizta mahsulot. Men relizdan keyin ham ishlaydigan tizimlar quraman." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://donik1998.github.io/og-image.png" />
+<meta property="og:url" content="https://donik1998.github.io/uz.html" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://donik1998.github.io/og-image.png" />
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
@@ -631,484 +616,357 @@
     .skill--lead { background: transparent; color: var(--ink); border-color: var(--ink); }
     a { color: var(--ink); }
   }
+
+  /* --- added for the rebuilt narrative --- */
+  /* the nav is sticky at 65px; without this an anchor jump hides the heading under it */
+  section[id], header[id] { scroll-margin-top: 84px; }
+  .tl-v-content .ctx {
+    font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.5;
+  }
+  .tl-v-content .ctx b { color: var(--ink-soft); font-weight: 600; }
+  .lede-note {
+    font-size: 14px; color: var(--muted); margin-top: 26px; padding-top: 18px;
+    border-top: 1px solid var(--line); max-width: 68ch;
+  }
+  .lede-note strong { color: var(--ink); font-weight: 600; }
+  /* every grid lays out on equal-height rows, so blocks read as one system */
+  .pers-grid { align-items: stretch; grid-auto-rows: 1fr; }
+  .pers-note { font-size: 13.5px; color: var(--ink-soft); margin: 14px 0 0; line-height: 1.55; }
+  /* a panel with no figure above it must not show the figure divider */
+  .pers-panel h3:first-child { border-top: 0; padding-top: 0; }
+  .lang-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .lang-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .lang-grid { grid-template-columns: 1fr; } }
+  .lang-card {
+    background: var(--raised); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 26px 24px;
+  }
+  .lang-card .name {
+    font-size: 21px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.1;
+  }
+  .lang-card .level {
+    font-size: 11px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.1em; font-weight: 600; margin-top: 10px;
+  }
 </style>
-<script>
-  /* Apply a stored theme choice before first paint. With no stored choice the
-     CSS falls back to prefers-color-scheme, so this is progressive enhancement. */
-  (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
-  })();
-</script>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-brand">Doniyor <span>•</span> Murodkulov</div>
+    <div class="nav-brand">Doniyor <span>&bull;</span> Murodkulov</div>
     <div class="nav-actions">
-      <div class="nav-links">
-        <a href="#about">Men haqimda</a>
-        <a href="#work">Loyihalar</a>
-        <a href="#experience">Tajriba</a>
-        <a href="#stack">Stek</a>
-        <a href="#education">Ta’lim</a>
-        <a href="#contact">Aloqa</a>
-        <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+      <div class="nav-links"><a href="#about">Men haqimda</a><a href="#work">Loyihalar</a><a href="#experience">Tajriba</a><a href="#stack">Stek</a><a href="#education">Ta&rsquo;lim</a><a href="#contact">Aloqa</a>
+        <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;&#8599;</a>
       </div>
       <button class="theme-toggle" id="themeToggle" type="button"
-              aria-label="Yorugʻ va qorongʻi mavzuni almashtirish" title="Mavzuni almashtirish">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+              aria-label="Theme" title="Theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
         </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
         </svg>
       </button>
-      <div class="lang-switch">
-        <a href="index.html">EN</a>
-        <a href="ru.html">RU</a>
-        <a href="uz.html" class="active">UZ</a>
-      </div>
+      <div class="lang-switch"><a href="index.html">EN</a><a href="ru.html">RU</a><a href="uz.html" class="active">UZ</a></div>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="eyebrow">Mobile Tech Lead  ·  Flutter Developer</div>
-  <h1 class="tag">Har kuni ishlatiladigan mobil ilovalar yarataman — va relizdan keyin ham ularga mas’ulman.</h1>
-  <p class="blurb">
-    Mobil dasturlashda olti yil, prodakshenda 8 ta ilova — yetkazib berish, fintex, striming,
-    marketpleys, kripto. <strong>Express24</strong>da sakkiz oyda Mobile Tech Lead lavozimiga
-    ko‘tarildim va uch kishilik jamoani boshqardim: har kuni 3 000+ do‘kon, kafe va restoran
-    ishlatadigan B2B ilovada crash-free ko‘rsatkichini 68% dan 98% ga yetkazdim, loyihani
-    Feature-First DDD ga o‘tkazdim, buyurtmalarni esa pollingdan real vaqtli WebSocketga
-    ko‘chirdim. <strong>EMCD</strong>da Coinhold hamyonining ikkita katta yo‘nalishini
-    boshdan-oyoq refaktoring qildim — ikkalasini ham muddatida topshirdim — va jamoani test
-    yozishga o‘rgatdim.
-  </p>
+  <div class="eyebrow">Dasturiy injener  &middot;  texnik yetakchi</div>
+  <h1 class="tag">Men relizdan keyin ham ishlaydigan tizimlar quraman.</h1>
+  <p class="blurb">Olti yil va prodakshnda sakkizta mahsulot. <strong>Express24</strong>&rsquo;da B2B platformani
+    68% crash-free holatida qabul qilib, ikki oyda 98% ga yetkazdim va buyurtmalar pollingini real-time
+    WebSocket konveyeriga almashtirdim &mdash; keyin bu darajani ushlab turgan uch kishilik jamoani boshqardim.
+    <strong>EMCD</strong>&rsquo;da 35&nbsp;000+ oylik faol foydalanuvchili hamyonda ikkita to&lsquo;liq refaktoring
+    o&lsquo;tkazdim, ikkalasini ham muddatida topshirdim.</p>
   <div class="hero-cta">
-    <a class="btn btn-primary" href="#contact">Bog‘lanish &nbsp;→</a>
-    <a class="btn btn-secondary" href="cv-uz.html" target="_blank" rel="noopener">CVni ochish</a>
+    <a class="btn btn-primary" href="#contact">Bog&lsquo;lanish &nbsp;&rarr;</a>
+    <a class="btn btn-secondary" href="cv-ats.html" target="_blank" rel="noopener">Rezyumeni ko&lsquo;rish</a>
   </div>
 </header>
 
-<!-- ===== ABOUT ===== -->
+<section id="stats-strip">
+  <div class="stats"><div class="stat"><div class="stat-num">68&rarr;98%</div><div class="stat-label">Crash-free, ikki oyda</div></div><div class="stat"><div class="stat-num">8</div><div class="stat-label">Prodakshndagi mahsulot</div></div><div class="stat"><div class="stat-num">6</div><div class="stat-label">Yillik tajriba</div></div><div class="stat"><div class="stat-num">35K+</div><div class="stat-label">Oylik faol foydalanuvchi</div></div></div>
+</section>
+
 <section id="about">
-  <div class="section-head">
-    <span class="section-num">01 / Men haqimda</span>
-    <h2>Ishni oxiriga yetkazadigan mobil dasturchi.</h2>
-  </div>
-
-  <div class="about-grid about">
-    <div>
-      <p>
-        Toshkentlik Flutter dasturchiman. Hammasi sof qiziqish uchun olgan bir nechta frilans
-        buyurtmamdan boshlangan. Oradan o‘tgan olti yilda o‘sha qiziqish meni Toshkentdagi ilk
-        yetkazib berish xizmatlaridan birida Tech Lead lavozimigacha olib keldi va yetkazib berish,
-        fintex, striming, marketpleys hamda kripto sohalarida ilova chiqarishga yetakladi.
-      </p>
-      <p>
-        Bu ishda menga eng yoqadigani birinchi versiyani chiqarish emas, balki undan keyin
-        nima bo‘lishi. Barqarorlik, reliz sikli va analitika ilovaning taqdirini hal
-        qiladi — ularga ham ishlab chiqishdek jiddiy qarayman.
-      </p>
-      <p>
-        Oxirgi ish joyim — <strong>EMCD</strong>, kripto/Web3 platforma, oyiga 35 mingdan ortiq
-        faol foydalanuvchisi bor: u yerda Coinhold hamyonining ikkita katta yo‘nalishini boshdan-oyoq
-        refaktoring qildim va jamoani AI yordamida test yozishga o‘tkazdim.
-        Flutter yoki Mobile Lead lavozimi bo‘yicha takliflarni ko‘rib chiqyapman —
-        <strong>masofadan, dunyoning istalgan nuqtasidan</strong>. O‘zim Toshkentdaman (UTC+5): ish vaqtim Ko‘rfaz bilan to‘liq,
-        Yevropa bilan esa deyarli to‘liq mos tushadi.
-      </p>
-    </div>
-
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">yil mobil dasturlash tajribasi</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">68→98%</div>
-        <div class="stat-label">crash-free ko‘rsatkich o‘sishi</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">8</div>
-        <div class="stat-label">production ilova chiqarilgan</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">35K+</div>
-        <div class="stat-label">oylik faol foydalanuvchi</div>
-      </div>
-    </div>
-  </div>
+  <div class="section-head"><span class="section-num">01 / Men haqimda</span><h2>Aslida nima qilaman.</h2></div>
+  <div class="about-grid about"><div>
+      <p>Men Toshkentda ishlaydigan dasturiy injenerman. Ishimning katta qismi mobil klientlar orqali
+    o&lsquo;tgan, lekin masalalar <strong>tizim masalalari</strong> bo&lsquo;lgan: reliz nega yiqiladi,
+    buyurtma merchantga nega kech yetadi, katta kod bazasini jamoa o&lsquo;sganda ham buzilmaydigan
+    chegaralarga qanday ko&lsquo;chirish kerak.</p>
+      <p>Hammasi qiziqish uchun olingan frilans ishlardan boshlangan. Olti yil ichida bu meni Toshkentning
+    birinchi yetkazib berish platformalaridan birida texnik yetakchi roliga va
+    <strong>prodakshndagi sakkizta mahsulotga</strong> olib keldi &mdash; yetkazib berish, fintex,
+    striming, marketpleys va kripto sohalarida: klientda, nativ chegarada va ularning orqasidagi bekendda.</p>
+      <p>Birinchi versiyani chiqarish &mdash; oson qismi. Barqarorlik, reliz jarayoni va regressiyani
+    foydalanuvchidan oldin ushlaydigan testlar mahsulot ikkinchi yilga yetadimi yo&lsquo;qmi &mdash;
+    shuni hal qiladi. Menga ana shu ish qiziq.</p>
+      <p class="lede-note"><strong>Dasturiy injener</strong> rollariga ochiqman &mdash; butun dunyo bo&lsquo;ylab masofadan,
+    relokatsiyaga ham tayyorman. Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.</p>
+  </div></div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
 <section id="work">
-  <div class="section-head">
-    <span class="section-num">02 / Ishlarim</span>
-    <h2>Tanlangan loyihalar.</h2>
-  </div>
-
-    <div class="cases">
-      <article class="case">
-        <div>
-          <span class="card-tag">B2B  ·  Tech Lead</span>
-          <h3>Express24 Merchant App</h3>
-          <div class="card-role">Flutter Developer → Mobile Tech Lead  ·  2023 – 2024</div>
-          <p>
-        Buyurtmalarni qabul qilish va bajarish uchun <span class="highlight">3 000+ do‘kon, kafe va
-        restoran</span> ishlatadigan B2B Flutter ilova. Sakkiz oyda
-        <span class="highlight">Mobile Tech Lead</span> lavozimiga ko‘tarildim va uch kishilik
-        muhandislar jamoasini boshqardim — mobil arxitektura, relizlar va CI menda edi.
-        Beqarorlik sabablarini topib bartaraf etdim, loyihani Feature-First DDDga o‘tkazdim,
-        buyurtmalarni esa pollingdan WebSocketga ko‘chirdim.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">BLoC</span>
-        <span class="chip">DDD</span><span class="chip">WebSockets</span>
-        <span class="chip">CircleCI</span>
+  <div class="section-head"><span class="section-num">02 / Tanlangan ishlar</span><h2>Men hal qilgan masalalar.</h2></div>
+  <div class="cases">
+    <article class="case">
+      <div>
+        <span class="card-tag">Barqarorlik  &middot;  real-time  &middot;  texnik yetakchi</span>
+        <h3>Express24 Merchant Platform</h3>
+        <div class="card-role">Dasturiy injener &rarr; mobil yo&lsquo;nalish texnik yetakchisi  &middot;  2023 &ndash; 2024</div>
+        <p><span class="highlight">3 000+ do&lsquo;kon, kafe va restoran</span> buyurtmalarni qabul qilib
+      bajarish uchun ishlatgan B2B platforma. Uni 68% crash-free holatida qabul qildim, har bir yiqilish
+      turini asl sababigacha ochib, ikki oyda 98% ga chiqardim. Buyurtma pollingini
+      <span class="highlight">WebSocket konveyeriga</span> almashtirdim &mdash; endi merchant buyurtmani
+      keyingi so&lsquo;rovda emas, sodir bo&lsquo;lgan zahoti ko&lsquo;radi &mdash; va kod bazasini
+      Feature-First Domain-Driven Design&rsquo;ga ko&lsquo;chirdim. Sakkiz oyda texnik yetakchi bo&lsquo;ldim:
+      uch injenerni boshqardim, arxitektura, relizlar va CI menda edi.</p>
+        <div class="card-tech"><span class="chip">Flutter</span><span class="chip">BLoC</span><span class="chip">Feature-First DDD</span><span class="chip">WebSockets</span><span class="chip">CircleCI</span><span class="chip">Yunit-testlar</span></div>
+        <div class="card-status">Express24 keyinchalik ilovani yopdi &mdash; arxitekturasini bemalol tushuntirib bera olaman.</div>
       </div>
-          <div class="card-status">Loyiha yopilgan — arxitekturasini birga ko‘rib chiqishga tayyorman.</div>
-        </div>
-        <div class="case-metric">
-          <div class="n">68 → 98%</div>
-          <div class="l">crash-free, ikki oyda</div>
-        </div>
-      </article>
-      <article class="case">
-        <div>
-          <span class="card-tag">Kripto  ·  Web3</span>
-          <h3>EMCD Coinhold</h3>
-          <div class="card-role">Flutter Developer  ·  2025 – 2026</div>
-          <p>
-        400 kishilik jamoaga ega kripto kompaniyaning mobil hamyoni —
-        <span class="highlight">oyiga 35K+ faol foydalanuvchi</span>. Katta funksional
-        yo‘nalishlarning <span class="highlight">ikkita boshdan-oyoq refaktoringini</span> olib
-        bordim — ikkalasini ham rejalashtirib, muddatida topshirdim — va jamoani AI yordamida
-        test yozishga o‘tkazdim. Yangi testlar bilan qoplagan qismlarimiz regressiyasiz chiqdi.
-        Hamyonning nativ qismini — biometrik kirish, kalitlarni xavfsiz saqlash va diplinklarni —
-        platform channels orqali uladim.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Web3</span>
-        <span class="chip">Clean Architecture</span><span class="chip">Platform Channels</span>
-        <span class="chip">REST</span>
-      </div>
-          <div class="card-links">
-        <a href="https://apps.apple.com/sa/app/emcd-coinhold-crypto-wallet/id1606903304" target="_blank" rel="noopener">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=io.emcd.emcd_flutter.prod" target="_blank" rel="noopener">Google Play</a>
-      </div>
-        </div>
-        <div class="case-metric">
-          <div class="n">2</div>
-          <div class="l">boshdan-oyoq refaktoring, ikkalasi ham muddatida</div>
-        </div>
-      </article>
-      <article class="case">
-        <div>
-          <span class="card-tag">Pet-loyiha &nbsp;·&nbsp; agentlar bilan qurilgan</span>
-          <h3>CubeClash</h3>
-          <div class="card-role">Yakka o‘zim &nbsp;·&nbsp; agentlar jamoasi bilan loyihalab qurdim &nbsp;·&nbsp; 2026</div>
-          <p>
-        Spidkubing uchun ilova — WCA taymeri va WebSockets orqali
-        <span class="highlight">jonli 1x1 musobaqalar</span>. Bitta mahsulot to‘rtta kod bazasida:
-        Flutter klient, nativ Kotlin, nativ Swift va Postgres hamda Redis ustidagi NestJS backend —
-        barchasi bitta arxitektura va bitta real-time shartnoma asosida.
-        <span class="highlight">Olti agentdan iborat jamoa</span> bilan qurdim — PM, dizayner,
-        spetsifikatsiya, arxitektor, backend va UI — ular repozitoriylarni yozma spetsifikatsiyalar
-        bo‘yicha parallel olib boradi, shuning uchun to‘rtta klient o‘zaro mos tushadi.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Kotlin</span>
-        <span class="chip">Swift</span><span class="chip">NestJS</span>
-        <span class="chip">WebSockets</span><span class="chip">Postgres</span>
-      </div>
-      <div class="card-links">
-        <a href="https://github.com/donik1998/cubeclash-flutter" target="_blank" rel="noopener">Flutter</a>
-        <a href="https://github.com/donik1998/cubeclash-android" target="_blank" rel="noopener">Android</a>
-        <a href="https://github.com/donik1998/cubeclash-ios" target="_blank" rel="noopener">iOS</a>
-        <a href="https://github.com/donik1998/cubeclash-backend" target="_blank" rel="noopener">Backend</a>
-      </div>
-          <div class="card-status">Hali chiqarilmagan — kod ochiq, arxitekturasini birga ko‘rib chiqishga tayyorman.</div>
-        </div>
-        <div class="case-metric">
-          <div class="n">4</div>
-          <div class="l">kod bazasi, bitta arxitektura</div>
-        </div>
-      </article>
-    </div>
-
-    <div class="tier-label">Kontrakt loyihalar · 2024 – 2025</div>
-    <div class="project-grid">
-    <article class="card">
-      <span class="card-tag">Marketpleys  ·  Ko‘p platformali</span>
-      <h3>7Tech</h3>
-      <div class="card-role">Contract Software Engineer (Flutter)  ·  2025</div>
-      <p>
-        Bitta Flutter kod bazasidan bir vaqtning o‘zida <span class="highlight">iOS, Android va veb</span>ga
-        chiqqan marketpleys ilovasi. Kross-funksional mahsulot jamoasi tarkibida ishlab chiqdim.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter Web</span><span class="chip">Flutter Mobile</span>
-        <span class="chip">REST</span>
-      </div>
-      <div class="card-links">
-        <a href="https://apps.apple.com/uz/app/7tech-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B5-%D1%81%D0%B5%D0%B3%D0%BE%D0%B4%D0%BD%D1%8F/id6479844581" target="_blank" rel="noopener">App Store</a>
-        <a href="https://seventech.uz/" target="_blank" rel="noopener">Android ilova</a>
-      </div>
+      <div class="case-metric"><div class="n">68 &rarr; 98%</div><div class="l">crash-free, ikki oyda</div></div>
     </article>
+    <article class="case">
+      <div>
+        <span class="card-tag">Fintex  &middot;  Web3</span>
+        <h3>EMCD Coinhold</h3>
+        <div class="card-role">Dasturiy injener  &middot;  2025 &ndash; 2026</div>
+        <p>Coinhold &mdash; kripto mayning-pulning fintex yo&lsquo;nalishidagi depozit mahsuloti: foydalanuvchi
+      kriptovalyutani saqlagani uchun mukofot oladi. Hamyonning katta qismlarida
+      <span class="highlight">ikkita to&lsquo;liq refaktoring</span> o&lsquo;tkazdim: hajmini baholab,
+      bosqichlarga bo&lsquo;lib, ikkalasini ham barqarorlikni tushirmasdan muddatida topshirdim.
+      O&lsquo;z qismlarimni unit, widget, golden va integratsion testlar bilan qopladim, so&lsquo;ng
+      jamoani sun&rsquo;iy intellekt yordamida test yozishga o&lsquo;tkazdim &mdash; yangi qamrovga
+      olingan barcha qismlar regressiyasiz chiqdi.</p>
+        <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">BLoC</span><span class="chip">DDD</span><span class="chip">GitLab CI/CD</span><span class="chip">Codemagic</span></div>
+        
+      </div>
+      <div class="case-metric"><div class="n">35K+</div><div class="l">oylik faol foydalanuvchi</div></div>
+    </article>
+  </div>
+  <div class="tier-label">Kontrakt ishlari  &middot;  2024 &ndash; 2025</div>
+  <div class="project-grid">
     <article class="card">
-      <span class="card-tag">Striming  ·  Yakka o‘zim</span>
+      <span class="card-tag">Striming  &middot;  noldan</span>
       <h3>Million TV</h3>
-      <div class="card-role">Contract Flutter Developer  ·  2025</div>
-      <p>
-        O‘zbek filmlari va seriallari uchun striming ilovasi. Relizlarni boshidan oxirigacha
-        olib bordim va to‘laqonli videopleyer ishlab chiqdim: til va sifat tanlovi, qismlar orasida
-        o‘tish, to‘xtagan joydan davom ettirish — nativ ijro qatlamiga platform views va
-        platform channels orqali ulandim.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Video Player</span>
-        <span class="chip">Platform Channels</span><span class="chip">BLoC</span>
-      </div>
-      <div class="card-status">Ilova buyurtmachida qoldi — so‘rov bo‘yicha ko‘rsataman.</div>
+      <div class="card-role">Kontrakt bo&lsquo;yicha dasturiy injener  &middot;  2025</div>
+      <p>O&lsquo;zbek film va seriallari uchun striming klienti, noldan qurilgan. Butun injenerlik ishi
+      pleyerda edi: platform views orqali ulangan ExoPlayer, til va sifat tanlash, epizodlar bo&lsquo;ylab
+      navigatsiya va tomoshabin to&lsquo;xtagan joyidan davom etadigan ijro.</p>
+      <div class="card-tech"><span class="chip">Flutter</span><span class="chip">BLoC</span><span class="chip">DDD</span><span class="chip">ExoPlayer</span></div>
     </article>
     <article class="card">
-      <span class="card-tag">B2B + B2C  ·  Maxsus UI</span>
-      <h3>Cuppy</h3>
-      <div class="card-role">Contract Flutter Developer  ·  2024</div>
-      <p>
-        Ikki ilovadan iborat kafe platformasi — egasi uchun panel va mehmonlar uchun buyurtma
-        ilovasi. Tayyor vidjetlar yetmagan joyni o‘zim chizdim — grafiklar, shkalalar va nostandart
-        joylashuvlar <span class="highlight">CustomPainter</span> bilan noldan yasaldi;
-        scoped DI asosida qurilgan.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Provider</span>
-        <span class="chip">BLoC</span><span class="chip">CustomPainter</span>
-      </div>
-      <div class="card-status">Buyurtmachi uchun ishlangan yopiq loyiha — so‘rov bo‘yicha ko‘rsataman.</div>
+      <span class="card-tag">Marketpleys  &middot;  uch platforma</span>
+      <h3>7Tech</h3>
+      <div class="card-role">Kontrakt bo&lsquo;yicha dasturiy injener  &middot;  Neotech  &middot;  2025</div>
+      <p>Bitta marketpleys <span class="highlight">bitta kod bazasidan veb, iOS va Android</span>&rsquo;ga
+      chiqarildi: uchala render maqsadida bir xil xatti-harakat, relizlar mijozning mahsulot jamoasi
+      bilan birga muvofiqlashtirildi.</p>
+      <div class="card-tech"><span class="chip">Flutter</span><span class="chip">BLoC</span><span class="chip">Clean Architecture</span></div>
     </article>
+    <article class="card">
+      <span class="card-tag">Ikki interfeys  &middot;  o&lsquo;z chizmasi</span>
+      <h3>Cuppy</h3>
+      <div class="card-role">Kontrakt bo&lsquo;yicha dasturiy injener  &middot;  2024</div>
+      <p>Ikki qismdan iborat qahvaxona platformasi &mdash; egasi uchun konsol va mijoz ilovasi. Qahvaxonalar
+      xaritada Google Maps SDK va maxsus markerlar bilan, tayyor vidjetlar qoplamaydigan grafik va
+      datchiklar esa CustomPainter&rsquo;da noldan chizilgan.</p>
+      <div class="card-tech"><span class="chip">Flutter</span><span class="chip">BLoC</span><span class="chip">Clean Architecture</span><span class="chip">Google Maps SDK</span><span class="chip">CustomPainter</span></div>
+    </article>
+  </div>
+  <div class="tier-label">Oldingi loyihalar  &middot;  2020 &ndash; 2023</div>
+  <div class="early">
+    <div class="early-row">
+      <div><h3>Tegen Loyalty</h3><span class="early-tag">Loyallik  &middot;  QR</span></div>
+      <div>
+        <div class="early-role">Dasturiy injener  &middot;  Ptolemay LLC  &middot;  2021 &ndash; 2023</div>
+        <p>Go&lsquo;sht do&lsquo;konlari tarmog&lsquo;i uchun loyallik ilovasi. Mijoz ilovadagi QR-kod orqali bonusini oladi, do&lsquo;kon uni kassada skanerlaydi.</p>
+        <div class="early-tech">Flutter &middot; BLoC &middot; DDD &middot; REST</div>
+      </div>
+      <div class="early-links"><a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a></div>
     </div>
-
-    <div class="tier-label">Dastlabki ishlar · 2020 – 2023</div>
-    <div class="early">
-      <div class="early-row">
-        <div>
-          <h3>Tegen Loyalty</h3>
-          <span class="early-tag">Sodiqlik dasturi  ·  QR</span>
-        </div>
-        <div>
-          <div class="early-role">Flutter Developer  ·  Ptolemay LLC  ·  2021 – 2023</div>
-          <p>Go‘sht mahsulotlari do‘konlari tarmog‘i uchun sodiqlik dasturi ilovasi. Xaridorlar ilovadagi QR-kod orqali bonus oladi, do‘konlar esa uni kassada skanerlaydi.</p>
-          <div class="early-tech">Flutter · QR · REST</div>
-        </div>
-        <div class="early-links"><a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a></div>
+    <div class="early-row">
+      <div><h3>Bakery HR App</h3><span class="early-tag">HR  &middot;  ko&lsquo;p filial</span></div>
+      <div>
+        <div class="early-role">Dasturiy injener  &middot;  Udevs  &middot;  2021</div>
+        <p>O&lsquo;zbekiston bo&lsquo;ylab <span class="highlight">100+ filialli</span> nonvoyxonalar tarmog&lsquo;i uchun HR ilovasi &mdash; interfeys va REST integratsiyalari.</p>
+        <div class="early-tech">Flutter &middot; GetX &middot; BLoC &middot; REST</div>
       </div>
-      <div class="early-row">
-        <div>
-          <h3>Bakery HR App</h3>
-          <span class="early-tag">HR  ·  Do‘konlar tarmog‘i</span>
-        </div>
-        <div>
-          <div class="early-role">Flutter Developer  ·  Udevs  ·  2021</div>
-          <p><span class="highlight">O‘zbekiston bo‘ylab 100+ do‘koni bor</span> nonvoyxonalar tarmog‘i uchun HR ilova — interfeysni ishlab chiqish va REST API integratsiyalari.</p>
-          <div class="early-tech">Flutter · REST</div>
-        </div>
-        <div></div>
-      </div>
-      <div class="early-row">
-        <div>
-          <h3>Auto Repair CRM</h3>
-          <span class="early-tag">CRM  ·  Firebase</span>
-        </div>
-        <div>
-          <div class="early-role">Frilans  ·  Kwork  ·  2020 – 2021</div>
-          <p>Avtoservis uchun to‘liq CRM — Flutterda, bir vaqtning o‘zida <span class="highlight">mobil va veb</span> uchun, butunlay Firebase Firestore va Storage asosida.</p>
-          <div class="early-tech">Flutter Web · Firestore · Storage</div>
-        </div>
-        <div></div>
-      </div>
+      <div class="early-links"></div>
     </div>
+    <div class="early-row">
+      <div><h3>OVVOZ</h3><span class="early-tag">Musiqa  &middot;  oflayn</span></div>
+      <div>
+        <div class="early-role">Frilans  &middot;  2020 &ndash; 2021</div>
+        <p>Tojik musiqasi pleyeri: kutubxona lokal SQLite&rsquo;da, moor orqali &mdash; hozir drift.</p>
+        <div class="early-tech">Flutter &middot; Provider &middot; SQLite</div>
+      </div>
+      <div class="early-links"></div>
+    </div>
+    <div class="early-row">
+      <div><h3>Auto Repair CRM</h3><span class="early-tag">CRM  &middot;  Firebase</span></div>
+      <div>
+        <div class="early-role">Frilans  &middot;  2020 &ndash; 2021</div>
+        <p>Avtoservis uchun to&lsquo;liq CRM: Flutter&rsquo;da <span class="highlight">mobil va veb</span>, Firestore va Cloud Storage ustida.</p>
+        <div class="early-tech">Flutter &middot; Provider &middot; Firebase</div>
+      </div>
+      <div class="early-links"></div>
+    </div>
+  </div>
+  <div class="tier-label">Shaxsiy loyiha</div>
+  <div class="early">
+    <div class="early-row">
+      <div><h3>CubeClash</h3><span class="early-tag">Real-time  &middot;  to&lsquo;rt kod bazasi</span></div>
+      <div>
+        <div class="early-role">Shaxsiy loyiha  &middot;  2026</div>
+        <p>Musobaqa spidkubingi platformasi: bitta mahsulot to&lsquo;rt kod bazasida &mdash; Flutter klient, Kotlin&rsquo;dagi nativ klient, Swift&rsquo;dagi nativ klient va NestJS bekend &mdash; bitta arxitektura va WebSocket ustidagi bitta real-time shartnoma asosida.</p>
+        <div class="early-tech">Flutter &middot; Kotlin &middot; Swift &middot; NestJS &middot; PostgreSQL &middot; Redis</div>
+      </div>
+      <div class="early-links"><a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+  </div>
 </section>
 
-<!-- ===== EXPERIENCE (animated vertical timeline) ===== -->
 <section id="experience">
-  <div class="section-head">
-    <span class="section-num">03 / Tajriba</span>
-    <h2>Qayerlarda ishlaganman.</h2>
-  </div>
-
+  <div class="section-head"><span class="section-num">03 / Tajriba</span><h2>Qayerlarda ishlaganman.</h2></div>
   <div class="tl-v" id="timeline">
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Avg 2025 — iyul 2026</div>
-        <div class="role">Flutter Developer</div>
-        <div class="company">EMCD</div>
-        <div class="location">Masofadan</div>
-      </div>
-    </div>
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+        <div class="dates">2025-yil avg &mdash; 2026-yil iyul</div><div class="role">Dasturiy injener</div>
+        <div class="company">EMCD</div><div class="location">Masofadan</div>
+        <div class="ctx">Kripto mayning-pul, fintex yo&lsquo;nalishi &middot; Coinhold depoziti &middot; <b>Flutter, Dart, BLoC, DDD, GitLab CI/CD, Codemagic</b></div>
+      </div></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Okt 2024 — avg 2025</div>
-        <div class="role">Contract Software Engineer (Flutter)</div>
-        <div class="company">7Tech · Million TV · Cuppy</div>
-        <div class="location">Masofadan / Toshkent</div>
-      </div>
-    </div>
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+        <div class="dates">2024-yil okt &mdash; 2025-yil avg</div><div class="role">Kontrakt bo&lsquo;yicha dasturiy injener</div>
+        <div class="company">Neotech &middot; Million TV &middot; Cuppy</div><div class="location">Masofadan / Toshkent</div>
+        <div class="ctx">Marketpleys, striming va riteyl &middot; uchta mahsulot prodakshngacha &middot; <b>Flutter, BLoC, Clean Architecture, DDD</b></div>
+      </div></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Yan 2023 — okt 2024</div>
-        <div class="role">Flutter Developer → Mobile Tech Lead</div>
-        <div class="company">Express24</div>
-        <div class="location">Toshkent</div>
-      </div>
-    </div>
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+        <div class="dates">2023-yil yan &mdash; 2024-yil okt</div><div class="role">Dasturiy injener &rarr; mobil yo&lsquo;nalish texnik yetakchisi</div>
+        <div class="company">Express24</div><div class="location">Toshkent</div>
+        <div class="ctx">Yetkazib berish xizmati &middot; merchantlar uchun B2B platforma &middot; <b>Flutter, BLoC, Feature-First DDD, WebSockets, CircleCI</b></div>
+      </div></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Noy 2021 — yan 2023</div>
-        <div class="role">Flutter Developer</div>
-        <div class="company">Ptolemay LLC</div>
-        <div class="location">Walnut, CA (masofadan)</div>
-      </div>
-    </div>
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+        <div class="dates">2021-yil noy &mdash; 2023-yil yan</div><div class="role">Dasturiy injener</div>
+        <div class="company">Ptolemay LLC</div><div class="location">Walnut, Kaliforniya (masofadan)</div>
+        <div class="ctx">Autsorsing kompaniyasi &mdash; bekend, mobil va ML jamoalari &middot; <b>Flutter, BLoC, DDD, REST</b></div>
+      </div></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">May — okt 2021</div>
-        <div class="role">Flutter Developer (stajyorlikdan ko‘tarilgan)</div>
-        <div class="company">Udevs</div>
-        <div class="location">Toshkent</div>
-      </div>
-    </div>
-    <div class="tl-v-item">
-      <div class="tl-v-dot"></div>
+        <div class="dates">2021-yil may &mdash; okt</div><div class="role">Dasturiy injener, stajyorlikdan o&lsquo;sgan</div>
+        <div class="company">Udevs</div><div class="location">Toshkent</div>
+        <div class="ctx">Dasturiy ta&rsquo;minot agentligi &middot; nonvoyxonalar tarmog&lsquo;i uchun HR platforma &middot; <b>Flutter, GetX, BLoC, REST</b></div>
+      </div></div>
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Sen 2020 — may 2021</div>
-        <div class="role">Frilans Flutter Developer</div>
-        <div class="company">Kwork</div>
-        <div class="location">Masofadan</div>
-      </div>
-    </div>
+        <div class="dates">2020-yil sen &mdash; 2021-yil may</div><div class="role">Frilanser dasturiy injener</div>
+        <div class="company">Mustaqil</div><div class="location">Masofadan</div>
+        <div class="ctx">Iste&rsquo;molchi va kichik biznes uchun dasturlar &middot; <b>Flutter, Provider, Firebase, SQLite</b></div>
+      </div></div>
   </div>
 </section>
 
-<!-- ===== STACK ===== -->
 <section id="stack">
-  <div class="section-head">
-    <span class="section-num">04 / Stek</span>
-    <h2>Doim ishlatadigan vositalarim.</h2>
-  </div>
-
+  <div class="section-head"><span class="section-num">04 / Stek</span><h2>Doim ishlatadigan vositalarim.</h2></div>
   <div class="row-list">
-    <div class="row-item">
-      <h3 class="stack-label">Asosiy</h3>
-      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill skill--lead">Dart</span><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">DDD</span><span class="skill">Provider</span><span class="skill">ValueNotifier</span><span class="skill">MobX</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Custom Animations</span></div>
+    <div class="row-item"><h3 class="stack-label">Tillar</h3>
+      <div class="skill-list"><span class="skill skill--lead">Dart</span><span class="skill">TypeScript</span><span class="skill">JavaScript</span><span class="skill">Kotlin</span><span class="skill">Swift</span><span class="skill">SQL</span></div>
     </div>
-    <div class="row-item">
-      <h3 class="stack-label">AI va agentlar</h3>
-      <div class="skill-list"><span class="skill skill--lead">Claude</span><span class="skill skill--lead">Claude Code</span><span class="skill skill--lead">Cursor</span><span class="skill">Agentlar jamoasi</span><span class="skill">Spetsifikatsiyaga asoslangan</span><span class="skill">Repozitoriylar orkestratsiyasi</span><span class="skill">AI yordamida testlash</span></div>
+    <div class="row-item"><h3 class="stack-label">Arxitektura va holat</h3>
+      <div class="skill-list"><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">Domain-Driven Design</span><span class="skill">Provider</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Maxsus animatsiyalar</span></div>
     </div>
-    <div class="row-item">
-      <h3 class="stack-label">Platformalar va vositalar</h3>
-      <div class="skill-list"><span class="skill skill--lead">Firebase</span><span class="skill skill--lead">REST</span><span class="skill skill--lead">WebSockets</span><span class="skill skill--lead">CircleCI</span><span class="skill">Firestore</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git / GitFlow</span><span class="skill">GitLab</span><span class="skill">Jira</span><span class="skill">ClickUp</span></div>
+    <div class="row-item"><h3 class="stack-label">Platformalar va vositalar</h3>
+      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill">iOS</span><span class="skill">Android</span><span class="skill">Web</span><span class="skill">Firebase</span><span class="skill">REST</span><span class="skill">WebSockets</span><span class="skill">SQLite (drift)</span><span class="skill">PostgreSQL</span><span class="skill">Redis</span><span class="skill">NestJS</span><span class="skill">GitLab CI/CD</span><span class="skill">CircleCI</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git</span></div>
     </div>
-    <div class="row-item">
-      <h3 class="stack-label">Testlash</h3>
-      <div class="skill-list"><span class="skill skill--lead">Unit Tests</span><span class="skill skill--lead">Widget Tests</span><span class="skill skill--lead">Golden Tests</span><span class="skill skill--lead">E2E Tests</span></div>
+    <div class="row-item"><h3 class="stack-label">Testlash</h3>
+      <div class="skill-list"><span class="skill skill--lead">Unit</span><span class="skill skill--lead">Widget</span><span class="skill skill--lead">Golden</span><span class="skill skill--lead">Integratsion (E2E)</span></div>
+    </div>
+    <div class="row-item"><h3 class="stack-label">Sun&rsquo;iy intellekt bilan ishlash</h3>
+      <div class="skill-list"><span class="skill">Claude</span><span class="skill">Claude Code</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===== EDUCATION ===== -->
 <section id="education">
-  <div class="section-head">
-    <span class="section-num">05 / Ta’lim</span>
-    <h2>Qayerda o‘qiganman.</h2>
-  </div>
-
+  <div class="section-head"><span class="section-num">05 / Ta&rsquo;lim</span><h2>Qayerda o&lsquo;qiganman.</h2></div>
   <div class="edu-grid">
-    <div class="edu-card">
-      <div class="edu-tag">Daraja</div>
-      <h3>Kompyuter va dasturiy ta’minot muhandisligi bakalavri</h3>
-      <div class="edu-school">Toshkentdagi INHA universiteti</div>
-      <div class="edu-dates">2018 — 2022</div>
-    </div>
-
-    <div class="edu-card">
-      <div class="edu-tag">Kurs</div>
-      <h3>Mobil dasturlash maktabi</h3>
-      <div class="edu-school">Yandex</div>
-      <div class="edu-dates">2024</div>
-    </div>
+    <div class="edu-card"><div class="edu-tag">Diplom</div><h3>Bakalavr, kompyuter va dasturiy injiniring</h3>
+      <div class="edu-school">Toshkentdagi Inha universiteti</div><div class="edu-dates">2018 &mdash; 2023</div></div>
+    <div class="edu-card"><div class="edu-tag">Kurs</div><h3>Mobil dasturlash maktabi</h3>
+      <div class="edu-school">Yandex</div><div class="edu-dates">2024</div></div>
   </div>
 </section>
 
-<!-- ===== PERSONALITY ===== -->
-<section id="personality">
-  <div class="section-head">
-    <span class="section-num">06 / Qiziqishlar</span>
-    <h2>Koddan tashqari.</h2>
+<section id="languages">
+  <div class="section-head"><span class="section-num">06 / Tillar</span><h2>Men ishlaydigan tillar.</h2></div>
+  <div class="lang-grid">
+    <div class="lang-card"><div class="name">Tojik tili</div><div class="level">Ona tili</div></div>
+    <div class="lang-card"><div class="name">Rus tili</div><div class="level">Erkin, ona tili darajasida</div></div>
+    <div class="lang-card"><div class="name">O&lsquo;zbek tili</div><div class="level">Erkin, ona tili darajasida</div></div>
+    <div class="lang-card"><div class="name">Ingliz tili</div><div class="level">C1 &middot; yuqori</div></div>
   </div>
+</section>
 
+<section id="interests">
+  <div class="section-head"><span class="section-num">07 / Qiziqishlar</span><h2>Injeneriyadan tashqari.</h2></div>
   <div class="pers-grid">
       <article class="pers-panel">
         <div class="pers-figure">9</div>
-        <div class="pers-figure-l">xil boshqotirma</div>
+        <div class="pers-figure-l">boshqotirma turi</div>
         <h3>Spidkubing</h3>
-        <div class="pers-sub">WCA rasmiy musobaqalari ishtirokchisi · 2017</div>
-        <div class="skill-list"><span class="skill">2×2</span><span class="skill">3×3</span><span class="skill">4×4</span><span class="skill">5×5</span><span class="skill">6×6</span><span class="skill">7×7</span><span class="skill">Megaminx</span><span class="skill">Teraminx</span><span class="skill">Mirror Cube</span></div>
+        <div class="pers-sub">WCA rasmiy ishtirokchisi &middot; 2017</div>
+        <div class="skill-list"><span class="skill">2&times;2</span><span class="skill">3&times;3</span><span class="skill">4&times;4</span><span class="skill">5&times;5</span><span class="skill">6&times;6</span><span class="skill">7&times;7</span><span class="skill">Megaminx</span><span class="skill">Teraminx</span><span class="skill">Mirror Cube</span></div>
       </article>
       <article class="pers-panel">
-        <div class="pers-figure">5</div>
-        <div class="pers-figure-l">til</div>
-        <h3>Tillar</h3>
-        <div class="pers-sub">Til bilimi</div>
-        <dl class="lang-list">
-          <div><dt>Rus tili</dt><dd>ona tili</dd></div>
-          <div><dt>Tojik tili</dt><dd>ona tili</dd></div>
-          <div><dt>Ingliz tili</dt><dd>C1 (professional)</dd></div>
-          <div><dt>O‘zbek tili</dt><dd>muloqot darajasida</dd></div>
-          <div><dt>Fransuz tili</dt><dd>boshlang‘ich</dd></div>
-        </dl>
+        <div class="pers-figure">1&nbsp;600+</div>
+        <div class="pers-figure-l">detal har bir yig&lsquo;mada</div>
+        <h3>Lego Technic</h3>
+        <div class="pers-sub">Ferrari va Red Bull bolidlari</div>
+        <p class="pers-note">Ikkala yig&lsquo;mada ham dvigatel, podveska va rul ishlaydi &mdash; qiziq joyi shakli emas, mexanizmi.</p>
+      </article>
+      <article class="pers-panel">
+        <div class="pers-figure">2011</div>
+        <div class="pers-figure-l">yildan beri har mavsum</div>
+        <h3>Formula 1</h3>
+        <div class="pers-sub">Sportning o&lsquo;zi &mdash; sevimli jamoa yoki pilot yo&lsquo;q</div>
+        <p class="pers-note">Hali trassada bo&lsquo;lmadim. Rejada turibdi.</p>
+      </article>
+      <article class="pers-panel">
+        <div class="pers-figure">4</div>
+        <div class="pers-figure-l">ichimlik tayyorlayman</div>
+        <h3>Qahva</h3>
+        <div class="pers-sub">Faqat ichmayman, tayyorlayman ham</div>
+        <div class="skill-list"><span class="skill">Kapuchino</span><span class="skill">Latte</span><span class="skill">Amerikano</span><span class="skill">Ice Bumble</span></div>
       </article>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
 <section id="contact">
   <div class="contact">
-    <h3>Keling, birga ishlaylik.</h3>
-    <p>
-      Flutter yoki Mobile Lead lavozimi bo‘yicha takliflarni ko‘rib chiqyapman — masofadan,
-      dunyoning istalgan nuqtasidan. O‘zim Toshkentdaman (UTC+5): ish vaqtim Ko‘rfaz bilan to‘liq,
-      Yevropa bilan esa deyarli to‘liq mos tushadi. Rasmiylashtirish oson: xizmat shartnomasi
-      asosida yoki Deel kabi EOR orqali ishlayman.
-    </p>
+    <h3>Keling, birgalikda quramiz.</h3>
+    <p>Dasturiy injener rollariga ochiqman &mdash; butun dunyo bo&lsquo;ylab masofadan, relokatsiyaga ham
+      tayyorman. Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.
+      Chet eldan yollash oson: xizmat ko&lsquo;rsatish shartnomasi bo&lsquo;yicha kontraktor sifatida yoki
+      Deel kabi EOR orqali ishlayman.</p>
     <div class="contact-links">
-      <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Email yuborish &nbsp;→</a>
+      <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Menga yozing &nbsp;&rarr;</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/donik1998" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn btn-secondary" href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn btn-secondary" href="cv-uz.html" target="_blank" rel="noopener">CVni ochish</a>
+      <a class="btn btn-secondary" href="cv-ats.html" target="_blank" rel="noopener">Rezyumeni ko&lsquo;rish</a>
     </div>
   </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Doniyor Murodkulov  ·  Qo‘lda yozilgan HTML va CSS asosida
+  &copy; <span id="year"></span> Doniyor Murodkulov  &middot;  Qo&lsquo;lda yozilgan HTML va CSS asosida
 </footer>
 
 <script>
