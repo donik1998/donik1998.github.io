@@ -2,303 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Doniyor Murodkulov — CV (ATS)</title>
+<title>Doniyor Murodkulov — Software Engineer — CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <style>
-  /* ATS-safe: single column, no photo, no graphics, semantic headings. */
-  /* Neo-Corporate palette. Colors only — this document stays single-column,
-     semantic and graphic-free so resume parsers read it exactly as before. */
-  :root {
-    color-scheme: light;
-    --ink: #111111;
-    --ink-soft: #333333;
-    --accent: #E8341C;
-    --accent-ink: #FFFFFF;
-    --desk: #E2E0DC;
-    --sheet: #FFFFFF;
-    --sheet-shadow: transparent;
+  :root { color-scheme: light; --ink:#000; --soft:#3f3f3f; --rule:#000; --desk:#e9e9e7; --sheet:#fff; }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);
+       background:var(--desk);font-size:9.4pt;line-height:1.34;
+       -webkit-font-smoothing:antialiased}
+  .page{width:210mm;min-height:297mm;margin:22px auto;background:var(--sheet);
+        padding:13mm 15mm 12mm}
+  h1{font-size:19pt;letter-spacing:-.3px;margin:0 0 1mm;font-weight:700}
+  .role-line{font-size:10.2pt;font-weight:700;letter-spacing:.35px;
+             text-transform:uppercase;margin:0 0 1.6mm}
+  .contact{font-size:8.6pt;color:var(--soft);margin:0 0 1.2mm;line-height:1.45}
+  .contact a{color:var(--ink);text-decoration:none}
+  .langs{font-size:8.6pt;margin:0 0 4mm;padding-top:1.6mm;border-top:.4pt solid #bbb;line-height:1.42}
+  .langs b{font-weight:700}
+  h2{font-size:9pt;text-transform:uppercase;letter-spacing:1.1px;font-weight:700;
+     border-bottom:1pt solid var(--rule);padding-bottom:1mm;margin:4.6mm 0 2.4mm}
+  .lede{margin:0 0 1mm;font-size:9.4pt}
+  .job{margin-bottom:3.1mm;page-break-inside:avoid;break-inside:avoid}
+  .job-head{display:flex;justify-content:space-between;gap:5mm;flex-wrap:wrap;align-items:baseline}
+  /* job title: quieter, italic */
+  .job-head .role{font-weight:600;font-style:italic;font-size:9.3pt;color:var(--soft)}
+  .job-head .dates{font-weight:600;font-style:italic;white-space:nowrap;font-size:8.6pt;color:var(--soft)}
+  /* company / product / stack: the loudest line in the entry */
+  .job-sub{font-style:normal;font-weight:400;font-size:10pt;color:var(--ink);
+           margin:.5mm 0 1.4mm;line-height:1.3}
+  .job-sub .stack{font-weight:700}
+  ul{margin:0;padding-left:4.6mm}
+  li{margin-bottom:.75mm;font-size:8.5pt;line-height:1.36}
+  .compact li{margin-bottom:.5mm}
+  .edu{display:flex;justify-content:space-between;gap:5mm;flex-wrap:wrap;margin-bottom:1mm}
+  .edu .what{font-weight:700}
+  .edu .school{font-weight:400;font-style:italic}
+  .foot{font-size:8.6pt;margin:.6mm 0 0}
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff;font-size:8.9pt;line-height:1.26}
+    .page{width:auto;margin:0;min-height:0;padding:10mm 12mm 8mm}
+    h1{font-size:17pt}
+    .role-line{font-size:9.4pt;margin-bottom:1.2mm}
+    .contact{font-size:8pt;line-height:1.4}
+    .langs{font-size:8pt;margin-bottom:2.2mm;padding-top:1.1mm;line-height:1.32}
+    h2{font-size:8.4pt;margin:2.7mm 0 1.5mm;padding-bottom:.6mm}
+    .lede{font-size:8.9pt}
+    .job{margin-bottom:1.7mm}
+    .job-head .role{font-size:8.9pt}
+    .job-head .dates{font-size:8.1pt}
+    .job-sub{font-size:9.2pt;margin:.35mm 0 1mm;line-height:1.22}
+    ul{padding-left:4.2mm}
+    li{font-size:8.2pt;line-height:1.27;margin-bottom:.35mm}
+    .compact li{margin-bottom:.3mm}
+    .edu{margin-bottom:.6mm}
+    .foot{font-size:8pt}
+    .helper{display:none!important}
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: dark;
-      --ink: #FFFFFF;
-      --ink-soft: #D3D3D3;
-      --accent: #E8341C;
-      --accent-ink: #FFFFFF;
-      --desk: #0A0A0A;
-      --sheet: #111111;
-      --sheet-shadow: transparent;
-    }
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--desk);
-    line-height: 1.5;
-    font-size: 10.5pt;
-  }
-  .page {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 24px auto;
-    background: var(--sheet);
-    box-shadow: 0 8px 24px var(--sheet-shadow);
-    padding: 16mm 18mm;
-  }
-
-  h1 {
-    font-size: 20pt;
-    margin: 0 0 2mm;
-    letter-spacing: 0.2px;
-  }
-  .title-line {
-    font-size: 11pt;
-    font-weight: 700;
-    margin: 0 0 2mm;
-  }
-  .contact {
-    font-size: 9.5pt;
-    margin: 0 0 6mm;
-    color: var(--ink-soft);
-  }
-  .contact a { color: var(--ink); }
-
-  h2 {
-    font-size: 12pt;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1.5px solid var(--accent);
-    padding-bottom: 1.5mm;
-    margin: 7mm 0 3.5mm;
-  }
-
-  .job { margin-bottom: 5mm; page-break-inside: avoid; break-inside: avoid; }
-  .job-head {
-    display: flex;
-    justify-content: space-between;
-    gap: 6mm;
-    flex-wrap: wrap;
-  }
-  .job-head .role { font-weight: 700; font-size: 11pt; }
-  .job-head .dates { font-weight: 700; white-space: nowrap; font-size: 10pt; }
-  .job-sub { font-style: italic; margin: 0.5mm 0 1.5mm; font-size: 10pt; }
-  ul { margin: 0; padding-left: 5mm; }
-  li { margin-bottom: 1.2mm; }
-
-  .skills p { margin: 0 0 1.5mm; }
-  .skills b { font-weight: 700; }
-
-  .edu-row { display: flex; justify-content: space-between; gap: 6mm; flex-wrap: wrap; margin-bottom: 2.5mm; }
-  .edu-row .what { font-weight: 700; }
-  .edu-row .school { font-style: italic; font-weight: 400; }
-
-  @page { size: A4; margin: 0; }
-  @media print {
-    /* Always the white sheet with dark ink, whatever the screen preference. */
-    :root {
-      color-scheme: light;
-      --ink: #111111; --ink-soft: #333333; --accent: #E8341C;
-      --accent-ink: #FFFFFF; --desk: #FFFFFF; --sheet: #FFFFFF;
-    }
-    body { background: #fff; }
-    .page { width: auto; margin: 0; box-shadow: none; min-height: 0; }
-    .job { page-break-inside: avoid; break-inside: avoid; }
-    .print-helper { display: none; }
-  }
-
-  .print-helper {
-    position: fixed;
-    top: 20px; right: 20px;
-    background: var(--sheet);
-    padding: 12px 16px;
-    border-radius: 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    z-index: 100;
-    line-height: 1.45;
-    max-width: 240px;
-  }
-  .print-helper button {
-    margin-top: 8px;
-    background: var(--ink);
-    color: var(--sheet);
-    border: 0;
-    padding: 8px 14px;
-    border-radius: 0;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 13px;
-    width: 100%;
-  }
-  .print-helper .styled-link {
-    display: block;
-    margin-top: 8px;
-    font-size: 12px;
-    color: var(--ink);
-    text-decoration: none;
-    text-align: center;
-    font-weight: 600;
-  }
+  .helper{position:fixed;top:18px;right:18px;background:#fff;padding:11px 13px;
+          box-shadow:0 3px 14px rgba(0,0,0,.16);font-size:12px;max-width:216px;
+          line-height:1.42;z-index:99}
+  .helper button{margin-top:7px;width:100%;background:#000;color:#fff;border:0;
+                 padding:7px 12px;font-weight:600;font-size:12px;cursor:pointer}
+  .helper .tag{display:block;font-size:10px;letter-spacing:.9px;text-transform:uppercase;
+               color:#666;margin-bottom:3px}
 </style>
 </head>
 <body>
-
-<div class="print-helper">
-  <b>ATS version</b> — single column, parser-safe. Press <b>⌘P</b> / <b>Ctrl+P</b>, set Margins to None.
-  <button onclick="window.print()">Print / Save as PDF</button>
-  <a class="styled-link" href="cv.html">Designed version →</a>
-  <a class="styled-link" href="cv-ru.html">Русская версия →</a>
-  <a class="styled-link" href="cv-uz.html">O‘zbekcha versiyasi →</a>
-</div>
-
+<div class="helper"><span class="tag">CV</span><b>Doniyor Murodkulov</b><br>One page, parser-safe. Press &#8984;P / Ctrl+P and set Margins to None to save as PDF.<button onclick="window.print()">Print / Save as PDF</button></div>
 <div class="page">
-
   <h1>Doniyor Murodkulov</h1>
-  <p class="title-line">Mobile Tech Lead | Flutter Developer</p>
-  <p class="contact">
-    Tashkent, Uzbekistan · +998 91 297 8293 ·
-    <a href="mailto:donikmurodkulov98@gmail.com">donikmurodkulov98@gmail.com</a> ·
-    <a href="https://linkedin.com/in/donik1998">linkedin.com/in/donik1998</a> ·
-    <a href="https://github.com/donik1998">github.com/donik1998</a> ·
-    <a href="https://donik1998.github.io">donik1998.github.io</a>
-  </p>
-
+  <p class="role-line">Software Engineer &middot; Tech Lead</p>
+  <p class="contact">Tashkent, Uzbekistan (UTC+5) &middot; <b>Remote-first, worldwide &mdash; open to relocation</b> &middot; +998 91 297 8293 &middot;
+    <a href="mailto:donikmurodkulov98@gmail.com">donikmurodkulov98@gmail.com</a> &middot;
+    <a href="https://github.com/donik1998">github.com/donik1998</a> &middot;
+    <a href="https://linkedin.com/in/donik1998">linkedin.com/in/donik1998</a> &middot;
+    <a href="https://donik1998.github.io">donik1998.github.io</a></p>
+  <p class="langs"><b>Languages:</b> Dart, TypeScript/JavaScript, Kotlin, Swift, SQL<br>
+    <b>Flutter:</b> BLoC, Clean Architecture, Domain-Driven Design, platform channels, CustomPaint;
+    unit, widget, golden and integration tests<br>
+    <b>Platforms &amp; tooling:</b> iOS, Android, Web, Firebase, REST, WebSockets, SQLite (drift), PostgreSQL,
+    Redis, GitLab CI/CD, CircleCI, Codemagic, Claude Code</p>
   <h2>Summary</h2>
-  <p>
-    Flutter developer with six years of experience building, stabilising and leading production
-    mobile and web applications across delivery, fintech, streaming, marketplace, and crypto —
-    eight shipped to production. Promoted to Mobile Tech Lead at Express24 within eight months,
-    where I led a team of three engineers, took the Merchant app from 68% to 98% crash-free users,
-    ran a Feature-First DDD migration, and shipped real-time WebSocket order flows serving 3,000+
-    merchants. At EMCD, led two end-to-end refactors of large feature areas in a wallet with
-    35,000+ monthly active users — both delivered on schedule — and drove team-wide adoption of
-    AI-assisted test writing. Open to Flutter and mobile lead roles —
-    remote-first, worldwide. Based in Tashkent (UTC+5), with full overlap with Gulf hours and most
-    of the European workday. Available as a contractor (service agreement) or via an EOR such as
-    Deel — no sponsorship needed.
-  </p>
-
+  <p class="lede">Software engineer with six years and eight products in production. At Express24 I took the merchant app from 68% to 98% crash-free users in two months and replaced order polling with a WebSocket pipeline. At EMCD I led two end-to-end refactors of a wallet serving 35,000+ monthly active users, both delivered on schedule.</p>
   <h2>Experience</h2>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Flutter Developer — EMCD</span>
-      <span class="dates">Aug 2025 – Jul 2026</span>
-    </div>
-    <p class="job-sub">Remote · Crypto / Web3 platform, 400-person organization</p>
-    <ul>
-      <li>Led two end-to-end refactors of large feature areas in a wallet app with 35,000+ monthly active users — scoped, sequenced, and delivered both on schedule.</li>
-      <li>Drove team-wide adoption of AI-assisted test writing; feature areas brought under the new test coverage shipped with no regressions reported.</li>
-      <li>Shipped Web3-integrated features enabling users to earn yield on crypto holdings, owning them end-to-end through coordinated release trains in a large Flutter team.</li>
-      <li>Covered owned features with unit, widget, golden, and E2E tests, catching regressions and UI drift before release; integrated the wallet's native surface — biometric unlock, secure key storage, and deep links — through platform channels.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Contract Software Engineer (Flutter) — Independent</span>
-      <span class="dates">Oct 2024 – Aug 2025</span>
-    </div>
-    <p class="job-sub">Remote / Tashkent · Delivered 3 production apps end-to-end for multiple clients</p>
-    <ul>
-      <li>Neotech / 7Tech: built a marketplace app shipped on iOS, Android, and the web from a single Flutter codebase, coordinating releases with a cross-functional product team.</li>
-      <li>Million TV: owned releases end-to-end for a streaming app for Uzbek films and series; built a video player with language and quality selectors, episode navigation, and resumable playback, wired into the native playback layer through platform views and platform channels.</li>
-      <li>Cuppy: developed a two-surface coffee-shop platform (owner console and customer app); built charts, gauges, and bespoke layouts painted from scratch with CustomPainter, on scoped dependency injection.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Flutter Developer, promoted to Mobile Tech Lead — Express24</span>
-      <span class="dates">Jan 2023 – Oct 2024</span>
-    </div>
-    <p class="job-sub">Tashkent, Uzbekistan · Leading delivery platform; B2B Merchant app used by 3,000+ businesses</p>
-    <ul>
-      <li>Promoted to Tech Lead within 8 months; led a small mobile team (2–3 engineers) and owned mobile architecture, releases, and CI for the Merchant app.</li>
-      <li>Inherited the app at 68% crash-free users; fixed the root causes of instability to reach 98% in two months (~16x fewer crash-affected users) through crash triage, release discipline, and observability.</li>
-      <li>Replaced order polling with a real-time WebSocket pipeline, cutting order-delivery latency for merchants.</li>
-      <li>Migrated the codebase to Feature-First Domain-Driven Design, improving testability and feature velocity.</li>
-      <li>Established CI on CircleCI; ran sprint retrospectives; aligned architecture decisions with native iOS and Android teams, integrating push notifications and native SDKs through platform channels.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Flutter Developer — Ptolemay LLC</span>
-      <span class="dates">Nov 2021 – Jan 2023</span>
-    </div>
-    <p class="job-sub">Walnut, CA, USA (remote) · Mobile development agency</p>
-    <ul>
-      <li>Shipped Tegen, a loyalty app for a retail chain (App Store and Google Play), with QR-code reward claims and a shop-side scanner flow.</li>
-      <li>Delivered calculator utilities and a mindfulness app for other agency clients.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Flutter Developer (promoted from Intern) — Udevs</span>
-      <span class="dates">May 2021 – Oct 2021</span>
-    </div>
-    <p class="job-sub">Tashkent, Uzbekistan</p>
-    <ul>
-      <li>Built an HR application for a national bakery chain operating 100+ stores — UI implementation and REST API integrations.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-head">
-      <span class="role">Freelance Flutter Developer — Kwork</span>
-      <span class="dates">Sep 2020 – May 2021</span>
-    </div>
-    <p class="job-sub">Remote</p>
-    <ul>
-      <li>Designed and shipped an end-to-end CRM for an auto-repair shop on Flutter (mobile and web), backed by Firebase Firestore and Storage.</li>
-      <li>Built a Tajik music streaming app with a custom playback UI.</li>
-    </ul>
-  </div>
-
-  <h2>Skills</h2>
-  <div class="skills">
-    <p><b>Core:</b> Flutter, Dart, BLoC, Provider, MobX, GetX, Clean Architecture, Domain-Driven Design (DDD), Platform Channels, Custom Animations, CustomPaint</p>
-    <p><b>AI &amp; Agents:</b> Claude, Claude Code, Cursor, multi-agent crews, spec-driven agent pipelines, multi-repo orchestration, AI-assisted test writing</p>
-    <p><b>Platforms &amp; Tooling:</b> Firebase, Firestore, REST APIs, WebSockets, CircleCI, Codemagic, Fastlane, Git/GitFlow, Jira</p>
-    <p><b>Testing:</b> Unit Testing, Widget Testing, Golden Testing, E2E Testing</p>
-  </div>
-
-  <h2>Selected Project</h2>
-  <div class="job">
-    <div class="job-head">
-      <span class="role">CubeClash — competitive speedcubing app</span>
-      <span class="dates">2026 · unreleased</span>
-    </div>
-    <p class="job-sub">Solo side project · source public on GitHub</p>
-    <ul>
-      <li>Built one product across four codebases — a Flutter client, a native Kotlin client, a native Swift client, and a NestJS backend on Postgres and Redis — all implementing the same architecture and the same real-time contract.</li>
-      <li>WCA practice timer plus live 1v1 head-to-head races over WebSockets.</li>
-      <li>Designed and ran a six-agent crew (product, design, spec, architecture, backend, UI) that works the repositories in parallel against written specifications, keeping the four clients consistent by construction.</li>
-    </ul>
-  </div>
-
+  <div class="job"><div class="job-head"><span class="role">Software Engineer &mdash; EMCD</span><span class="dates">Aug 2025 &ndash; Jul 2026</span></div><p class="job-sub">Crypto mining pool, fintech arm &middot; Coinhold, a deposit product paying rewards for holding crypto &middot; <span class="stack">Flutter, Dart, BLoC, DDD, GitLab CI/CD, Codemagic, unit, widget, golden and integration tests</span></p><ul><li>Led two end-to-end refactors of large feature areas in the wallet; scoped, sequenced and delivered both on schedule.</li><li>Worked inside coordinated release trains in a large Flutter team, on a wallet serving 35,000+ monthly active users.</li><li>Introduced AI-assisted test writing across the team; the feature areas brought under the new coverage shipped with no regressions reported.</li></ul></div>
+  <div class="job"><div class="job-head"><span class="role">Contract Software Engineer &mdash; Neotech, Million TV, Cuppy</span><span class="dates">Oct 2024 &ndash; Aug 2025</span></div><p class="job-sub">Marketplace, streaming and retail &middot; three products delivered end to end &middot; <span class="stack">Flutter, BLoC, Clean Architecture, DDD, unit tests</span></p><ul><li><b>Million TV:</b> built a streaming app for Uzbek films and series from zero, with a player on ExoPlayer &mdash; language and quality selection, episode navigation, resumable playback.</li><li><b>Neotech:</b> shipped the 7Tech marketplace to web, iOS and Android from a single codebase.</li><li><b>Cuppy:</b> built an owner console and a customer app &mdash; shop locations on the Google Maps SDK with custom markers, charts and gauges drawn in CustomPainter.</li></ul></div>
+  <div class="job"><div class="job-head"><span class="role">Software Engineer, promoted to Mobile Tech Lead &mdash; Express24</span><span class="dates">Jan 2023 &ndash; Oct 2024</span></div><p class="job-sub">Delivery marketplace &middot; B2B merchant app used by shops, caf&eacute;s and restaurants &middot; <span class="stack">Flutter, BLoC, Feature-First DDD, WebSockets, CircleCI, unit tests</span></p><ul><li>Raised crash-free users from 68% to 98% in two months by triaging crashes to root cause and tightening the release process.</li><li>Replaced order polling with a WebSocket pipeline, cutting the delay before merchants saw new orders.</li><li>Promoted to Mobile Tech Lead in eight months; led three engineers and owned mobile architecture, releases and CI.</li></ul></div>
+  <h2>Earlier Experience</h2>
+  <div class="job"><div class="job-head"><span class="role">Software Engineer &mdash; Ptolemay LLC, remote (Walnut, CA)</span><span class="dates">Nov 2021 &ndash; Jan 2023</span></div><p class="job-sub">Software outsourcing &mdash; backend, mobile and ML teams &middot; Tegen, a loyalty app for a meat retail chain &middot; <span class="stack">Flutter, BLoC, DDD, REST</span></p><ul><li>Shipped Tegen to the App Store and Google Play &mdash; customers claim rewards through in-app QR codes, shops scan them at the counter; delivered two further client applications alongside it.</li></ul></div>
+  <div class="job"><div class="job-head"><span class="role">Software Engineer, promoted from intern &mdash; Udevs, Tashkent</span><span class="dates">May &ndash; Oct 2021</span></div><p class="job-sub">Software agency &middot; HR application for a national bakery chain across 100+ stores &middot; <span class="stack">Flutter, GetX, BLoC, REST</span></p><ul><li>Built the interface and the REST integrations, and moved from intern to engineer inside six months.</li></ul></div>
+  <div class="job"><div class="job-head"><span class="role">Freelance Software Engineer &mdash; remote</span><span class="dates">Sep 2020 &ndash; May 2021</span></div><p class="job-sub">Consumer and small-business software &middot; OVVOZ music player, and a CRM for an auto-repair shop &middot; <span class="stack">Flutter, Provider, Firebase, SQLite (moor / drift)</span></p><ul><li>Built OVVOZ, a Tajik music player with a local SQLite library on moor (now drift), and a CRM for an auto-repair shop on Flutter mobile and web over Firestore.</li></ul></div>
+  <h2>Project</h2>
+  <div class="job"><div class="job-head"><span class="role">CubeClash &mdash; personal project</span><span class="dates">2026 &middot; source public</span></div><p class="job-sub">Competitive speedcubing platform &middot; practice timer and live 1v1 races &middot; <span class="stack">Flutter, Kotlin, Swift, NestJS/TypeScript, PostgreSQL, Redis</span></p><ul><li>One product across four codebases &mdash; Flutter, native Kotlin, native Swift and a NestJS backend &mdash; on one architecture and one real-time contract over WebSockets.</li></ul></div>
   <h2>Education</h2>
-  <div class="edu-row">
-    <span class="what">B.Sc. Computer &amp; Software Engineering — <span class="school">INHA University in Tashkent</span></span>
-    <span>2018 – 2022</span>
-  </div>
-  <div class="edu-row">
-    <span class="what">Mobile Development School — <span class="school">Yandex</span></span>
-    <span>2024</span>
-  </div>
-
-  <h2>Languages</h2>
-  <p>Russian (Native) · Tajik (Native) · English (C1, Professional) · Uzbek (Working proficiency) · French (Elementary)</p>
+  <div class="edu"><span class="what">B.Sc. Computer &amp; Software Engineering &mdash; <span class="school">INHA University in Tashkent</span></span><span>2018 &ndash; 2023</span></div>
+  <div class="edu"><span class="what">Mobile Development School &mdash; <span class="school">Yandex</span></span><span>2024</span></div>
+  <p class="foot"><b>Spoken languages:</b> Tajik (native) &middot; Russian and Uzbek (fluent, near-native) &middot; English (C1, advanced)</p>
 
 </div>
-
 </body>
 </html>

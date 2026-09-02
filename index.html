@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Doniyor Murodkulov — Mobile Tech Lead · Flutter Developer</title>
-<meta name="description" content="Mobile Tech Lead and Flutter developer — six years building, leading and stabilising production mobile apps." />
+<title>Doniyor Murodkulov &mdash; Software Engineer</title>
+<meta name="description" content="Software engineer, six years and eight products in production. Took a merchant platform from 68% to 98% crash-free users in two months; led two end-to-end refactors of a wallet serving 35,000+ people a month." />
 <link rel="canonical" href="https://donik1998.github.io/" />
 <link rel="alternate" hreflang="en" href="https://donik1998.github.io/" />
 <link rel="alternate" hreflang="ru" href="https://donik1998.github.io/ru.html" />
 <link rel="alternate" hreflang="uz" href="https://donik1998.github.io/uz.html" />
 <link rel="alternate" hreflang="x-default" href="https://donik1998.github.io/" />
-<meta property="og:title" content="Doniyor Murodkulov — Mobile Tech Lead · Flutter Developer" />
-<meta property="og:description" content="Mobile Tech Lead &amp; Flutter developer. Six years building and leading production mobile apps." />
+<meta property="og:title" content="Doniyor Murodkulov &mdash; Software Engineer" />
+<meta property="og:description" content="Six years and eight products in production. I build systems that stay up after launch." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://donik1998.github.io/og-image.png" />
 <meta property="og:url" content="https://donik1998.github.io/" />
@@ -26,15 +26,15 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Doniyor Murodkulov",
-  "jobTitle": "Mobile Tech Lead, Flutter Developer",
+  "jobTitle": "Software Engineer",
   "url": "https://donik1998.github.io",
   "email": "mailto:donikmurodkulov98@gmail.com",
   "image": "https://donik1998.github.io/og-image.png",
   "address": { "@type": "PostalAddress", "addressLocality": "Tashkent", "addressCountry": "UZ" },
   "sameAs": ["https://www.linkedin.com/in/donik1998", "https://github.com/donik1998"],
-  "knowsAbout": ["Flutter", "Dart", "Mobile Development", "Clean Architecture", "Domain-Driven Design"],
-  "alumniOf": { "@type": "CollegeOrUniversity", "name": "INHA University in Tashkent" },
-  "worksFor": { "@type": "Organization", "name": "EMCD" }
+  "knowsAbout": ["Software Engineering", "Distributed Systems", "Real-Time Systems", "Application Reliability",
+                 "Clean Architecture", "Domain-Driven Design", "Flutter", "Dart", "Kotlin", "Swift", "TypeScript"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "INHA University in Tashkent" }
 }
 </script>
 <style>
@@ -632,23 +632,45 @@
     .skill--lead { background: transparent; color: var(--ink); border-color: var(--ink); }
     a { color: var(--ink); }
   }
+
+  /* --- added for the rebuilt narrative --- */
+  /* the nav is sticky at 65px; without this an anchor jump hides the heading under it */
+  section[id], header[id] { scroll-margin-top: 84px; }
+  .tl-v-content .ctx {
+    font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.5;
+  }
+  .tl-v-content .ctx b { color: var(--ink-soft); font-weight: 600; }
+  .lede-note {
+    font-size: 14px; color: var(--muted); margin-top: 26px; padding-top: 18px;
+    border-top: 1px solid var(--line); max-width: 68ch;
+  }
+  .lede-note strong { color: var(--ink); font-weight: 600; }
+  /* every grid lays out on equal-height rows, so blocks read as one system */
+  .pers-grid { align-items: stretch; grid-auto-rows: 1fr; }
+  .pers-note { font-size: 13.5px; color: var(--ink-soft); margin: 14px 0 0; line-height: 1.55; }
+  /* a panel with no figure above it must not show the figure divider */
+  .pers-panel h3:first-child { border-top: 0; padding-top: 0; }
+  .lang-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .lang-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .lang-grid { grid-template-columns: 1fr; } }
+  .lang-card {
+    background: var(--raised); border: 1px solid var(--line);
+    border-radius: var(--radius-lg); padding: 26px 24px;
+  }
+  .lang-card .name {
+    font-size: 21px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.1;
+  }
+  .lang-card .level {
+    font-size: 11px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.1em; font-weight: 600; margin-top: 10px;
+  }
 </style>
-<script>
-  /* Apply a stored theme choice before first paint. With no stored choice the
-     CSS falls back to prefers-color-scheme, so this is progressive enhancement. */
-  (function () {
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
-    } catch (e) {}
-  })();
-</script>
 </head>
 <body>
 
 <nav>
   <div class="nav-inner">
-    <div class="nav-brand">Doniyor <span>•</span> Murodkulov</div>
+    <div class="nav-brand">Doniyor <span>&bull;</span> Murodkulov</div>
     <div class="nav-actions">
       <div class="nav-links">
         <a href="#about">About</a>
@@ -657,7 +679,7 @@
         <a href="#stack">Stack</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+        <a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub&nbsp;&#8599;</a>
       </div>
       <button class="theme-toggle" id="themeToggle" type="button"
               aria-label="Switch between light and dark theme" title="Toggle theme">
@@ -682,264 +704,264 @@
 
 <!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="eyebrow">Mobile Tech Lead  ·  Flutter Developer</div>
-  <h1 class="tag">I build mobile apps people use every day — and keep them alive after launch.</h1>
+  <div class="eyebrow">Software Engineer  &middot;  Tech Lead</div>
+  <h1 class="tag">I build systems that stay up after launch.</h1>
   <p class="blurb">
-    Six years in mobile, eight production apps across delivery, fintech, streaming, marketplace
-    and crypto. At <strong>Express24</strong> I was promoted to Mobile Tech Lead in eight months
-    and ran a team of three on the B2B merchant app that 3,000+ shops, cafés and restaurants use
-    daily — taking it from 68% to 98% crash-free users, migrating to Feature-First DDD and moving
-    orders off polling onto real-time WebSockets. At <strong>EMCD</strong> I led two end-to-end
-    refactors of the Coinhold wallet, both delivered on schedule, and got the team writing tests.
+    Six years and eight products in production. At <strong>Express24</strong> I inherited a B2B
+    platform at 68% crash-free users, took it to 98% in two months, and replaced order polling
+    with a real-time WebSocket pipeline &mdash; then led the team of three that kept it there.
+    At <strong>EMCD</strong> I led two end-to-end refactors of a wallet serving 35,000+ people
+    a month, both delivered on schedule.
   </p>
   <div class="hero-cta">
-    <a class="btn btn-primary" href="#contact">Get in touch &nbsp;→</a>
+    <a class="btn btn-primary" href="#contact">Get in touch &nbsp;&rarr;</a>
     <a class="btn btn-secondary" href="cv-ats.html" target="_blank" rel="noopener">View CV</a>
   </div>
 </header>
+
+<section id="stats-strip">
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">68&rarr;98%</div>
+      <div class="stat-label">Crash-free users, in two months</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">8</div>
+      <div class="stat-label">Products in production</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Years engineering</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">35K+</div>
+      <div class="stat-label">Monthly active users</div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <div class="section-head">
     <span class="section-num">01 / About</span>
-    <h2>A mobile engineer who finishes the job.</h2>
+    <h2>What I actually do.</h2>
   </div>
 
   <div class="about-grid about">
     <div>
       <p>
-        I'm a Flutter engineer based in Tashkent, Uzbekistan. My story started with a handful
-        of freelance gigs, taken on out of pure curiosity. Over the six years since, that
-        curiosity has carried me through a Tech Lead role at one of Tashkent's first delivery
-        platforms, and into shipping apps across delivery, fintech, streaming, marketplace
-        and crypto.
+        I'm a software engineer based in Tashkent, Uzbekistan. Most of my work has run through
+        mobile clients, but the problems have been <strong>systems problems</strong>: why a release
+        crashes, why an order reaches a merchant too late, how to move a large codebase onto
+        boundaries that still hold when the team grows.
       </p>
       <p>
-        What I love most about this work isn't just shipping a v1 — it's keeping it alive.
-        Stability, release cycles and analytics are the parts that decide whether an app
-        actually lasts, and they get just as much of my attention as the build itself.
+        It started with freelance work taken on out of curiosity. Six years later that has carried
+        me through a tech lead role at one of Tashkent's first delivery platforms and
+        <strong>eight products in production</strong> across delivery, fintech, streaming,
+        marketplace and crypto &mdash; on the client, at the native boundary, and on the backend
+        behind them.
       </p>
       <p>
-        Most recently I was at <strong>EMCD</strong>, a crypto / Web3 platform with 35K+ monthly
-        active users, where I led two end-to-end refactors of the Coinhold wallet and moved the
-        team onto AI-assisted testing. Open to Flutter and mobile lead roles — <strong>remote-first,
-        worldwide</strong>. Based in Tashkent (UTC+5): full overlap with Gulf hours and most of
-        the European workday.
+        Shipping a v1 is the easy part. Stability, the release process, and tests that catch a
+        regression before a user does are what decide whether a product survives its second year.
+        That is the part of the work I want.
       </p>
-    </div>
-
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Years in mobile</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">68→98%</div>
-        <div class="stat-label">Crash-free users</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">8</div>
-        <div class="stat-label">Production apps shipped</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">35K+</div>
-        <div class="stat-label">Monthly active users</div>
-      </div>
+      <p class="lede-note">
+        Open to <strong>software engineering roles</strong> &mdash; remote-first, worldwide, and open
+        to relocation. Based in Tashkent (UTC+5), with full overlap with Gulf hours and most of the
+        European workday.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
+<!-- ===== WORK ===== -->
 <section id="work">
   <div class="section-head">
-    <span class="section-num">02 / Featured Work</span>
-    <h2>Selected projects.</h2>
+    <span class="section-num">02 / Selected Work</span>
+    <h2>Problems I've solved.</h2>
   </div>
 
-    <div class="cases">
-      <article class="case">
-        <div>
-          <span class="card-tag">B2B  ·  Tech Lead</span>
-          <h3>Express24 Merchant App</h3>
-          <div class="card-role">Flutter Developer → Mobile Tech Lead  ·  2023 – 2024</div>
-          <p>
-        B2B app that <span class="highlight">3,000+ shops, cafés and restaurants</span> use
-        to accept and fulfill orders. Promoted to <span class="highlight">Mobile Tech Lead within
-        eight months</span> and led a team of three engineers — owning mobile architecture,
-        releases and CI. Traced and fixed the root causes of instability, migrated the codebase
-        to Feature-First DDD, and moved order updates from polling to WebSockets.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">BLoC</span>
-        <span class="chip">DDD</span><span class="chip">WebSockets</span>
-        <span class="chip">CircleCI</span>
-      </div>
-          <div class="card-status">Express24 has since retired the app — happy to walk through the architecture.</div>
+  <div class="cases">
+    <article class="case">
+      <div>
+        <span class="card-tag">Reliability  &middot;  Real-time  &middot;  Tech Lead</span>
+        <h3>Express24 Merchant Platform</h3>
+        <div class="card-role">Software Engineer &rarr; Mobile Tech Lead  &middot;  2023 &ndash; 2024</div>
+        <p>
+          The B2B platform <span class="highlight">3,000+ shops, caf&eacute;s and restaurants</span> used to
+          accept and fulfil orders. I inherited it at 68% crash-free users, traced every class of crash to
+          its root cause and reached 98% in two months. Replaced order polling with a
+          <span class="highlight">WebSocket pipeline</span> so a merchant sees a new order when it happens
+          rather than on the next poll, and migrated the codebase to Feature-First Domain-Driven Design.
+          Promoted to tech lead in eight months &mdash; led three engineers and owned architecture,
+          releases and CI.
+        </p>
+        <div class="card-tech">
+          <span class="chip">Flutter</span><span class="chip">BLoC</span>
+          <span class="chip">Feature-First DDD</span><span class="chip">WebSockets</span>
+          <span class="chip">CircleCI</span><span class="chip">Unit tests</span>
         </div>
-        <div class="case-metric">
-          <div class="n">68 → 98%</div>
-          <div class="l">crash-free users, in two months</div>
-        </div>
-      </article>
-      <article class="case">
-        <div>
-          <span class="card-tag">Crypto  ·  Web3</span>
-          <h3>EMCD Coinhold</h3>
-          <div class="card-role">Flutter Developer  ·  2025 – 2026</div>
-          <p>
-        Mobile wallet of a 400-person crypto platform with
-        <span class="highlight">35K+ monthly active users</span>. Led
-        <span class="highlight">two end-to-end refactors</span> of large feature areas — scoped,
-        sequenced and delivered both on schedule — and drove the team's move to AI-assisted test
-        writing. Every area we covered with unit, widget, golden and E2E tests then shipped
-        without a regression. Wired the wallet's native surface — biometric unlock, secure key
-        storage and deep links — through platform channels.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Web3</span>
-        <span class="chip">Clean Architecture</span><span class="chip">Platform Channels</span>
-        <span class="chip">REST</span>
+        <div class="card-status">Express24 has since retired the app &mdash; happy to walk through the architecture.</div>
       </div>
-          <div class="card-links">
-        <a href="https://apps.apple.com/sa/app/emcd-coinhold-crypto-wallet/id1606903304" target="_blank" rel="noopener">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=io.emcd.emcd_flutter.prod" target="_blank" rel="noopener">Google Play</a>
-      </div>
-        </div>
-        <div class="case-metric">
-          <div class="n">2</div>
-          <div class="l">feature-area refactors led, both on time</div>
-        </div>
-      </article>
-      <article class="case">
-        <div>
-          <span class="card-tag">Side project &nbsp;·&nbsp; Agent-built</span>
-          <h3>CubeClash</h3>
-          <div class="card-role">Solo &nbsp;·&nbsp; designed and built with an agent crew &nbsp;·&nbsp; 2026</div>
-          <p>
-        Competitive speedcubing app — a WCA practice timer plus
-        <span class="highlight">live 1v1 races</span> over WebSockets. One product across four
-        codebases: a Flutter client, a native Kotlin client, a native Swift client and a NestJS
-        backend on Postgres and Redis — all on the same architecture and the same real-time
-        contract. Built by a <span class="highlight">six-agent crew</span> I designed — PM,
-        designer, spec writer, architect, backend and UI — working the repos in parallel against
-        written specs, which is why four clients agree with each other by construction.
-      </p>
-          <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Kotlin</span>
-        <span class="chip">Swift</span><span class="chip">NestJS</span>
-        <span class="chip">WebSockets</span><span class="chip">Postgres</span>
-      </div>
-      <div class="card-links">
-        <a href="https://github.com/donik1998/cubeclash-flutter" target="_blank" rel="noopener">Flutter</a>
-        <a href="https://github.com/donik1998/cubeclash-android" target="_blank" rel="noopener">Android</a>
-        <a href="https://github.com/donik1998/cubeclash-ios" target="_blank" rel="noopener">iOS</a>
-        <a href="https://github.com/donik1998/cubeclash-backend" target="_blank" rel="noopener">Backend</a>
-      </div>
-          <div class="card-status">Not released yet — the code is public, and the architecture is the walkthrough.</div>
-        </div>
-        <div class="case-metric">
-          <div class="n">4</div>
-          <div class="l">codebases, one architecture</div>
-        </div>
-      </article>
-    </div>
-
-    <div class="tier-label">Contract work · 2024 – 2025</div>
-    <div class="project-grid">
-    <article class="card">
-      <span class="card-tag">Marketplace  ·  Multi-platform</span>
-      <h3>7Tech</h3>
-      <div class="card-role">Contract Software Engineer (Flutter)  ·  2025</div>
-      <p>
-        Marketplace app shipped on <span class="highlight">iOS, Android and the web</span> from
-        a single Flutter codebase; built within a cross-functional product team.
-      </p>
-      <div class="card-tech">
-        <span class="chip">Flutter Web</span><span class="chip">Flutter Mobile</span>
-        <span class="chip">REST</span>
-      </div>
-      <div class="card-links">
-        <a href="https://apps.apple.com/uz/app/7tech-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B5-%D1%81%D0%B5%D0%B3%D0%BE%D0%B4%D0%BD%D1%8F/id6479844581" target="_blank" rel="noopener">App Store</a>
-        <a href="https://seventech.uz/" target="_blank" rel="noopener">Android app</a>
+      <div class="case-metric">
+        <div class="n">68 &rarr; 98%</div>
+        <div class="l">crash-free users, in two months</div>
       </div>
     </article>
+
+    <article class="case">
+      <div>
+        <span class="card-tag">Fintech  &middot;  Web3</span>
+        <h3>EMCD Coinhold</h3>
+        <div class="card-role">Software Engineer  &middot;  2025 &ndash; 2026</div>
+        <p>
+          Coinhold is the deposit product of a crypto mining pool's fintech arm &mdash; users earn rewards
+          for holding crypto in it. I led <span class="highlight">two end-to-end refactors</span> of large
+          feature areas in the wallet: scoped them, broke them into stages, and delivered both on schedule
+          without a stability regression. Covered my areas with unit, widget, golden and integration tests,
+          then moved the team onto AI-assisted test writing &mdash; every area brought under the new
+          coverage shipped with no regressions reported.
+        </p>
+        <div class="card-tech">
+          <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">BLoC</span>
+          <span class="chip">DDD</span><span class="chip">GitLab CI/CD</span><span class="chip">Codemagic</span>
+        </div>
+      </div>
+      <div class="case-metric">
+        <div class="n">35K+</div>
+        <div class="l">monthly active users</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="tier-label">Contract work  &middot;  2024 &ndash; 2025</div>
+
+  <div class="project-grid">
     <article class="card">
-      <span class="card-tag">Streaming  ·  Solo</span>
+      <span class="card-tag">Streaming  &middot;  From zero</span>
       <h3>Million TV</h3>
-      <div class="card-role">Contract Software Engineer (Flutter)  ·  2025</div>
+      <div class="card-role">Contract Software Engineer  &middot;  2025</div>
       <p>
-        Streaming app for Uzbek films and series. Owned releases end-to-end and built a
-        feature-rich video player: language and quality selectors, episode navigation, and
-        resumable playback — wired into the native playback layer through platform views and
-        platform channels.
+        A streaming client for Uzbek films and series, built from nothing. The engineering was in the
+        player: ExoPlayer wired in through platform views, with language and quality selection, episode
+        navigation, and playback that resumes where the viewer left off.
       </p>
       <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Video Player</span>
-        <span class="chip">Platform Channels</span><span class="chip">BLoC</span>
+        <span class="chip">Flutter</span><span class="chip">BLoC</span>
+        <span class="chip">DDD</span><span class="chip">ExoPlayer</span>
       </div>
-      <div class="card-status">Client-owned release — walkthrough on request.</div>
     </article>
+
     <article class="card">
-      <span class="card-tag">B2B + B2C  ·  Custom UI</span>
-      <h3>Cuppy</h3>
-      <div class="card-role">Contract Software Engineer (Flutter)  ·  2024</div>
+      <span class="card-tag">Marketplace  &middot;  Three targets</span>
+      <h3>7Tech</h3>
+      <div class="card-role">Contract Software Engineer  &middot;  Neotech  &middot;  2025</div>
       <p>
-        Coffee-shop platform with two apps — an owner console and a customer ordering app.
-        Built the interface that off-the-shelf widgets couldn't cover — charts, gauges and
-        bespoke layouts painted from scratch with <span class="highlight">CustomPainter</span> —
-        on scoped dependency injection.
+        One marketplace shipped to <span class="highlight">web, iOS and Android from a single codebase</span>,
+        with behaviour held consistent across three render targets and releases coordinated with the
+        client's product team.
       </p>
       <div class="card-tech">
-        <span class="chip">Flutter</span><span class="chip">Provider</span>
-        <span class="chip">BLoC</span><span class="chip">CustomPainter</span>
+        <span class="chip">Flutter</span><span class="chip">BLoC</span>
+        <span class="chip">Clean Architecture</span>
       </div>
-      <div class="card-status">Private client build — walkthrough on request.</div>
     </article>
+
+    <article class="card">
+      <span class="card-tag">Two surfaces  &middot;  Custom rendering</span>
+      <h3>Cuppy</h3>
+      <div class="card-role">Contract Software Engineer  &middot;  2024</div>
+      <p>
+        A coffee-shop platform in two halves &mdash; an owner console and a customer app. Shop locations
+        run on the Google Maps SDK with custom markers, and the charts and gauges no off-the-shelf widget
+        covered are drawn from scratch in CustomPainter.
+      </p>
+      <div class="card-tech">
+        <span class="chip">Flutter</span><span class="chip">BLoC</span>
+        <span class="chip">Clean Architecture</span><span class="chip">Google Maps SDK</span>
+        <span class="chip">CustomPainter</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="tier-label">Earlier work  &middot;  2020 &ndash; 2023</div>
+
+  <div class="early">
+    <div class="early-row">
+      <div>
+        <h3>Tegen Loyalty</h3>
+        <span class="early-tag">Loyalty  &middot;  QR</span>
+      </div>
+      <div>
+        <div class="early-role">Software Engineer  &middot;  Ptolemay LLC  &middot;  2021 &ndash; 2023</div>
+        <p>Loyalty app for a meat retail chain. Customers claim rewards through in-app QR codes, and shops scan them at the counter.</p>
+        <div class="early-tech">Flutter &middot; BLoC &middot; DDD &middot; REST</div>
+      </div>
+      <div class="early-links"><a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a></div>
     </div>
 
-    <div class="tier-label">Earlier work · 2020 – 2023</div>
-    <div class="early">
-      <div class="early-row">
-        <div>
-          <h3>Tegen Loyalty</h3>
-          <span class="early-tag">Loyalty  ·  QR</span>
-        </div>
-        <div>
-          <div class="early-role">Flutter Developer  ·  Ptolemay LLC  ·  2021 – 2023</div>
-          <p>Loyalty app for a meat retail chain. Customers claim rewards via in-app QR codes, and shops scan them at the counter.</p>
-          <div class="early-tech">Flutter · QR · REST</div>
-        </div>
-        <div class="early-links"><a href="https://apps.apple.com/us/app/tegen-loyalty/id1592914766" target="_blank" rel="noopener">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=com.tegen.android" target="_blank" rel="noopener">Google Play</a></div>
+    <div class="early-row">
+      <div>
+        <h3>Bakery HR App</h3>
+        <span class="early-tag">HR  &middot;  Multi-store</span>
       </div>
-      <div class="early-row">
-        <div>
-          <h3>Bakery HR App</h3>
-          <span class="early-tag">HR  ·  Multi-store</span>
-        </div>
-        <div>
-          <div class="early-role">Flutter Developer  ·  Udevs  ·  2021</div>
-          <p>HR application for a national bakery chain operating <span class="highlight">100+ stores across Uzbekistan</span> — UI implementation and REST API integrations.</p>
-          <div class="early-tech">Flutter · REST</div>
-        </div>
-        <div></div>
+      <div>
+        <div class="early-role">Software Engineer  &middot;  Udevs  &middot;  2021</div>
+        <p>HR application for a national bakery chain operating <span class="highlight">100+ stores across Uzbekistan</span> &mdash; interface and REST integrations.</p>
+        <div class="early-tech">Flutter &middot; GetX &middot; BLoC &middot; REST</div>
       </div>
-      <div class="early-row">
-        <div>
-          <h3>Auto Repair CRM</h3>
-          <span class="early-tag">CRM  ·  Firebase</span>
-        </div>
-        <div>
-          <div class="early-role">Freelance  ·  Kwork  ·  2020 – 2021</div>
-          <p>End-to-end CRM for an auto repair shop, built with Flutter for <span class="highlight">mobile and web</span> and powered entirely by Firebase Firestore and Storage.</p>
-          <div class="early-tech">Flutter Web · Firestore · Storage</div>
-        </div>
-        <div></div>
-      </div>
+      <div></div>
     </div>
+
+    <div class="early-row">
+      <div>
+        <h3>OVVOZ</h3>
+        <span class="early-tag">Music  &middot;  Offline</span>
+      </div>
+      <div>
+        <div class="early-role">Freelance  &middot;  2020 &ndash; 2021</div>
+        <p>Tajik music player with a local library on SQLite through moor &mdash; now drift.</p>
+        <div class="early-tech">Flutter &middot; Provider &middot; SQLite</div>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="early-row">
+      <div>
+        <h3>Auto Repair CRM</h3>
+        <span class="early-tag">CRM  &middot;  Firebase</span>
+      </div>
+      <div>
+        <div class="early-role">Freelance  &middot;  2020 &ndash; 2021</div>
+        <p>End-to-end CRM for an auto-repair shop, on Flutter <span class="highlight">mobile and web</span>, over Firestore and Cloud Storage.</p>
+        <div class="early-tech">Flutter &middot; Provider &middot; Firebase</div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="tier-label">Personal project</div>
+
+  <div class="early">
+    <div class="early-row">
+      <div>
+        <h3>CubeClash</h3>
+        <span class="early-tag">Real-time  &middot;  Four codebases</span>
+      </div>
+      <div>
+        <div class="early-role">Personal project  &middot;  2026</div>
+        <p>Competitive speedcubing platform: one product across four codebases &mdash; a Flutter client, a native Kotlin client, a native Swift client and a NestJS backend &mdash; on one architecture and one real-time contract over WebSockets.</p>
+        <div class="early-tech">Flutter &middot; Kotlin &middot; Swift &middot; NestJS &middot; PostgreSQL &middot; Redis</div>
+      </div>
+      <div class="early-links"><a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+  </div>
 </section>
 
-<!-- ===== EXPERIENCE (animated vertical timeline) ===== -->
+<!-- ===== EXPERIENCE ===== -->
 <section id="experience">
   <div class="section-head">
     <span class="section-num">03 / Experience</span>
@@ -950,55 +972,61 @@
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Aug 2025 — Jul 2026</div>
-        <div class="role">Flutter Developer</div>
+        <div class="dates">Aug 2025 &mdash; Jul 2026</div>
+        <div class="role">Software Engineer</div>
         <div class="company">EMCD</div>
         <div class="location">Remote</div>
+        <div class="ctx">Crypto mining pool, fintech arm &middot; Coinhold deposit product &middot; <b>Flutter, Dart, BLoC, DDD, GitLab CI/CD, Codemagic</b></div>
       </div>
     </div>
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Oct 2024 — Aug 2025</div>
-        <div class="role">Contract Software Engineer (Flutter)</div>
-        <div class="company">7Tech · Million TV · Cuppy</div>
+        <div class="dates">Oct 2024 &mdash; Aug 2025</div>
+        <div class="role">Contract Software Engineer</div>
+        <div class="company">Neotech &middot; Million TV &middot; Cuppy</div>
         <div class="location">Remote / Tashkent</div>
+        <div class="ctx">Marketplace, streaming and retail &middot; three products end to end &middot; <b>Flutter, BLoC, Clean Architecture, DDD</b></div>
       </div>
     </div>
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Jan 2023 — Oct 2024</div>
-        <div class="role">Flutter Developer → Mobile Tech Lead</div>
+        <div class="dates">Jan 2023 &mdash; Oct 2024</div>
+        <div class="role">Software Engineer &rarr; Mobile Tech Lead</div>
         <div class="company">Express24</div>
         <div class="location">Tashkent</div>
+        <div class="ctx">Delivery marketplace &middot; B2B merchant platform &middot; <b>Flutter, BLoC, Feature-First DDD, WebSockets, CircleCI</b></div>
       </div>
     </div>
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Nov 2021 — Jan 2023</div>
-        <div class="role">Flutter Developer</div>
+        <div class="dates">Nov 2021 &mdash; Jan 2023</div>
+        <div class="role">Software Engineer</div>
         <div class="company">Ptolemay LLC</div>
         <div class="location">Walnut, CA (remote)</div>
+        <div class="ctx">Software outsourcing &mdash; backend, mobile and ML teams &middot; <b>Flutter, BLoC, DDD, REST</b></div>
       </div>
     </div>
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">May — Oct 2021</div>
-        <div class="role">Flutter Developer (promoted from Intern)</div>
+        <div class="dates">May &mdash; Oct 2021</div>
+        <div class="role">Software Engineer, from intern</div>
         <div class="company">Udevs</div>
         <div class="location">Tashkent</div>
+        <div class="ctx">Software agency &middot; HR platform for a bakery chain &middot; <b>Flutter, GetX, BLoC, REST</b></div>
       </div>
     </div>
     <div class="tl-v-item">
       <div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">Sep 2020 — May 2021</div>
-        <div class="role">Freelance Flutter Developer</div>
-        <div class="company">Kwork</div>
+        <div class="dates">Sep 2020 &mdash; May 2021</div>
+        <div class="role">Freelance Software Engineer</div>
+        <div class="company">Independent</div>
         <div class="location">Remote</div>
+        <div class="ctx">Consumer and small-business software &middot; <b>Flutter, Provider, Firebase, SQLite</b></div>
       </div>
     </div>
   </div>
@@ -1013,20 +1041,24 @@
 
   <div class="row-list">
     <div class="row-item">
-      <h3 class="stack-label">Core</h3>
-      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill skill--lead">Dart</span><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">DDD</span><span class="skill">Provider</span><span class="skill">ValueNotifier</span><span class="skill">MobX</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Custom Animations</span></div>
+      <h3 class="stack-label">Languages</h3>
+      <div class="skill-list"><span class="skill skill--lead">Dart</span><span class="skill">TypeScript</span><span class="skill">JavaScript</span><span class="skill">Kotlin</span><span class="skill">Swift</span><span class="skill">SQL</span></div>
     </div>
     <div class="row-item">
-      <h3 class="stack-label">AI &amp; agents</h3>
-      <div class="skill-list"><span class="skill skill--lead">Claude</span><span class="skill skill--lead">Claude Code</span><span class="skill skill--lead">Cursor</span><span class="skill">Agent crew</span><span class="skill">Spec-driven pipeline</span><span class="skill">Multi-repo orchestration</span><span class="skill">AI-assisted testing</span></div>
+      <h3 class="stack-label">Architecture &amp; state</h3>
+      <div class="skill-list"><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">Domain-Driven Design</span><span class="skill">Provider</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Custom Animations</span></div>
     </div>
     <div class="row-item">
       <h3 class="stack-label">Platforms &amp; tooling</h3>
-      <div class="skill-list"><span class="skill skill--lead">Firebase</span><span class="skill skill--lead">REST</span><span class="skill skill--lead">WebSockets</span><span class="skill skill--lead">CircleCI</span><span class="skill">Firestore</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git / GitFlow</span><span class="skill">GitLab</span><span class="skill">Jira</span><span class="skill">ClickUp</span></div>
+      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill">iOS</span><span class="skill">Android</span><span class="skill">Web</span><span class="skill">Firebase</span><span class="skill">REST</span><span class="skill">WebSockets</span><span class="skill">SQLite (drift)</span><span class="skill">PostgreSQL</span><span class="skill">Redis</span><span class="skill">NestJS</span><span class="skill">GitLab CI/CD</span><span class="skill">CircleCI</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git</span></div>
     </div>
     <div class="row-item">
       <h3 class="stack-label">Testing</h3>
-      <div class="skill-list"><span class="skill skill--lead">Unit Tests</span><span class="skill skill--lead">Widget Tests</span><span class="skill skill--lead">Golden Tests</span><span class="skill skill--lead">E2E Tests</span></div>
+      <div class="skill-list"><span class="skill skill--lead">Unit</span><span class="skill skill--lead">Widget</span><span class="skill skill--lead">Golden</span><span class="skill skill--lead">Integration (E2E)</span></div>
+    </div>
+    <div class="row-item">
+      <h3 class="stack-label">AI-assisted development</h3>
+      <div class="skill-list"><span class="skill">Claude</span><span class="skill">Claude Code</span></div>
     </div>
   </div>
 </section>
@@ -1043,7 +1075,7 @@
       <div class="edu-tag">Degree</div>
       <h3>B.Sc. Computer &amp; Software Engineering</h3>
       <div class="edu-school">INHA University in Tashkent</div>
-      <div class="edu-dates">2018 — 2022</div>
+      <div class="edu-dates">2018 &mdash; 2023</div>
     </div>
 
     <div class="edu-card">
@@ -1055,11 +1087,26 @@
   </div>
 </section>
 
-<!-- ===== PERSONALITY ===== -->
-<section id="personality">
+<!-- ===== LANGUAGES ===== -->
+<section id="languages">
   <div class="section-head">
-    <span class="section-num">06 / Personality</span>
-    <h2>Beyond the editor.</h2>
+    <span class="section-num">06 / Languages</span>
+    <h2>Languages I work in.</h2>
+  </div>
+
+  <div class="lang-grid">
+    <div class="lang-card"><div class="name">Tajik</div><div class="level">Native</div></div>
+    <div class="lang-card"><div class="name">Russian</div><div class="level">Fluent, near-native</div></div>
+    <div class="lang-card"><div class="name">Uzbek</div><div class="level">Fluent, near-native</div></div>
+    <div class="lang-card"><div class="name">English</div><div class="level">C1 &middot; Advanced</div></div>
+  </div>
+</section>
+
+<!-- ===== BEYOND ENGINEERING ===== -->
+<section id="interests">
+  <div class="section-head">
+    <span class="section-num">07 / Interests</span>
+    <h2>Beyond engineering.</h2>
   </div>
 
   <div class="pers-grid">
@@ -1067,21 +1114,32 @@
         <div class="pers-figure">9</div>
         <div class="pers-figure-l">puzzle types</div>
         <h3>Speedcubing</h3>
-        <div class="pers-sub">WCA Official Contestant · 2017</div>
-        <div class="skill-list"><span class="skill">2×2</span><span class="skill">3×3</span><span class="skill">4×4</span><span class="skill">5×5</span><span class="skill">6×6</span><span class="skill">7×7</span><span class="skill">Megaminx</span><span class="skill">Teraminx</span><span class="skill">Mirror Cube</span></div>
+        <div class="pers-sub">WCA Official Contestant &middot; 2017</div>
+        <div class="skill-list"><span class="skill">2&times;2</span><span class="skill">3&times;3</span><span class="skill">4&times;4</span><span class="skill">5&times;5</span><span class="skill">6&times;6</span><span class="skill">7&times;7</span><span class="skill">Megaminx</span><span class="skill">Teraminx</span><span class="skill">Mirror Cube</span></div>
       </article>
+
       <article class="pers-panel">
-        <div class="pers-figure">5</div>
-        <div class="pers-figure-l">languages</div>
-        <h3>Languages</h3>
-        <div class="pers-sub">Spoken</div>
-        <dl class="lang-list">
-          <div><dt>Russian</dt><dd>Native</dd></div>
-          <div><dt>Tajik</dt><dd>Native</dd></div>
-          <div><dt>English</dt><dd>C1 (Professional)</dd></div>
-          <div><dt>Uzbek</dt><dd>Working proficiency</dd></div>
-          <div><dt>French</dt><dd>Elementary</dd></div>
-        </dl>
+        <div class="pers-figure">1,600+</div>
+        <div class="pers-figure-l">pieces per build</div>
+        <h3>Lego Technic</h3>
+        <div class="pers-sub">Ferrari and Red Bull F1 cars</div>
+        <p class="pers-note">Both builds run a working engine, suspension and steering &mdash; the appeal is the mechanism, not the shape.</p>
+      </article>
+
+      <article class="pers-panel">
+        <div class="pers-figure">2011</div>
+        <div class="pers-figure-l">every season since</div>
+        <h3>Formula 1</h3>
+        <div class="pers-sub">The sport itself &mdash; no team, no driver</div>
+        <p class="pers-note">Never made it trackside. Still on the list.</p>
+      </article>
+
+      <article class="pers-panel">
+        <div class="pers-figure">4</div>
+        <div class="pers-figure-l">drinks I make</div>
+        <h3>Coffee</h3>
+        <div class="pers-sub">Making it, not just drinking it</div>
+        <div class="skill-list"><span class="skill">Cappuccino</span><span class="skill">Latte</span><span class="skill">Americano</span><span class="skill">Ice Bumble</span></div>
       </article>
   </div>
 </section>
@@ -1091,13 +1149,13 @@
   <div class="contact">
     <h3>Let's build something.</h3>
     <p>
-      Open to Flutter and mobile lead roles — remote-first, worldwide. Based in
-      Tashkent (UTC+5), with full overlap with Gulf hours and most of the European workday.
+      Open to software engineering roles &mdash; remote-first, worldwide, and open to relocation.
+      Based in Tashkent (UTC+5), with full overlap with Gulf hours and most of the European workday.
       Hiring from abroad is straightforward: I work as a contractor under a service agreement,
       or through an EOR such as Deel.
     </p>
     <div class="contact-links">
-      <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Email me &nbsp;→</a>
+      <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Email me &nbsp;&rarr;</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/donik1998" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn btn-secondary" href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-secondary" href="cv-ats.html" target="_blank" rel="noopener">View CV</a>
@@ -1106,7 +1164,7 @@
 </section>
 
 <footer>
-  © <span id="year"></span> Doniyor Murodkulov  ·  Built with hand-written HTML &amp; CSS
+  &copy; <span id="year"></span> Doniyor Murodkulov  &middot;  Built with hand-written HTML &amp; CSS
 </footer>
 
 <script>
