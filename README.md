@@ -11,10 +11,9 @@ Personal site and CV of **Doniyor Murodkulov** — software engineer based in Ta
 | [`index.html`](https://donik1998.github.io) | Portfolio — work, experience, stack (English) |
 | [`ru.html`](https://donik1998.github.io/ru.html) | Русская версия |
 | [`uz.html`](https://donik1998.github.io/uz.html) | Oʻzbekcha versiyasi |
-| [`cv-ats.html`](https://donik1998.github.io/cv-ats.html) | CV — one page, single column, parser-safe (the CV the site links to) |
-| [`cv.html`](https://donik1998.github.io/cv.html) | Designed CV — print-ready A4, save as PDF from the browser |
-| [`cv-ru.html`](https://donik1998.github.io/cv-ru.html) | Резюме на русском — print-ready A4 |
-| [`cv-uz.html`](https://donik1998.github.io/cv-uz.html) | O‘zbekcha CV — print-ready A4 |
+| [`cv-ats.html`](https://donik1998.github.io/cv-ats.html) | CV — one page, single column, parser-safe |
+| [`cv-ru.html`](https://donik1998.github.io/cv-ru.html) | Резюме — одна страница |
+| [`cv-uz.html`](https://donik1998.github.io/cv-uz.html) | Rezyume — bir sahifa |
 
 ## Highlights
 
@@ -25,7 +24,7 @@ Personal site and CV of **Doniyor Murodkulov** — software engineer based in Ta
 
 ## Tech
 
-Hand-written HTML and CSS — no frameworks, no build step, zero dependencies, and no webfonts: the Swiss Editorial type is the system Helvetica stack, so the pages make no external requests at all. Trilingual (EN/RU/UZ), responsive, light and dark, respects `prefers-reduced-motion`, print-optimised CV pages.
+Hand-written HTML and CSS — no frameworks, no build step, zero dependencies, and no webfonts: the Swiss Editorial type is the system Helvetica stack, so the pages make no external requests at all. Trilingual (EN/RU/UZ), responsive, light and dark, respects `prefers-reduced-motion`, print-optimised CV pages — one CV per language, each a single A4 page.
 
 ## Contact
 
