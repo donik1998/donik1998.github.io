@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Doniyor Murodkulov &mdash; dasturiy injener</title>
-<meta name="description" content="Dasturiy injener: olti yil, prodakshnda sakkizta mahsulot. Crash-free ko&lsquo;rsatkichini 68% dan 98% ga ikki oyda yetkazdim; 35 000+ oylik faol foydalanuvchili hamyonda ikkita to&lsquo;liq refaktoring o&lsquo;tkazdim." />
+<meta name="description" content="Dasturiy injener: olti yil, prodakshnda to&lsquo;qqizta mahsulot. Hamkorbank mobil ilovasining core jamoasidaman &mdash; bu bank ilovasidan har kuni 1,9 mln kishi foydalanadi. Crash-free ko&lsquo;rsatkichini 68% dan 98% ga ikki oyda yetkazdim." />
 <link rel="canonical" href="https://donik1998.github.io/uz.html" />
 <link rel="alternate" hreflang="en" href="https://donik1998.github.io/" />
 <link rel="alternate" hreflang="ru" href="https://donik1998.github.io/ru.html" />
 <link rel="alternate" hreflang="uz" href="https://donik1998.github.io/uz.html" />
 <link rel="alternate" hreflang="x-default" href="https://donik1998.github.io/" />
 <meta property="og:title" content="Doniyor Murodkulov &mdash; dasturiy injener" />
-<meta property="og:description" content="Olti yil va prodakshnda sakkizta mahsulot. Men relizdan keyin ham ishlaydigan tizimlar quraman." />
+<meta property="og:description" content="Olti yil va prodakshnda to&lsquo;qqizta mahsulot. Men relizdan keyin ham ishlaydigan tizimlar quraman." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://donik1998.github.io/og-image.png" />
 <meta property="og:url" content="https://donik1998.github.io/uz.html" />
@@ -387,6 +387,7 @@
     color: var(--muted); margin: 46px 0 20px;
   }
   .tier-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+  .section-head + .tier-label { margin-top: 0; }
 
   .early { border-top: 1px solid var(--line); }
   .early-row {
@@ -676,11 +677,12 @@
 <header class="hero">
   <div class="eyebrow">Dasturiy injener  &middot;  texnik yetakchi</div>
   <h1 class="tag">Men relizdan keyin ham ishlaydigan tizimlar quraman.</h1>
-  <p class="blurb">Olti yil va prodakshnda sakkizta mahsulot. <strong>Express24</strong>&rsquo;da B2B platformani
-    68% crash-free holatida qabul qilib, ikki oyda 98% ga yetkazdim va buyurtmalar pollingini real-time
-    WebSocket konveyeriga almashtirdim &mdash; keyin bu darajani ushlab turgan uch kishilik jamoani boshqardim.
-    <strong>EMCD</strong>&rsquo;da 35&nbsp;000+ oylik faol foydalanuvchili hamyonda ikkita to&lsquo;liq refaktoring
-    o&lsquo;tkazdim, ikkalasini ham muddatida topshirdim.</p>
+  <p class="blurb">Olti yil va prodakshnda to&lsquo;qqizta mahsulot. Hozir <strong>Hamkorbank</strong> mobil
+    ilovasining core jamoasidaman &mdash; har kuni 1,9&nbsp;mln kishi foydalanadigan bank ilovasini ishlab chiqyapmiz.
+    <strong>Express24</strong>&rsquo;da B2B platformani 68% crash-free holatida qabul qilib, ikki oyda 98% ga
+    yetkazdim va buyurtmalar pollingini real-time WebSocket konveyeriga almashtirdim &mdash; keyin bu darajani
+    ushlab turgan uch kishilik jamoani boshqardim. <strong>EMCD</strong>&rsquo;da 35&nbsp;000+ oylik faol
+    foydalanuvchili hamyonda ikkita to&lsquo;liq refaktoring o&lsquo;tkazdim, ikkalasini ham muddatida topshirdim.</p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#contact">Bog&lsquo;lanish &nbsp;&rarr;</a>
     <a class="btn btn-secondary" href="cv-uz.html" target="_blank" rel="noopener">Rezyumeni ko&lsquo;rish</a>
@@ -688,7 +690,7 @@
 </header>
 
 <section id="stats-strip">
-  <div class="stats"><div class="stat"><div class="stat-num">68&rarr;98%</div><div class="stat-label">Crash-free, ikki oyda</div></div><div class="stat"><div class="stat-num">8</div><div class="stat-label">Prodakshndagi mahsulot</div></div><div class="stat"><div class="stat-num">6</div><div class="stat-label">Yillik tajriba</div></div><div class="stat"><div class="stat-num">35K+</div><div class="stat-label">Oylik faol foydalanuvchi</div></div></div>
+  <div class="stats"><div class="stat"><div class="stat-num">68&rarr;98%</div><div class="stat-label">Crash-free, ikki oyda</div></div><div class="stat"><div class="stat-num">9</div><div class="stat-label">Prodakshndagi mahsulot</div></div><div class="stat"><div class="stat-num">6</div><div class="stat-label">Yillik tajriba</div></div><div class="stat"><div class="stat-num">1,9&nbsp;mln</div><div class="stat-label">Kunlik foydalanuvchi, Hamkorbank</div></div></div>
 </section>
 
 <section id="about">
@@ -700,18 +702,36 @@
     chegaralarga qanday ko&lsquo;chirish kerak.</p>
       <p>Hammasi qiziqish uchun olingan frilans ishlardan boshlangan. Olti yil ichida bu meni Toshkentning
     birinchi yetkazib berish platformalaridan birida texnik yetakchi roliga va
-    <strong>prodakshndagi sakkizta mahsulotga</strong> olib keldi &mdash; yetkazib berish, fintex,
-    striming, marketpleys va kripto sohalarida: klientda, nativ chegarada va ularning orqasidagi bekendda.</p>
+    <strong>prodakshndagi to&lsquo;qqizta mahsulotga</strong> olib keldi &mdash; banking, yetkazib berish, fintex,
+    striming, marketpleys va kripto sohalarida: klientda, nativ chegarada va ularning orqasidagi bekendda.
+    Shu bilan birga geyming klublari uchun platforma &mdash; GameFit&rsquo;ning hammuassisi va injeneriman.</p>
       <p>Birinchi versiyani chiqarish &mdash; oson qismi. Barqarorlik, reliz jarayoni va regressiyani
     foydalanuvchidan oldin ushlaydigan testlar mahsulot ikkinchi yilga yetadimi yo&lsquo;qmi &mdash;
     shuni hal qiladi. Menga ana shu ish qiziq.</p>
-      <p class="lede-note"><strong>Dasturiy injener</strong> rollariga ochiqman &mdash; butun dunyo bo&lsquo;ylab masofadan,
-    relokatsiyaga ham tayyorman. Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.</p>
+      <p class="lede-note"><strong>Takliflarga ochiqman</strong> &mdash; masofaviy ishlash yoki relokatsiya bilan.
+    Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.</p>
   </div></div>
 </section>
 
 <section id="work">
   <div class="section-head"><span class="section-num">02 / Tanlangan ishlar</span><h2>Men hal qilgan masalalar.</h2></div>
+  <div class="tier-label">Hozir</div>
+  <div class="cases">
+    <article class="case">
+      <div>
+        <span class="card-tag">Banking  &middot;  masshtab  &middot;  core jamoa</span>
+        <h3>Hamkorbank Mobile</h3>
+        <div class="card-role">Senior Flutter injeneri  &middot;  2026 &mdash; hozirgacha</div>
+        <p>Hamkorbankning chakana bank ilovasi &mdash; undan <span class="highlight">har kuni 1,9&nbsp;mln kishi</span>
+      foydalanadi. Men mobil core jamoasidaman &mdash; ustiga mahsulot jamoalari o&lsquo;z funksiyalarini quradigan
+      umumiy poydevor &mdash; shuning uchun bu yerda masalalar bitta funksiya emas, butun ilova haqida: u qanday
+      tuzilgan, shu masshtabda qanday barqaror qoladi va har bir reliz qanday chiqadi.</p>
+        <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Dart</span></div>
+      </div>
+      <div class="case-metric"><div class="n">1,9&nbsp;mln</div><div class="l">kunlik foydalanuvchi</div></div>
+    </article>
+  </div>
+  <div class="tier-label">Keyslar  &middot;  2023 &ndash; 2026</div>
   <div class="cases">
     <article class="case">
       <div>
@@ -736,16 +756,36 @@
         <h3>EMCD Coinhold</h3>
         <div class="card-role">Dasturiy injener  &middot;  2025 &ndash; 2026</div>
         <p>Coinhold &mdash; kripto mayning-pulning fintex yo&lsquo;nalishidagi depozit mahsuloti: foydalanuvchi
-      kriptovalyutani saqlagani uchun mukofot oladi. Hamyonning katta qismlarida
+      kriptovalyutani saqlagani uchun mukofot oladi. 20+ mamlakatdagi foydalanuvchilar unda
+      <span class="highlight">$60&nbsp;mln dan ortiq</span> mablag&lsquo; saqlaydi, interfeys 12 tilga tarjima qilingan. Hamyonning katta qismlarida
       <span class="highlight">ikkita to&lsquo;liq refaktoring</span> o&lsquo;tkazdim: hajmini baholab,
       bosqichlarga bo&lsquo;lib, ikkalasini ham barqarorlikni tushirmasdan muddatida topshirdim.
-      O&lsquo;z qismlarimni unit, widget, golden va integratsion testlar bilan qopladim, so&lsquo;ng
-      jamoani sun&rsquo;iy intellekt yordamida test yozishga o&lsquo;tkazdim &mdash; yangi qamrovga
-      olingan barcha qismlar regressiyasiz chiqdi.</p>
+      Coinholdning test qamrovini unit, widget, golden va integratsion testlar bilan
+      <span class="highlight">90% dan yuqoriga</span> olib chiqdim, so&lsquo;ng jamoani sun&rsquo;iy intellekt
+      yordamida test yozishga o&lsquo;tkazdim &mdash; yangi qamrovga olingan barcha qismlar regressiyasiz chiqdi.</p>
         <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">BLoC</span><span class="chip">DDD</span><span class="chip">GitLab CI/CD</span><span class="chip">Codemagic</span></div>
         
       </div>
       <div class="case-metric"><div class="n">35K+</div><div class="l">oylik faol foydalanuvchi</div></div>
+    </article>
+  </div>
+  <div class="tier-label">O&lsquo;z mahsulotim  &middot;  2025 &mdash; hozirgacha</div>
+  <div class="cases">
+    <article class="case">
+      <div>
+        <span class="card-tag">Platforma  &middot;  hammuassis  &middot;  to&lsquo;rt kod bazasi</span>
+        <h3>GameFit</h3>
+        <div class="card-role">Hammuassis va injener  &middot;  2025 &mdash; hozirgacha</div>
+        <p>Geyming klublari uchun platforma. Geymer ilovadan joy band qiladi, sessiyasini to&lsquo;laydi va ovqat
+      buyuradi; klubning har bir kompyuterida sessiyalarni ochib-yopadigan agent ishlaydi; egasi klubni CRM orqali
+      boshqaradi. Bitta mahsulot <span class="highlight">to&lsquo;rt kod bazasida &mdash; Flutter ilova, Spring Boot
+      bekend, Next.js CRM va klub kompyuterlari uchun .NET agent</span>, relizlar GitLab merge request&rsquo;lari va
+      pipeline&rsquo;lari orqali chiqadi. Mobil ilova to&lsquo;liq mening zimmamda, funksiyalarni esa to&lsquo;rttalasida ham
+      oxirigacha o&lsquo;zim chiqaraman.</p>
+        <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Spring Boot</span><span class="chip">Next.js</span><span class="chip">.NET</span><span class="chip">WebSockets</span><span class="chip">GitLab CI/CD</span></div>
+        <div class="card-status">Bekend, CRM va kompyuter agenti prodakshnda ishlaydi; klublar ulanyapti.</div>
+      </div>
+      <div class="case-metric"><div class="n">4</div><div class="l">kod bazasi &mdash; ilova, bekend, CRM, agent</div></div>
     </article>
   </div>
   <div class="tier-label">Kontrakt ishlari  &middot;  2024 &ndash; 2025</div>
@@ -821,11 +861,11 @@
   <div class="tier-label">Shaxsiy loyiha</div>
   <div class="early">
     <div class="early-row">
-      <div><h3>CubeClash</h3><span class="early-tag">Real-time  &middot;  to&lsquo;rt kod bazasi</span></div>
+      <div><h3>CubeClash</h3><span class="early-tag">Real-time  &middot;  klient + bekend</span></div>
       <div>
         <div class="early-role">Shaxsiy loyiha  &middot;  2026</div>
-        <p>Musobaqa spidkubingi platformasi: bitta mahsulot to&lsquo;rt kod bazasida &mdash; Flutter klient, Kotlin&rsquo;dagi nativ klient, Swift&rsquo;dagi nativ klient va NestJS bekend &mdash; bitta arxitektura va WebSocket ustidagi bitta real-time shartnoma asosida.</p>
-        <div class="early-tech">Flutter &middot; Kotlin &middot; Swift &middot; NestJS &middot; PostgreSQL &middot; Redis</div>
+        <p>Musobaqa spidkubingi platformasi &mdash; mashq taymeri va jonli 1v1 bellashuvlar. Flutter klient va NestJS bekend bitta arxitektura va WebSocket ustidagi bitta real-time protokol asosida qurilgan; manba kodi ochiq.</p>
+        <div class="early-tech">Flutter &middot; NestJS &middot; PostgreSQL &middot; Redis &middot; WebSockets</div>
       </div>
       <div class="early-links"><a href="https://github.com/donik1998" target="_blank" rel="noopener">GitHub</a></div>
     </div>
@@ -835,6 +875,12 @@
 <section id="experience">
   <div class="section-head"><span class="section-num">03 / Tajriba</span><h2>Qayerlarda ishlaganman.</h2></div>
   <div class="tl-v" id="timeline">
+    <div class="tl-v-item"><div class="tl-v-dot"></div>
+      <div class="tl-v-content">
+        <div class="dates">2026-yil sen &mdash; hozirgacha</div><div class="role">Senior Flutter injeneri</div>
+        <div class="company">Hamkorbank</div><div class="location">Toshkent</div>
+        <div class="ctx">Chakana bank &middot; kuniga 1,9&nbsp;mln foydalanuvchili mobil bank ilovasi &middot; core jamoa &middot; <b>Flutter, Dart</b></div>
+      </div></div>
     <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
         <div class="dates">2025-yil avg &mdash; 2026-yil iyul</div><div class="role">Dasturiy injener</div>
@@ -878,7 +924,7 @@
   <div class="section-head"><span class="section-num">04 / Stek</span><h2>Doim ishlatadigan vositalarim.</h2></div>
   <div class="row-list">
     <div class="row-item"><h3 class="stack-label">Tillar</h3>
-      <div class="skill-list"><span class="skill skill--lead">Dart</span><span class="skill">TypeScript</span><span class="skill">JavaScript</span><span class="skill">Kotlin</span><span class="skill">Swift</span><span class="skill">SQL</span></div>
+      <div class="skill-list"><span class="skill skill--lead">Dart</span><span class="skill">TypeScript</span><span class="skill">JavaScript</span><span class="skill">SQL</span></div>
     </div>
     <div class="row-item"><h3 class="stack-label">Arxitektura va holat</h3>
       <div class="skill-list"><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">Domain-Driven Design</span><span class="skill">Provider</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Maxsus animatsiyalar</span></div>
@@ -952,10 +998,9 @@
 <section id="contact">
   <div class="contact">
     <h3>Keling, birgalikda quramiz.</h3>
-    <p>Dasturiy injener rollariga ochiqman &mdash; butun dunyo bo&lsquo;ylab masofadan, relokatsiyaga ham
-      tayyorman. Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.
-      Chet eldan yollash oson: xizmat ko&lsquo;rsatish shartnomasi bo&lsquo;yicha kontraktor sifatida yoki
-      Deel kabi EOR orqali ishlayman.</p>
+    <p>Takliflarga ochiqman &mdash; masofaviy ishlash yoki relokatsiya bilan.
+      Toshkent (UTC+5): Ko&lsquo;rfaz vaqti va Yevropa ish kunining katta qismi bilan mos.
+      Chet eldan yollash oson: xizmat ko&lsquo;rsatish shartnomasi yoki Deel kabi EOR orqali.</p>
     <div class="contact-links">
       <a class="btn btn-primary" href="mailto:donikmurodkulov98@gmail.com">Menga yozing &nbsp;&rarr;</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/donik1998" target="_blank" rel="noopener">LinkedIn</a>
