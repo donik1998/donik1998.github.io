@@ -680,8 +680,8 @@
   <p class="blurb">Шесть лет и девять продуктов в проде. Сейчас &mdash; в core-команде мобильного приложения
     <strong>Hamkorbank</strong>: банковское приложение, которым каждый день пользуются 1,9&nbsp;млн человек.
     В <strong>Express24</strong> я принял B2B-платформу с 68% crash-free, за два месяца довёл её до 98%
-    и заменил поллинг заказов на real-time WebSocket-конвейер &mdash; а затем вёл команду из трёх инженеров,
-    которая держала этот уровень. В <strong>EMCD</strong> провёл два сквозных рефакторинга кошелька
+    и перевёл заказы с поллинга на WebSocket &mdash; а затем вёл команду из трёх инженеров,
+    которая держала этот уровень. В <strong>EMCD</strong> провёл два крупных рефакторинга кошелька
     с 35&nbsp;000+ MAU, оба сдал в срок.</p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#contact">Связаться &nbsp;&rarr;</a>
@@ -705,7 +705,7 @@
     Параллельно я сооснователь и инженер GameFit &mdash; платформы для игровых клубов.</p>
       <p>Выпустить первую версию &mdash; простая часть. Стабильность, релизный процесс и тесты, которые ловят
     регрессию раньше пользователя, решают, доживёт ли продукт до второго года. Это и есть та работа, которую я хочу.</p>
-      <p class="lede-note"><strong>Открыт к предложениям</strong> &mdash; удалённо или с релокацией.
+      <p class="lede-note"><strong>Открыт к предложениям</strong> &mdash; в офисе или гибридно в Ташкенте, удалённо или с релокацией.
     Ташкент (UTC+5): полное пересечение с Заливом и почти всем европейским рабочим днём.</p>
   </div></div>
 </section>
@@ -733,13 +733,13 @@
       </div></div>
     <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">янв 2023 &mdash; окт 2024</div><div class="role">Инженер-программист &rarr; техлид мобильной разработки</div>
+        <div class="dates">янв 2023 &mdash; ноя 2024</div><div class="role">Инженер-программист &rarr; техлид мобильной разработки</div>
         <div class="company">Express24</div><div class="location">Ташкент</div>
         <div class="ctx">Сервис доставки &middot; B2B-платформа для мерчантов &middot; <b>Flutter, BLoC, Feature-First DDD, WebSockets, CircleCI</b></div>
       </div></div>
     <div class="tl-v-item"><div class="tl-v-dot"></div>
       <div class="tl-v-content">
-        <div class="dates">ноя 2021 &mdash; янв 2023</div><div class="role">Инженер-программист</div>
+        <div class="dates">окт 2021 &mdash; дек 2022</div><div class="role">Инженер-программист</div>
         <div class="company">Ptolemay LLC</div><div class="location">Walnut, Калифорния (удалённо)</div>
         <div class="ctx">Аутсорсинг разработки &mdash; бэкенд, мобайл, ML &middot; <b>Flutter, BLoC, DDD, REST</b></div>
       </div></div>
@@ -770,7 +770,9 @@
         <p>Розничное банковское приложение Hamkorbank, которым <span class="highlight">каждый день пользуются
       1,9&nbsp;млн человек</span>. Я в core-команде мобильной разработки: мы делаем общую основу, на которой
       остальные команды строят свои продукты. Поэтому задачи здесь про приложение целиком, а не про одну
-      фичу &mdash; как оно устроено, как остаётся стабильным при таком масштабе и как выходит каждый релиз.</p>
+      фичу &mdash; как оно устроено, как остаётся стабильным при таком масштабе и как выходит каждый релиз.
+      Занимаемся и защитой приложения: secure storage, SSL pinning, биометрия, проверки root/jailbreak,
+      запрет скриншотов. А ещё я готовлю единый процесс в Jira для фич и релизов, общий для всех команд.</p>
         <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Dart</span></div>
       </div>
       <div class="case-metric"><div class="n">1,9&nbsp;млн</div><div class="l">пользователей в день</div></div>
@@ -785,10 +787,11 @@
         <div class="card-role">Инженер-программист &rarr; техлид мобильной разработки  &middot;  2023 &ndash; 2024</div>
         <p>B2B-платформа, через которую <span class="highlight">3 000+ магазинов, кафе и ресторанов</span>
       принимали и выполняли заказы. Я принял её с 68% crash-free, разобрал каждый класс падений
-      до первопричины и за два месяца дошёл до 98%. Заменил поллинг заказов на
-      <span class="highlight">WebSocket-конвейер</span>, чтобы мерчант видел заказ в момент его появления,
+      до первопричины и за два месяца дошёл до 98%. Перевёл заказы с поллинга на
+      <span class="highlight">WebSocket</span>, чтобы мерчант видел заказ в момент его появления,
       а не на следующем опросе, и перевёл кодовую базу на Feature-First Domain-Driven Design.
-      Стал техлидом через восемь месяцев &mdash; вёл трёх инженеров, отвечал за архитектуру, релизы и CI.</p>
+      За восемь месяцев вырос до техлида &mdash; вёл команду из трёх инженеров: распределял задачи,
+      проводил код-ревью и ретроспективы, выстроил GitFlow, отвечал за архитектуру, релизы и CI.</p>
         <div class="card-tech"><span class="chip">Flutter</span><span class="chip">BLoC</span><span class="chip">Feature-First DDD</span><span class="chip">WebSockets</span><span class="chip">CircleCI</span><span class="chip">Юнит-тесты</span></div>
         <div class="card-status">Express24 с тех пор закрыл приложение &mdash; готов разобрать архитектуру на созвоне.</div>
       </div>
@@ -801,15 +804,17 @@
         <div class="card-role">Инженер-программист  &middot;  2025 &ndash; 2026</div>
         <p>Coinhold &mdash; депозитный продукт финтех-направления криптовалютного майнинг-пула: пользователь
       получает вознаграждение за хранение криптовалюты. Пользователи из 20+ стран держат в нём
-      <span class="highlight">более $60&nbsp;млн</span>, интерфейс переведён на 12 языков. Я провёл <span class="highlight">два сквозных
-      рефакторинга</span> крупных областей кошелька: оценил объём, разбил на этапы и сдал оба в срок
-      без просадки стабильности. Довёл покрытие Coinhold тестами <span class="highlight">выше 90%</span> &mdash;
+      <span class="highlight">более $60&nbsp;млн</span>, интерфейс переведён на 12 языков. Я провёл <span class="highlight">два крупных
+      рефакторинга</span> кошелька: оценил объём, разбил на этапы и сдал оба в срок
+      без просадки стабильности. Поднял покрытие Coinhold тестами <span class="highlight">выше 90%</span> &mdash;
       unit-, widget-, golden- и интеграционными, &mdash; затем перевёл команду на написание тестов с ИИ:
-      все покрытые области вышли без регрессий.</p>
+      все покрытые области вышли без регрессий. Ещё придумал и сделал шеринг дохода: пользователь делится
+      баннером со своим доходом &mdash; он собирается оверлеем во Flutter, а PNG кодируется в отдельном изоляте,
+      чтобы не нагружать UI-поток.</p>
         <div class="card-tech"><span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">BLoC</span><span class="chip">DDD</span><span class="chip">GitLab CI/CD</span><span class="chip">Codemagic</span></div>
         
       </div>
-      <div class="case-metric"><div class="n">35K+</div><div class="l">активных пользователей в месяц</div></div>
+      <div class="case-metric"><div class="n">~11&nbsp;тыс.</div><div class="l">пользователей в день</div></div>
     </article>
   </div>
   <div class="tier-label">Свой продукт  &middot;  2025 &mdash; настоящее время</div>
@@ -864,7 +869,7 @@
     <div class="early-row">
       <div><h3>Tegen Loyalty</h3><span class="early-tag">Лояльность  &middot;  QR</span></div>
       <div>
-        <div class="early-role">Инженер-программист  &middot;  Ptolemay LLC  &middot;  2021 &ndash; 2023</div>
+        <div class="early-role">Инженер-программист  &middot;  Ptolemay LLC  &middot;  2021 &ndash; 2022</div>
         <p>Приложение лояльности для мясной розничной сети. Клиент забирает бонусы по QR-коду в приложении, магазин сканирует его на кассе.</p>
         <div class="early-tech">Flutter &middot; BLoC &middot; DDD &middot; REST</div>
       </div>
@@ -923,13 +928,16 @@
       <div class="skill-list"><span class="skill skill--lead">BLoC</span><span class="skill skill--lead">Clean Architecture</span><span class="skill skill--lead">Domain-Driven Design</span><span class="skill">Provider</span><span class="skill">GetX</span><span class="skill">Platform Channels</span><span class="skill">CustomPaint</span><span class="skill">Кастомные анимации</span></div>
     </div>
     <div class="row-item"><h3 class="stack-label">Платформы и инструменты</h3>
-      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill">iOS</span><span class="skill">Android</span><span class="skill">Web</span><span class="skill">Firebase</span><span class="skill">REST</span><span class="skill">WebSockets</span><span class="skill">SQLite (drift)</span><span class="skill">PostgreSQL</span><span class="skill">Redis</span><span class="skill">NestJS</span><span class="skill">GitLab CI/CD</span><span class="skill">CircleCI</span><span class="skill">Codemagic</span><span class="skill">Fastlane</span><span class="skill">Git</span></div>
+      <div class="skill-list"><span class="skill skill--lead">Flutter</span><span class="skill">iOS</span><span class="skill">Android</span><span class="skill">Web</span><span class="skill">Firebase</span><span class="skill">REST</span><span class="skill">WebSockets</span><span class="skill">SQLite (drift)</span><span class="skill">PostgreSQL</span><span class="skill">Redis</span><span class="skill">NestJS</span><span class="skill">GitLab CI/CD</span><span class="skill">CircleCI</span><span class="skill">Codemagic</span><span class="skill">GitHub Actions</span><span class="skill">Fastlane</span><span class="skill">Git</span></div>
     </div>
     <div class="row-item"><h3 class="stack-label">Тестирование</h3>
       <div class="skill-list"><span class="skill skill--lead">Unit</span><span class="skill skill--lead">Widget</span><span class="skill skill--lead">Golden</span><span class="skill skill--lead">Интеграционные (E2E)</span></div>
     </div>
+    <div class="row-item"><h3 class="stack-label">Процессы</h3>
+      <div class="skill-list"><span class="skill">Scrum</span><span class="skill">Kanban</span><span class="skill">Jira</span><span class="skill">Confluence</span><span class="skill">GitFlow</span><span class="skill">Код-ревью</span></div>
+    </div>
     <div class="row-item"><h3 class="stack-label">Разработка с ИИ</h3>
-      <div class="skill-list"><span class="skill">Claude</span><span class="skill">Claude Code</span></div>
+      <div class="skill-list"><span class="skill">Claude</span><span class="skill">Claude Code</span><span class="skill">Cursor</span></div>
     </div>
   </div>
 </section>
@@ -991,7 +999,7 @@
 <section id="contact">
   <div class="contact">
     <h3>Давайте что-нибудь построим.</h3>
-    <p>Открыт к предложениям &mdash; удалённо или с релокацией.
+    <p>Открыт к предложениям &mdash; в офисе или гибридно в Ташкенте, удалённо или с релокацией.
       Ташкент (UTC+5): полное пересечение с Заливом и почти всем европейским рабочим днём.
       Нанимать из-за рубежа просто: договор оказания услуг или EOR вроде Deel.</p>
     <div class="contact-links">
